@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -20,7 +21,7 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content" >
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar_note"
@@ -34,21 +35,21 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:gravity="center" >
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
                         android:layout_margin="6dp">
 
                         <androidx.cardview.widget.CardView
@@ -82,7 +83,7 @@
                                     android:layout_marginTop="10dp"
                                     android:textColor="#000000"
                                     android:text="Блокнот"
-                                    android:fontFamily="@font/productsansbold"
+                                    android:fontFamily="@font/product_sans_bold"
                                     android:textSize="20sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -110,7 +111,8 @@
                                 android:layout_height="match_parent"
                                 android:foreground="?android:attr/selectableItemBackground"
                                 android:clickable="true"
-                                android:focusable="true" >
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
 
                                 <ImageView
                                     android:src="@drawable/brush"
@@ -123,7 +125,7 @@
                                     android:layout_marginTop="10dp"
                                     android:textColor="#000000"
                                     android:text="Рисовалка"
-                                    android:fontFamily="@font/productsansbold"
+                                    android:fontFamily="@font/product_sans_bold"
                                     android:textSize="20sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -150,7 +152,8 @@
                                 android:layout_height="match_parent"
                                 android:foreground="?android:attr/selectableItemBackground"
                                 android:clickable="true"
-                                android:focusable="true" >
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
 
                                 <ImageView
                                     android:src="@drawable/blueprint"
@@ -163,7 +166,7 @@
                                     android:layout_marginTop="10dp"
                                     android:textColor="#000000"
                                     android:text="Черновик"
-                                    android:fontFamily="@font/productsansbold"
+                                    android:fontFamily="@font/product_sans_bold"
                                     android:textSize="20sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -191,7 +194,8 @@
                                 android:layout_height="match_parent"
                                 android:foreground="?android:attr/selectableItemBackground"
                                 android:clickable="true"
-                                android:focusable="true" >
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
 
                                 <ImageView
                                     android:src="@drawable/no_image"
@@ -204,7 +208,7 @@
                                     android:layout_marginTop="10dp"
                                     android:textColor="#000000"
                                     android:text="NO NAME"
-                                    android:fontFamily="@font/productsansbold"
+                                    android:fontFamily="@font/product_sans_bold"
                                     android:textSize="20sp"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content" />
@@ -213,28 +217,26 @@
                         </androidx.cardview.widget.CardView>
 
                     </RelativeLayout>
-                </RelativeLayout>
+                </LinearLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
 
                     <RelativeLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_margin="6dp" >
-
+                        android:layout_height="wrap_content" >
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:foreground="?android:attr/selectableItemBackground"
                             app:cardElevation="6dp"
                             app:cardCornerRadius="10dp"
                             android:layout_marginTop="2dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginEnd="20dp"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginEnd="22dp"
                             android:layout_marginBottom="10dp">
 
                             <RelativeLayout
@@ -257,7 +259,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Закрепленая заметка"
                                     android:textColor="@color/white"
-                                    android:fontFamily="@font/productsansblack"
+                                    android:fontFamily="@font/product_sans_black"
                                     android:textSize="21sp"
                                     android:layout_marginStart="16dp"
                                     android:layout_marginTop="5dp"
@@ -269,16 +271,16 @@
                                     android:layout_alignParentEnd="true"
                                     android:text="TOP NOTE"
                                     android:textColor="#458FFF"
-                                    android:fontFamily="@font/productsansbold"
+                                    android:fontFamily="@font/product_sans_bold"
                                     android:layout_marginTop="16dp"
                                     android:layout_marginEnd="10dp"
                                     android:background="@drawable/white_rectangel_background"
-                                    android:paddingStart="8dp"
-                                    android:paddingTop="2dp"
-                                    android:paddingEnd="8dp"
-                                    android:elevation="6dp"
-                                    android:paddingBottom="2dp"
-                                    android:textSize="16sp" />
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="4dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="4dp"
+                                    android:textSize="16sp"
+                                    android:elevation="6dp" />
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -292,14 +294,13 @@
                                     android:layout_marginStart="16dp"
                                     android:layout_marginEnd="10dp"
                                     android:layout_marginBottom="10dp"
-                                    android:fontFamily="@font/productsansbold"/>
-
-
+                                    android:fontFamily="@font/product_sans_bold"/>
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
+
                     </RelativeLayout>
-                </RelativeLayout>
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
