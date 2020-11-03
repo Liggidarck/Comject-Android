@@ -52,6 +52,7 @@
 
                         <ImageView
                             android:id="@+id/image_avatar"
+                            android:src="@drawable/ic_ava"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_marginTop="10dp"
@@ -87,7 +88,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/arrow_next" />
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 
                     </RelativeLayout>
@@ -131,6 +132,7 @@
 
                         <ImageView
                             android:id="@+id/image_setting_profile"
+                            android:src="@drawable/ic_edit_profile"
                             android:layout_width="50dp"
                             android:layout_height="50dp" />
 
@@ -154,7 +156,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/arrow_next" />
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 
                     </RelativeLayout>
@@ -184,6 +186,7 @@
 
                         <ImageView
                             android:id="@+id/image_setting_app"
+                            android:src="@drawable/ic_settings"
                             android:layout_width="50dp"
                             android:layout_height="50dp" />
 
@@ -207,12 +210,9 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/arrow_next" />
-
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
                     </RelativeLayout>
-
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -237,6 +237,7 @@
 
                         <ImageView
                             android:id="@+id/image_help"
+                            android:src="@drawable/ic_help"
                             android:layout_width="50dp"
                             android:layout_height="50dp" />
 
@@ -260,7 +261,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/arrow_next" />
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 
                     </RelativeLayout>
@@ -290,6 +291,7 @@
 
                         <ImageView
                             android:id="@+id/image_about"
+                            android:src="@drawable/ic_info"
                             android:layout_width="50dp"
                             android:layout_height="50dp" />
 
@@ -313,7 +315,7 @@
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
                             android:layout_marginEnd="20dp"
-                            android:src="@drawable/arrow_next" />
+                            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
 
 
                     </RelativeLayout>
