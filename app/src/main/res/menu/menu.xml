@@ -3,26 +3,32 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Главная">
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Home">
     </item>
 
     <item
         android:id="@+id/nav_note"
-        android:icon="@drawable/ic_baseline_book_24"
-        android:title="Заметки">
+        android:icon="@drawable/ic_outline_class_24"
+        android:title="Note">
+    </item>
+
+    <item
+        android:id="@+id/nav_explore"
+        android:icon="@drawable/ic_outline_explore_24"
+        android:title="Explore">
     </item>
 
     <item
         android:id="@+id/nav_messeg"
-        android:icon="@drawable/ic_baseline_mail_24"
-        android:title="Месседжер" >
+        android:icon="@drawable/ic_outline_email_24"
+        android:title="Chats" >
     </item>
 
     <item
         android:id="@+id/nav_profile"
-        android:icon="@drawable/ic_baseline_account_circle_24"
-        android:title="Профиль">
+        android:icon="@drawable/ic_outline_school_24"
+        android:title="Profile">
     </item>
 
 </menu>
