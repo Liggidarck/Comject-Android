@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_proj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -37,9 +38,694 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Work"
+                        android:textColor="#000000"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="15sp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/product_sans_bold"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="8dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="174dp"
+                                android:src="@drawable/default_1"
+                                android:scaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp"
+                                    android:text="MY MAIN PROJECT"
+                                    android:fontFamily="@font/product_sans_regular"
+                                    android:textAppearance="?attr/textAppearanceBody2"
+                                    android:textColor="?android:attr/textColorSecondary" />
 
 
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gradient Notes"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/google_sans_medium"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="liggidarck"
+                                    android:fontFamily="@font/product_sans_regular"
+                                    android:textAppearance="?attr/textAppearanceBody2"
+                                    android:textColor="?android:attr/textColorSecondary" />
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Long default text for you project.  Long continuation of the description. Мой уровень английского не позволяет сделать мне более длинный текст на английском, поэтому продолжу на русском чтобы текст описания выглядил более объёмно. "
+                                    android:textSize="16sp"
+                                    android:textColor="#3D3D3D"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/product_sans_regular"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
+                                    android:textSize="15sp"
+                                    android:textColor="#1E3F92"
+                                    android:fontFamily="@font/product_sans_regular"
+                                    android:layout_marginTop="15dp" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" >
+
+                                    <ImageView
+                                        android:id="@+id/icon_likes1"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginStart="16dp"
+                                        android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                    <TextView
+                                        android:id="@+id/val_likes1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="534"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:layout_toEndOf="@id/icon_likes1"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_centerVertical="true"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon_comment_1"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/chat"
+                                        android:layout_toEndOf="@id/val_likes1"
+                                        android:layout_marginStart="26dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="143"
+                                        android:layout_toEndOf="@id/icon_comment_1"
+                                        android:layout_marginStart="8dp"
+                                        android:textSize="15sp"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:textColor="@color/black"
+                                        android:layout_centerVertical="true" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <Button
+                                        android:id="@+id/share_btn1"
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="Share"
+                                        android:textColor="#4A4A4A"
+                                        android:textAllCaps="false"
+                                        android:textSize="14sp"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        app:icon="@drawable/ic_outline_share_blue"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                    <Button
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:layout_toEndOf="@id/share_btn1"
+                                        android:layout_marginStart="18dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:text="Edit project"
+                                        android:textColor="#4A4A4A"
+                                        android:textAllCaps="false"
+                                        android:textSize="14sp"                                        app:icon="@drawable/ic_outline_edit_blue"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Others Projects"
+                        android:textColor="#000000"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginTop="15sp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/product_sans_bold"/>
+
+                </RelativeLayout>
+
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card2"
+                            android:layout_width="305dp"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="4dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_margin="8dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="135dp"
+                                    android:src="@drawable/default_2"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mobile Frimework"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginStart="8dp"
+                                        android:fontFamily="@font/product_sans_black"
+                                        android:textStyle="bold"
+                                        android:textSize="22sp"
+                                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"/>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" >
+
+                                        <ImageView
+                                            android:id="@+id/icon_likes2"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginStart="8dp"
+                                            android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                        <TextView
+                                            android:id="@+id/val_likes2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="4.3k"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:layout_toEndOf="@id/icon_likes2"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_centerVertical="true"/>
+
+                                        <ImageView
+                                            android:id="@+id/icon_comment_2"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:src="@drawable/chat"
+                                            android:layout_toEndOf="@id/val_likes2"
+                                            android:layout_marginStart="26dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2.7k Comments"
+                                            android:layout_toEndOf="@id/icon_comment_2"
+                                            android:layout_marginStart="8dp"
+                                            android:textSize="15sp"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:textColor="@color/black"
+                                            android:layout_centerVertical="true" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" >
+
+                                        <Button
+                                            android:id="@+id/share_btn2"
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:fontFamily="@font/google_sans_medium"
+                                            android:text="Share"
+                                            android:textColor="#4A4A4A"
+                                            android:textAllCaps="false"
+                                            android:textSize="13sp"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            app:icon="@drawable/ic_outline_share_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                        <Button
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:layout_toEndOf="@id/share_btn2"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:text="Edit Project"
+                                            android:textAllCaps="false"
+                                            android:textColor="#4A4A4A"
+                                            android:textSize="13sp"
+                                            app:icon="@drawable/ic_outline_edit_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card3"
+                            android:layout_width="305dp"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="4dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_toEndOf="@+id/card2"
+                            android:layout_margin="8dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="135dp"
+                                    android:src="@drawable/default_2"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Infection Monkey"
+                                        android:layout_marginTop="12dp"
+                                        android:layout_marginStart="8dp"
+                                        android:fontFamily="@font/product_sans_black"
+                                        android:textStyle="bold"
+                                        android:textSize="22sp"
+                                        android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"/>
+
+
+                                </LinearLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" >
+
+                                        <ImageView
+                                            android:id="@+id/icon_likes3"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginStart="8dp"
+                                            android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                        <TextView
+                                            android:id="@+id/val_likes3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="4.3k"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:layout_toEndOf="@id/icon_likes3"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_centerVertical="true"/>
+
+                                        <ImageView
+                                            android:id="@+id/icon_comment_3"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:src="@drawable/chat"
+                                            android:layout_toEndOf="@id/val_likes3"
+                                            android:layout_marginStart="26dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2.7k Comments"
+                                            android:layout_toEndOf="@id/icon_comment_3"
+                                            android:layout_marginStart="8dp"
+                                            android:textSize="15sp"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:textColor="@color/black"
+                                            android:layout_centerVertical="true" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" >
+
+                                        <Button
+                                            android:id="@+id/share_btn3"
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:fontFamily="@font/google_sans_medium"
+                                            android:text="Share"
+                                            android:textColor="#4A4A4A"
+                                            android:textAllCaps="false"
+                                            android:textSize="13sp"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            app:icon="@drawable/ic_outline_share_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                        <Button
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:layout_toEndOf="@id/share_btn3"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:text="Edit Project"
+                                            android:textAllCaps="false"
+                                            android:textColor="#4A4A4A"
+                                            android:textSize="13sp"
+                                            app:icon="@drawable/ic_outline_edit_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card4"
+                            android:layout_width="305dp"
+                            android:layout_height="wrap_content"
+                            app:cardElevation="4dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_toEndOf="@+id/card3"
+                            android:layout_margin="8dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:focusable="true" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="135dp"
+                                    android:src="@drawable/default_3"
+                                    android:scaleType="centerCrop" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" >
+
+                                        <TextView
+                                            android:id="@+id/title1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Java Framework"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginStart="8dp"
+                                            android:fontFamily="@font/product_sans_black"
+                                            android:textStyle="bold"
+                                            android:textSize="22sp"
+                                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                                        <ImageView
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_toEndOf="@id/title1"
+                                            android:layout_marginTop="12dp"
+                                            android:layout_marginStart="8dp"
+                                            android:src="@drawable/ic_outline_lock_24"
+                                            />
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginEnd="8dp"/>
+
+
+                                </LinearLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="7dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" >
+
+                                        <ImageView
+                                            android:id="@+id/icon_likes4"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:layout_marginStart="8dp"
+                                            android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                        <TextView
+                                            android:id="@+id/val_likes4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="4.3k"
+                                            android:textSize="15sp"
+                                            android:textColor="@color/black"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:layout_toEndOf="@id/icon_likes4"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_centerVertical="true"/>
+
+                                        <ImageView
+                                            android:id="@+id/icon_comment_4"
+                                            android:layout_width="25dp"
+                                            android:layout_height="25dp"
+                                            android:src="@drawable/chat"
+                                            android:layout_toEndOf="@id/val_likes4"
+                                            android:layout_marginStart="26dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="2.7k Comments"
+                                            android:layout_toEndOf="@id/icon_comment_4"
+                                            android:layout_marginStart="8dp"
+                                            android:textSize="15sp"
+                                            android:fontFamily="@font/product_sans_regular"
+                                            android:textColor="@color/black"
+                                            android:layout_centerVertical="true" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" >
+
+                                        <Button
+                                            android:id="@+id/share_btn4"
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:fontFamily="@font/google_sans_medium"
+                                            android:text="Share"
+                                            android:textColor="#4A4A4A"
+                                            android:textAllCaps="false"
+                                            android:textSize="13sp"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            app:icon="@drawable/ic_outline_share_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                        <Button
+                                            android:layout_width="140dp"
+                                            android:layout_height="55dp"
+                                            android:layout_toEndOf="@id/share_btn4"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginBottom="16dp"
+                                            android:text="Edit Project"
+                                            android:textAllCaps="false"
+                                            android:textColor="#4A4A4A"
+                                            android:textSize="13sp"
+                                            app:icon="@drawable/ic_outline_edit_blue"
+                                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </LinearLayout>
         </androidx.core.widget.NestedScrollView>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>
