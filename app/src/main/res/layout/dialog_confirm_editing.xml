@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Внимание"
+            android:textSize="22sp"
+            android:fontFamily="@font/product_sans_bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вы изменили даные. Вы уверенны, что хотите сохранить измененые данные?"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/cont_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="продолжить"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textColor="#FF5656"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/cancle_editing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="отмена"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/cont_btn" />
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

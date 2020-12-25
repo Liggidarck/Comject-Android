@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentsActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_kal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:src="@drawable/main_kate_ava"
+                        app:civ_border_width="0dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/name_card_eee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kate Sheptukhina"
+                        android:layout_toEndOf="@id/profile_image"
+                        android:fontFamily="@font/product_sans_bold"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/namespace_card_eee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="_kate_sheee_"
+                        android:layout_toEndOf="@id/profile_image"
+                        android:layout_below="@id/name_card_eee"
+                        android:layout_marginStart="10dp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    android:src="@drawable/default_2"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Title goes here"
+                        android:fontFamily="@font/product_sans_black"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#Информатика #Программирование #IT #Мобильное Приложение #что-тоЕще"
+                        android:textColor="#1E3F92"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/product_sans_medium" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <ImageView
+                            android:id="@+id/icon_likes1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                        <TextView
+                            android:id="@+id/val_likes1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5.4k"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:layout_toEndOf="@id/icon_likes1"
+                            android:layout_marginStart="8dp"
+                            android:layout_centerVertical="true"/>
+
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:src="@drawable/line_gray_dark"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.7k COMMENTS"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image_comment"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/ava_me"
+                                app:civ_border_width="0dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/name_card_comment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="George Filatov"
+                                android:layout_toEndOf="@id/profile_image_comment"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/namespace_card_comment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="liggidarck"
+                                android:layout_toEndOf="@id/profile_image_comment"
+                                android:layout_below="@id/name_card_comment"
+                                android:layout_marginStart="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="22 hours ago"
+                                android:layout_toEndOf="@+id/name_card_comment"
+                                android:layout_marginTop="19dp"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/product_sans_light"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_favorite_border_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Дефолтный текст комментрия"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ответить"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="10dp"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textColor="#858585"/>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="15dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image_comment_2"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:src="@drawable/ava_agamir"
+                                app:civ_border_width="0dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"/>
+
+                            <TextView
+                                android:id="@+id/name_card_comment_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="File Owl"
+                                android:layout_toEndOf="@id/profile_image_comment_2"
+                                android:fontFamily="@font/product_sans_bold"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginStart="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:id="@+id/namespace_card_comment_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="thefireowl"
+                                android:layout_toEndOf="@id/profile_image_comment_2"
+                                android:layout_below="@id/name_card_comment_2"
+                                android:layout_marginStart="10dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2 day ago"
+                                android:layout_toEndOf="@+id/name_card_comment_2"
+                                android:layout_marginTop="19dp"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/product_sans_light"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_favorite_border_24"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Дефолтный текст комментрия"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="5dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ответить"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="10dp"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textColor="#858585"/>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar_message_main"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_blue"
+                android:elevation="4dp"
+                style="@style/Widget.MaterialComponents.Toolbar.Surface"
+                app:title="Post">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/add_element_messeger"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_baseline_control_point_24"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/EditText_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:hint="Comment"
+                    android:background="@null"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/send_message"
+                    android:layout_toEndOf="@+id/add_element_messeger" />
+
+                <ImageView
+                    android:id="@+id/send_message"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_send_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp" />
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

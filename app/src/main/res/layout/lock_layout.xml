@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/like_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_outline_lock_24"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/val_likes5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/like_icon"
+            android:text="My personal project (Private)"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+</RelativeLayout>

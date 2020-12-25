@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose category"
+                android:textColor="@color/black"
+                android:fontFamily="@font/product_sans_black"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/pupil_ralative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true" >
+
+            <ImageView
+                android:id="@+id/icon_pupil_login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_outline_school_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pupil"
+                android:layout_toEndOf="@+id/icon_pupil_login"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/teacher_relative_dilaog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/icon_teacher_login"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_outline_people_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teather"
+                android:layout_toEndOf="@+id/icon_teacher_login"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/cancel_dialog_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cancel"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                style="?attr/materialButtonOutlinedStyle" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

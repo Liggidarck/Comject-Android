@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fluentui_launch_logo_bottom_spacing">30dp</dimen>
+</resources>

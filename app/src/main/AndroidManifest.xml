@@ -8,16 +8,50 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjectDevil">
-        <activity android:name=".NewProjectImagesActivity"></activity>
+        android:theme="@style/ProjectDevil">
+        <activity android:name=".ForgotPasswordACtivity"></activity>
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".AddTaskNoteActivity" />
+        <activity android:name=".AddTaskActivity" />
+        <activity android:name=".MyTasksActivity" />
+        <activity android:name=".CommentsActivity" />
+        <activity android:name=".InformationFromTeacherActivity" />
+        <activity android:name=".AddNoteChange" />
+        <activity android:name=".AddChange" />
+        <activity android:name=".AddNoteIssue" />
+        <activity android:name=".AddIssue" />
+        <activity android:name=".ChangesActivity" />
+        <activity android:name=".IsuuesActivity" />
+        <activity android:name=".PostProjectActivity" />
+        <activity android:name=".PrivatePublicProjectActivity" />
+        <activity android:name=".FollowingFollowersActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".FindMoreImagesActivity" />
+        <activity android:name=".RegistarionPupilActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".EditProjectImagesActivity" />
+        <activity android:name=".EditProjectActivity" />
+        <activity android:name=".MainProjectActivity" />
+        <activity
+            android:name=".AddNoteActivity" />
+        <activity android:name=".NewProjectImagesActivity" />
         <activity android:name=".NewProjectActivity" />
-        <activity android:name=".MainActivity">
+
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/ProjectDevil.Launcher">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

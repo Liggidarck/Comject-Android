@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_share"
+        android:title="Share"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_copy_name_proj"
+        android:title="Copy name project"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/item_copy_description_proj"
+        android:title="Copy description project"
+        app:showAsAction="never" />
+
+</menu>

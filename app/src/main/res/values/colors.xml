@@ -14,4 +14,6 @@
 
     <color name="blue_primary_variant">#346ec7</color>
 
+    <color name="status_bar_color_profile">#45BFDF</color>
+
 </resources>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainProjectActivity" >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_title_project_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gradient Notes"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/main_description_project_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="Long default text for you project.  Long continuation of the description. Мой уровень английского не позволяет сделать мне более длинный текст на английском, поэтому продолжу на русском чтобы текст описания выглядил более объёмно."
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/main_hastags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
+                android:textColor="#1E3F92"
+                android:textSize="14sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="12dp" />
+
+            <FrameLayout
+                android:id="@+id/private_public_fragme_main_proj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/publish_main_prokect"
+                    android:layout_width="175dp"
+                    android:layout_height="55dp"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Publish"
+                    android:textColor="#4A4A4A"
+                    android:textAllCaps="false"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="10dp"
+                    app:icon="@drawable/ic_outline_add_circle_outline_24"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                <Button
+                    android:id="@+id/edit_main_project"
+                    android:layout_width="175dp"
+                    android:layout_height="55dp"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Edit Project"
+                    android:textColor="#4A4A4A"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentEnd="true"
+                    app:icon="@drawable/ic_outline_edit_blue"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/line_gray_dark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/issues_layou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/red_issues"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/red_rectangle" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_outline_report_problem_24"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Issues"
+                        android:layout_toEndOf="@+id/red_issues"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/changes_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/violet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/violet_rectangle" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_outline_timeline_24"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Changes"
+                        android:layout_toEndOf="@+id/violet"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/information_teather_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/greeen_rectangle" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_outline_info_24"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Information from teacher"
+                        android:layout_toEndOf="@+id/green"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/line_gray_dark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/comments_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/orange_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/orange_rectangle" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/ic_outline_comment_24"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Comments"
+                        android:layout_toEndOf="@+id/orange_comment"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/hashtah_layour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/blue_hashtag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/blue_recangle" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/has"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hashtags"
+                        android:layout_toEndOf="@+id/blue_hashtag"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="#F1F5FF" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/main_title_prokect_secondaty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gradient Notes"
+                android:fontFamily="@font/google_sans_medium"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp" >
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/default_1"
+                        android:scaleType="centerCrop" />
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/main_description_proj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#F1F5FF" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        app:liftOnScroll="true"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:expandedTitleMarginStart="50dp"
+            app:expandedTitleMarginBottom="28dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:contentScrim="?attr/colorPrimary"
+            app:statusBarScrim="?attr/colorPrimaryVariant"
+            app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Collapsed"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar_main_proj"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="My Project"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                app:layout_collapseMode="pin"
+                android:background="@android:color/transparent" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

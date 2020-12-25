@@ -131,7 +131,7 @@
                         android:layout_marginStart="15sp" />
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/textField_activnost"
+                        android:id="@+id/textField_topic_new"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Project Topic"
@@ -145,6 +145,7 @@
 
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/topic_auto_new_proj"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"                            android:focusable="false"
                             android:inputType="none"
@@ -192,6 +193,7 @@
                         android:fontFamily="@font/product_sans_medium" />
 
                     <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchPrivate_proj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"

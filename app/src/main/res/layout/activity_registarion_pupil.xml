@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistarionPupilActivity" >
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_kal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_name_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_person_24"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_name_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_name_regis_pupil"
+                        android:hint="Your name"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textPersonName"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_username_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_username_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_username_regis_pupil"
+                        android:hint="Username"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="20dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textPersonName"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icon_topik_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_science_24"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"  />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_topic_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Topic"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_toEndOf="@id/icon_topik_regis_pupil"
+                        app:endIconMode="dropdown_menu"
+                        app:errorEnabled="true"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >
+
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/topic_auto_regis_pupil_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:fontFamily="@font/product_sans_medium"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_email_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_email_24"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_email_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_email_regis_pupil"
+                        android:hint="E-mail"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textEmailAddress"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_city_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_place_24"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp"  />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_city_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_city_regis_pupil"
+                        android:hint="City"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textCapWords" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_school_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_backpack_24"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_school_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_school_regis_pupil"
+                        android:hint="School"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_grade_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_grade_regis_pupil"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_grade_regis_pupil"
+                        android:hint="Grade"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textCapWords"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_bithday_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_outline_cake_24"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_bithday_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_bithday_regis_pupil"
+                        android:hint="Birthday"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="custom"
+                        app:endIconDrawable="@drawable/ic_outline_today_24"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/date_textView_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:focusable="false"
+                            android:inputType="none"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/icon_password_regis_pupil"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_password_regis_pupil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_password_regis_pupil"
+                        android:hint="Password"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:endIconMode="password_toggle"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:fontFamily="@font/product_sans_medium" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/reg_pupil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:text="CREATE ACCOUNT"
+                        android:layout_centerHorizontal="true"
+                        style="?attr/materialButtonOutlinedStyle" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="true"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar_reg_pupil"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Registration pupil"
+                app:titleTextColor="@android:color/white"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+                android:background="@android:color/transparent" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

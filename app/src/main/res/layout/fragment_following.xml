@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/newChatAvaLayout_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/newChatAva_5"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/ava_ulyana"
+                            app:civ_border_width="0dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/newChatAvaLayout_5"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_NewChat_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ulyana Brazhnik"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_NewChat_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="___uliano4ka___"
+                            android:layout_below="@id/name_NewChat_5" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:textAllCaps="false"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/newChatAvaLayout_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/newChatAva_4"
+                            android:layout_width="56dp"
+                            android:layout_height="56dp"
+                            android:elevation="3dp"
+                            android:src="@drawable/ava_stefa"
+                            app:civ_border_width="0dp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/newChatAvaLayout_4"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_NewChat_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Stefania Vasiliadi"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_NewChat_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="stefa__vasiliadi"
+                            android:layout_below="@id/name_NewChat_4" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Following"
+                        android:textAllCaps="false"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:textColor="@color/black"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5000dp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

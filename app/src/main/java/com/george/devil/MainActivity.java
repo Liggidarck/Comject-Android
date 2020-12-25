@@ -2,11 +2,15 @@ package com.george.devil;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -14,19 +18,30 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    double chekable_data, start_seesion, load_component;
+
     private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.ProjectDevil);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String name_user = sharedPreferences.getString("full_name", "empty_user_name");
+        if(name_user.equals("empty_user_name"))
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         if (savedInstanceState == null)
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragmentHome()).commit();
+
+        start_seesion = 4231.1;
+        load_component = 322;
 
     }
 
@@ -36,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 Fragment selectedFragment = null;
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        Log.i(TAG, "Fragment home started");
+                        chekable_data = start_seesion / load_component;
+                        Log.i(TAG, "Fragment home started Davy! current speed: " + Math.log(chekable_data));
                         selectedFragment = new fragmentHome();
                         break;
                     case R.id.nav_note:
@@ -61,4 +77,9 @@ public class MainActivity extends AppCompatActivity {
 
                 return true;
             };
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

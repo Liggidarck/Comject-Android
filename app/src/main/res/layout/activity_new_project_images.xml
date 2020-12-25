@@ -54,9 +54,9 @@
                     android:layout_height="wrap_content" >
 
                     <TextView
+                        android:id="@+id/project_main_name_images"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Project Name"
                         android:textSize="25sp"
                         android:fontFamily="@font/product_sans_bold"
                         android:textColor="@color/black"
@@ -98,6 +98,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <Button
+                    android:id="@+id/find_more_images_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="find more"
@@ -115,7 +116,7 @@
                     android:layout_marginEnd="8dp"/>
 
                 <EditText
-                    android:id="@+id/note_text"
+                    android:id="@+id/description_main_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="This will be the most important text for your project"

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@mipmap/backgraund_main" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's get \nstarted"
+        android:fontFamily="@font/product_sans_bold"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_login_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_centerVertical="true"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_login_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:layout_gravity="center"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_login_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:layout_below="@id/email_login_text_layout"
+        app:errorEnabled="true"
+        android:layout_centerVertical="true"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_login_edittex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_gravity="center"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password_login_text_layout"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/sign_in_btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:src="@drawable/login_btn"
+            android:layout_marginStart="130dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You don’t have eny account?"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/registr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/regist"
+                android:textColor="#569AFF"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

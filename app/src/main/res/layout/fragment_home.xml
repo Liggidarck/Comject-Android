@@ -14,6 +14,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
         android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="normal"
         app:tint="#FFFFFF" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -102,9 +103,10 @@
 
 
                                 <TextView
+                                    android:id="@+id/main_title_project"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Gradient Notes"
+                                    android:text="Title goes here"
                                     android:layout_marginTop="10dp"
                                     android:fontFamily="@font/google_sans_medium"
                                     android:textStyle="bold"
@@ -112,6 +114,7 @@
                                     android:textAppearance="?attr/textAppearanceHeadline6" />
 
                                 <TextView
+                                    android:id="@+id/main_username_project"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="2dp"
@@ -122,18 +125,18 @@
 
 
                                 <TextView
+                                    android:id="@+id/main_description_project"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Long default text for you project.  Long continuation of the description. Мой уровень английского не позволяет сделать мне более длинный текст на английском, поэтому продолжу на русском чтобы текст описания выглядил более объёмно. "
                                     android:textSize="16sp"
-                                    android:textColor="#3D3D3D"
                                     android:layout_marginTop="10dp"
                                     android:fontFamily="@font/product_sans_regular"/>
 
                                 <TextView
+                                    android:id="@+id/hastags_mail_proj_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
                                     android:textSize="15sp"
                                     android:textColor="#1E3F92"
                                     android:fontFamily="@font/product_sans_regular"
@@ -161,7 +164,7 @@
                                         android:id="@+id/val_likes1"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="534"
+                                        android:text="5.4k"
                                         android:textSize="15sp"
                                         android:textColor="@color/black"
                                         android:fontFamily="@font/product_sans_regular"
@@ -180,7 +183,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="143"
+                                        android:text="1.3 Comments"
                                         android:layout_toEndOf="@id/icon_comment_1"
                                         android:layout_marginStart="8dp"
                                         android:textSize="15sp"
@@ -196,30 +199,30 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
 
-
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent" >
 
                                     <Button
-                                        android:id="@+id/share_btn1"
+                                        android:id="@+id/publish_main_project_brn"
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
                                         android:fontFamily="@font/google_sans_medium"
-                                        android:text="Share"
+                                        android:text="Publish"
                                         android:textColor="#4A4A4A"
                                         android:textAllCaps="false"
                                         android:textSize="14sp"
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
-                                        app:icon="@drawable/ic_outline_share_blue"
+                                        app:icon="@drawable/publish_project"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                     <Button
+                                        android:id="@+id/edit_main_project_card_btn"
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
-                                        android:layout_toEndOf="@id/share_btn1"
+                                        android:layout_toEndOf="@id/publish_main_project_brn"
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
@@ -234,6 +237,7 @@
                             </LinearLayout>
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -244,14 +248,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="My Others Projects"
-                        android:textColor="#000000"
+                        android:textColor="@color/black"
                         android:layout_marginStart="10sp"
                         android:layout_marginTop="15sp"
                         android:textSize="20sp"
                         android:fontFamily="@font/product_sans_bold"/>
 
                 </RelativeLayout>
-
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -280,7 +283,7 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    android:layout_height="135dp"
+                                    android:layout_height="145dp"
                                     android:src="@drawable/default_2"
                                     android:scaleType="centerCrop" />
 
@@ -292,7 +295,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Mobile Frimework"
+                                        android:text="Title goes here"
                                         android:layout_marginTop="12dp"
                                         android:layout_marginStart="8dp"
                                         android:fontFamily="@font/product_sans_black"
@@ -376,14 +379,14 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Share"
+                                            android:text="Publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            app:icon="@drawable/ic_outline_share_blue"
+                                            app:icon="@drawable/publish_project"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                         <Button
@@ -396,7 +399,7 @@
                                             android:text="Edit Project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
-                                            android:textSize="13sp"
+                                            android:textSize="12sp"
                                             app:icon="@drawable/ic_outline_edit_blue"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
@@ -426,8 +429,8 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    android:layout_height="135dp"
-                                    android:src="@drawable/default_2"
+                                    android:layout_height="145dp"
+                                    android:src="@drawable/default_4"
                                     android:scaleType="centerCrop" />
 
                                 <LinearLayout
@@ -438,7 +441,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Infection Monkey"
+                                        android:text="Title goes here"
                                         android:layout_marginTop="12dp"
                                         android:layout_marginStart="8dp"
                                         android:fontFamily="@font/product_sans_black"
@@ -524,14 +527,14 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Share"
+                                            android:text="Publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            app:icon="@drawable/ic_outline_share_blue"
+                                            app:icon="@drawable/publish_project"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                         <Button
@@ -544,7 +547,7 @@
                                             android:text="Edit Project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
-                                            android:textSize="13sp"
+                                            android:textSize="12sp"
                                             app:icon="@drawable/ic_outline_edit_blue"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
@@ -573,7 +576,7 @@
 
                                 <ImageView
                                     android:layout_width="match_parent"
-                                    android:layout_height="135dp"
+                                    android:layout_height="145dp"
                                     android:src="@drawable/default_3"
                                     android:scaleType="centerCrop" />
 
@@ -590,7 +593,7 @@
                                             android:id="@+id/title1"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Java Framework"
+                                            android:text="Title goes here"
                                             android:layout_marginTop="12dp"
                                             android:layout_marginStart="8dp"
                                             android:fontFamily="@font/product_sans_black"
@@ -604,8 +607,7 @@
                                             android:layout_toEndOf="@id/title1"
                                             android:layout_marginTop="12dp"
                                             android:layout_marginStart="8dp"
-                                            android:src="@drawable/ic_outline_lock_24"
-                                            />
+                                            android:src="@drawable/ic_outline_lock_24" />
 
                                     </RelativeLayout>
 
@@ -688,14 +690,14 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Share"
+                                            android:text="Publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            app:icon="@drawable/ic_outline_share_blue"
+                                            app:icon="@drawable/publish_project"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                         <Button
@@ -708,7 +710,7 @@
                                             android:text="Edit Project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
-                                            android:textSize="13sp"
+                                            android:textSize="12sp"
                                             app:icon="@drawable/ic_outline_edit_blue"
                                             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
@@ -717,9 +719,10 @@
                                 </LinearLayout>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
-                    </RelativeLayout>
-                </HorizontalScrollView>
 
+                    </RelativeLayout>
+
+                </HorizontalScrollView>
 
                 <View
                     android:layout_width="match_parent"

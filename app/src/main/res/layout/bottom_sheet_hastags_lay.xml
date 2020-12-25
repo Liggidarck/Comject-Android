@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="3dp"
+        android:src="@drawable/line_gray_dark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/text_hatsk_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#1E3F92"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
+
+    <Button
+        android:id="@+id/btn_edit_chas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_outline_edit_blue"
+        android:text="edit chastags"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_below="@id/text_hatsk_sheet"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn_edit_chas" />
+
+</RelativeLayout>

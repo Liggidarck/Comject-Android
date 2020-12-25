@@ -6,48 +6,59 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_note"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
         android:src="@drawable/ic_baseline_add_24"
-        app:tint="#FFFFFF" />
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/empty_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/empty_image"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_outline_class_gray"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/topAppBar_note"
-                style="@style/Widget.MaterialComponents.Toolbar.Primary"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:title="Notebook" />
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#4B4B4B"
+            android:textSize="20sp"
+            android:fontFamily="@font/product_sans_bold"
+            android:text="Your notes will be here"
+            android:layout_below="@id/empty_image"/>
 
-        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_notebook"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Notebook"
+        style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp">
+    <ListView
+        android:id="@+id/notebook_list"
+        android:layout_below="@id/toolbar_notebook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-
-
-            </RelativeLayout>
-
-
-        </androidx.core.widget.NestedScrollView>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>

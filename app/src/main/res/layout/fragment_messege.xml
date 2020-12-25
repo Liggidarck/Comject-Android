@@ -1,43 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
-    <com.google.android.material.appbar.AppBarLayout
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_chat_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_outline_edit_blue"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent" >
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar_message"
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="Chats"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary" />
+            android:layout_height="wrap_content" >
 
-    </com.google.android.material.appbar.AppBarLayout>
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar_message"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Chats"
+                android:elevation="4dp"
+                style="@style/Widget.MaterialComponents.Toolbar.Surface" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/fist_layout_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/profile_image_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" >
 
 
-            </RelativeLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="56dp"
+                            android:layout_height="56dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/main_kate_ava"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:layout_marginEnd="4dp"
+                                android:src="#1B76FF"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="2.5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/profile_image_2"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_chat_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kate Sheptukhina"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_chat_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="_kate_sheee_"
+                            android:layout_below="@id/name_chat_1" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:src="@drawable/line_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@id/profile_image_2"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_3"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:civ_border_width="0dp"
+                        android:src="@drawable/anton_ava"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/profile_image_3"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_chat_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Anton Rovenko"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_chat_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teatcher"
+                            android:layout_below="@id/name_chat_3" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:src="@drawable/line_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@id/profile_image_3"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_4"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:civ_border_width="0dp"
+                        android:src="@drawable/ava_agamir"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/profile_image_4"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_chat_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fire Owl"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_chat_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="thefireowl"
+                            android:layout_below="@id/name_chat_4" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:src="@drawable/line_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@id/profile_image_4"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image_5"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:civ_border_width="0dp"
+                        android:src="@drawable/ava_me"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="3dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/profile_image_5"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/name_chat_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="George Filatov"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/username_chat_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="liggidarck"
+                            android:layout_below="@id/name_chat_5" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="3sp"
+                        android:src="@drawable/line_gray"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toEndOf="@id/profile_image_5"/>
+
+                </RelativeLayout>
 
 
 
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
