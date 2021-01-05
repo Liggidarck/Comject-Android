@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddChange">
+    tools:context=".Activitys.Changes.AddChange">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
 
 
                     <EditText
-                        android:id="@+id/name_issue"
+                        android:id="@+id/name_change"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
@@ -85,6 +85,7 @@
                                 android:layout_marginBottom="10dp"/>
 
                             <EditText
+                                android:id="@+id/edit_text_due_day_change"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:hint="Add due date"
@@ -120,6 +121,7 @@
 
 
                             <TextView
+                                android:id="@+id/text_note_change"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Add note"
@@ -149,6 +151,7 @@
             android:layout_height="wrap_content" >
 
             <TextView
+                android:id="@+id/edit_date_change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Последнее изменение: 11.12 в 00:43"

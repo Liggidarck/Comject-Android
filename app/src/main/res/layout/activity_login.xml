@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".Activitys.Main.LoginActivity"
     android:background="@mipmap/backgraund_main" >
 
     <TextView
@@ -111,9 +111,5 @@
                 android:textSize="16sp"/>
 
         </LinearLayout>
-
-
     </RelativeLayout>
-
-
 </RelativeLayout>

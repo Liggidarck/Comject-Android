@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoteChange">
+    tools:context=".Activitys.Changes.AddNoteChange">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar_add_note_change_new"

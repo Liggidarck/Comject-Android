@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddIssue">
+    tools:context=".Activitys.Issues.AddIssue">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -159,6 +159,7 @@
 
 
                             <TextView
+                                android:id="@+id/text_note_issue"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Add note"
@@ -198,6 +199,7 @@
                 android:layout_centerInParent="true" />
 
             <ImageView
+                android:id="@+id/delete_isseue"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:padding="11dp"

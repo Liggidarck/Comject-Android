@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChangesActivity">
+    tools:context=".Activitys.Changes.ChangesActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_chage"
@@ -53,7 +53,7 @@
         style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
     <ListView
-        android:id="@+id/notebook_list"
+        android:id="@+id/changes_list"
         android:layout_below="@id/toolbar_changes"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

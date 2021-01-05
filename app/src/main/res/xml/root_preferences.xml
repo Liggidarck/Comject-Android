@@ -1,0 +1,13 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <PreferenceCategory android:title="General">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="delet_bool"
+            android:title="Confirm before deleting" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

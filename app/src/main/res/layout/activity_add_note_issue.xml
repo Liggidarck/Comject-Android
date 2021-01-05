@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoteIssue">
+    tools:context=".Activitys.Issues.AddNoteIssue">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar_add_note_issue_new"
@@ -25,7 +25,7 @@
         android:layout_below="@id/topAppBar_add_note_issue_new">
 
         <EditText
-            android:id="@+id/note_text"
+            android:id="@+id/note_issue_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="top|left"

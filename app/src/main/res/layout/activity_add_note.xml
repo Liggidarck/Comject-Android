@@ -4,7 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNoteActivity" >
+    tools:context=".Activitys.Notebook.AddNoteActivity" >
+
+    <View
+        android:id="@+id/theme_view_add_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topAppBar_add_note"
+        android:layout_above="@+id/more_bottom" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar_add_note"

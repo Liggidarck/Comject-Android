@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.george.devil">
+    package="com.george.devil" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -9,49 +11,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/ProjectDevil">
-        <activity android:name=".ForgotPasswordACtivity"></activity>
-        <activity android:name=".ChangePasswordActivity" />
-        <activity android:name=".AddTaskNoteActivity" />
-        <activity android:name=".AddTaskActivity" />
-        <activity android:name=".MyTasksActivity" />
-        <activity android:name=".CommentsActivity" />
-        <activity android:name=".InformationFromTeacherActivity" />
-        <activity android:name=".AddNoteChange" />
-        <activity android:name=".AddChange" />
-        <activity android:name=".AddNoteIssue" />
-        <activity android:name=".AddIssue" />
-        <activity android:name=".ChangesActivity" />
-        <activity android:name=".IsuuesActivity" />
-        <activity android:name=".PostProjectActivity" />
-        <activity android:name=".PrivatePublicProjectActivity" />
-        <activity android:name=".FollowingFollowersActivity" />
-        <activity android:name=".EditProfileActivity" />
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".FindMoreImagesActivity" />
-        <activity android:name=".RegistarionPupilActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".EditProjectImagesActivity" />
-        <activity android:name=".EditProjectActivity" />
-        <activity android:name=".MainProjectActivity" />
+        <activity android:name=".Activitys.Main.Pupil.SettingsActivity"/>
+        <activity android:name=".Activitys.Main.Pupil.ForgotPasswordActivity" />
+        <activity android:name=".Activitys.Main.Pupil.ChangePasswordActivity" />
+        <activity android:name=".Activitys.Tasks.AddTaskNoteActivity" />
+        <activity android:name=".Activitys.Tasks.AddTaskActivity" />
+        <activity android:name=".Activitys.Tasks.MyTasksActivity" />
+        <activity android:name=".Activitys.Main.Pupil.CommentsActivity" />
+        <activity android:name=".Activitys.Projects.InformationFromTeacherActivity" />
+        <activity android:name=".Activitys.Changes.AddNoteChange" />
+        <activity android:name=".Activitys.Changes.AddChange" />
+        <activity android:name=".Activitys.Issues.AddNoteIssue" />
+        <activity android:name=".Activitys.Issues.AddIssue" />
+        <activity android:name=".Activitys.Changes.ChangesActivity" />
+        <activity android:name=".Activitys.Issues.IsuuesActivity" />
+        <activity android:name=".Activitys.Projects.PostProjectActivity" />
+        <activity android:name=".Activitys.Projects.PrivatePublicProjectActivity" />
+        <activity android:name=".Activitys.Main.Pupil.FollowingFollowersActivity" />
+        <activity android:name=".Activitys.Main.Pupil.EditProfileActivity" />
+        <activity android:name=".Activitys.Main.Pupil.MessageActivity" />
+        <activity android:name=".Activitys.Projects.FindMoreImagesActivity" />
+        <activity android:name=".Activitys.Main.Registration.RegistarionPupilActivity" />
+        <activity android:name=".Activitys.Main.LoginActivity" />
+        <activity android:name=".Activitys.Projects.EditProjectImagesActivity" />
+        <activity android:name=".Activitys.Projects.EditProjectActivity" />
+        <activity android:name=".Activitys.Projects.MainProjectActivity" />
+        <activity android:name=".Activitys.Notebook.AddNoteActivity" />
+        <activity android:name=".Activitys.Projects.NewProjectImagesActivity" />
+        <activity android:name=".Activitys.Projects.NewProjectActivity" />
         <activity
-            android:name=".AddNoteActivity" />
-        <activity android:name=".NewProjectImagesActivity" />
-        <activity android:name=".NewProjectActivity" />
-
-
-        <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.Main.Pupil.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/ProjectDevil.Launcher">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>
