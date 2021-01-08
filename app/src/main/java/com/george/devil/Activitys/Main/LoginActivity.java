@@ -14,8 +14,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.george.devil.Activitys.Main.Pupil.MainActivity;
+import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.Activitys.Main.Registration.RegistarionPupilActivity;
+import com.george.devil.Activitys.Main.Registration.RegistrationTeatherActivity;
 import com.george.devil.R;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
@@ -62,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 editor.apply();
 
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, MainActivityPupil.class));
             }
 
         });
@@ -104,15 +105,10 @@ public class LoginActivity extends AppCompatActivity {
         next.setOnClickListener(v -> dialog.dismiss());
 
         RelativeLayout pupil_ralative_layout = dialog.findViewById(R.id.pupil_ralative_layout);
-        pupil_ralative_layout.setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, RegistarionPupilActivity.class));
-        });
+        pupil_ralative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistarionPupilActivity.class)));
 
         RelativeLayout teacher_relative_layout = dialog.findViewById(R.id.teacher_relative_dilaog);
-        teacher_relative_layout.setOnClickListener(v -> {
-            Snackbar.make(v, "Teacher нажат", Snackbar.LENGTH_SHORT)
-                    .setAction("done", null).show();
-        });
+        teacher_relative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistrationTeatherActivity.class)));
 
         dialog.show();
     }

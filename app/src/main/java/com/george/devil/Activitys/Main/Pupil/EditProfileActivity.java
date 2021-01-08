@@ -209,7 +209,7 @@ public class EditProfileActivity extends AppCompatActivity {
                 sharedPreferences.edit().putString("grade", grade_chek).apply();
                 sharedPreferences.edit().putString("birthday", birthday_chek).apply();
 
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(this, MainActivityPupil.class);
                 startActivity(intent);
 
             }
@@ -295,7 +295,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     sharedPreferences.edit().putString("grade", grade_chek).apply();
                     sharedPreferences.edit().putString("birthday", birthday_chek).apply();
 
-                    Intent intent = new Intent(this, MainActivity.class);
+                    Intent intent = new Intent(this, MainActivityPupil.class);
                     startActivity(intent);
 
                 });

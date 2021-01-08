@@ -17,6 +17,7 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_outline_filter_alt_white"
                 app:title="Explore" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -86,6 +87,26 @@
                                     android:layout_toEndOf="@id/profile_image"
                                     android:layout_below="@id/name_card_eee"
                                     android:layout_marginStart="10dp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/circle_border"
+                                    android:layout_width="4dp"
+                                    android:layout_height="4dp"
+                                    android:layout_toEndOf="@+id/name_card_eee"
+                                    android:src="@color/black"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginStart="10dp" />
+
+                                <Button
+                                    android:id="@+id/subscribe_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_toEndOf="@+id/circle_border"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginStart="3dp"
+                                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                                    android:text="Subscribe"
+                                    android:textSize="11sp" />
 
                             </RelativeLayout>
 

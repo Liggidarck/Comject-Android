@@ -36,7 +36,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
 
     Calendar myCalendar;
 
-    private static final String TAG = "regPpil";
+    public static final String TAG = "RegistrationPupilActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

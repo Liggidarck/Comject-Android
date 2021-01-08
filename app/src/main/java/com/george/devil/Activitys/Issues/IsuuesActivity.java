@@ -12,6 +12,7 @@ import android.widget.SimpleCursorAdapter;
 
 import com.george.devil.DataBases.IssuesDataBase;
 import com.george.devil.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class IsuuesActivity extends AppCompatActivity {
@@ -23,11 +24,16 @@ public class IsuuesActivity extends AppCompatActivity {
     SimpleCursorAdapter userAdapter;
 
     ListView issuesList;
+    MaterialToolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_isuues);
+
+        toolbar = findViewById(R.id.toolbar_issues);
+
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         FloatingActionButton add = findViewById(R.id.add_issue);
         add.setOnClickListener(v -> startActivity(new Intent(IsuuesActivity.this, AddIssue.class)));

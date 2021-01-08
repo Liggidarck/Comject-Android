@@ -373,7 +373,7 @@
                 android:id="@+id/topAppBar_reg_pupil"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Registration pupil"
+                app:title="Registration Pupil"
                 app:titleTextColor="@android:color/white"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"

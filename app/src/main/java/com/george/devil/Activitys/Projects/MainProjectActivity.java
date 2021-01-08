@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.george.devil.Activitys.Changes.ChangesActivity;
 import com.george.devil.Activitys.Main.Pupil.CommentsActivity;
 import com.george.devil.Activitys.Issues.IsuuesActivity;
-import com.george.devil.Activitys.Main.Pupil.MainActivity;
+import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.BottomSheets.BottomSheetHastags;
 import com.george.devil.Fragments.Pupil.likes_fragment;
 import com.george.devil.Fragments.Pupil.lock_fragment;
@@ -38,7 +38,7 @@ public class MainProjectActivity extends AppCompatActivity {
 
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_main_proj);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(v -> startActivity(new Intent(MainProjectActivity.this, MainActivity.class)));
+        toolbar.setNavigationOnClickListener(v -> startActivity(new Intent(MainProjectActivity.this, MainActivityPupil.class)));
 
         Button edit_main_project = findViewById(R.id.edit_main_project);
         edit_main_project.setOnClickListener(v -> startActivity(new Intent(MainProjectActivity.this, EditProjectActivity.class)));
@@ -89,6 +89,6 @@ public class MainProjectActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(MainProjectActivity.this, MainActivity.class));
+        startActivity(new Intent(MainProjectActivity.this, MainActivityPupil.class));
     }
 }

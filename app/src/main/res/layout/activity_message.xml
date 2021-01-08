@@ -17,8 +17,6 @@
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-
-
         </androidx.core.widget.NestedScrollView>
 
         <com.google.android.material.appbar.AppBarLayout
@@ -43,9 +41,9 @@
                         android:layout_height="wrap_content">
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ava_mainMes"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
-                            android:src="@drawable/main_kate_ava"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -66,7 +64,7 @@
                         android:id="@+id/text_main_messege"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kate Sheptukhina"
+                        android:text="null"
                         android:layout_toEndOf="@+id/ava_messege_main"
                         android:textSize="20sp"
                         android:textColor="@color/black"

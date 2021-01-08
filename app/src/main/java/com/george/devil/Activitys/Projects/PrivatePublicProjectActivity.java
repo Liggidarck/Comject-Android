@@ -12,6 +12,7 @@ import com.george.devil.Activitys.Issues.IsuuesActivity;
 import com.george.devil.Activitys.Tasks.MyTasksActivity;
 import com.george.devil.BottomSheets.BottomSheetHastags;
 import com.george.devil.R;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public class PrivatePublicProjectActivity extends AppCompatActivity {
 
@@ -19,6 +20,9 @@ public class PrivatePublicProjectActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_private_public_project);
+
+        MaterialToolbar toolbar = findViewById(R.id.topAppBar_private_piblic_proj);
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         //Frame private_public_fragme | lock_lay | likes_lay
 

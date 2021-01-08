@@ -12,6 +12,7 @@ import android.widget.SimpleCursorAdapter;
 
 import com.george.devil.DataBases.ChangesDataBase;
 import com.george.devil.R;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ChangesActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class ChangesActivity extends AppCompatActivity {
     SimpleCursorAdapter userAdapter;
 
     ListView changesList;
+    MaterialToolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,9 @@ public class ChangesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_changes);
 
         changesList = findViewById(R.id.changes_list);
+        toolbar = findViewById(R.id.toolbar_changes);
+
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         changesList.setOnItemClickListener((parent, view1, position, id) -> {
             Intent intent = new Intent(getApplicationContext(), AddChange.class);

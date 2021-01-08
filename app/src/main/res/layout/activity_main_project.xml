@@ -67,7 +67,7 @@
                     android:textAllCaps="false"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="10dp"
-                    app:icon="@drawable/ic_outline_add_circle_outline_24"
+                    app:icon="@drawable/publish_project"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                 <Button

@@ -60,12 +60,12 @@
                         android:layout_width="175dp"
                         android:layout_height="55dp"
                         android:fontFamily="@font/google_sans_medium"
-                        android:text="Share"
+                        android:text="Publish"
                         android:textColor="#4A4A4A"
                         android:textAllCaps="false"
                         android:layout_marginStart="16dp"
                         android:layout_marginBottom="10dp"
-                        app:icon="@drawable/ic_outline_share_blue"
+                        app:icon="@drawable/publish_project"
                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                     <Button

@@ -20,7 +20,7 @@ import com.george.devil.Fragments.Pupil.fragmentProfile;
 import com.george.devil.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityPupil extends AppCompatActivity {
 
     double chekable_data, start_seesion, load_component;
 
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String name_user = sharedPreferences.getString("full_name", "empty_user_name");
         if(name_user.equals("empty_user_name"))
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(MainActivityPupil.this, LoginActivity.class));
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);

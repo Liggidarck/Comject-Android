@@ -30,6 +30,10 @@ public class AddChange extends AppCompatActivity {
     Cursor userCursor;
     long changesId = 0;
 
+    //TODO: Добавить возможность удаления элементов из базы данных Changes
+
+    //TODO: Добавить проверку на пустоту
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

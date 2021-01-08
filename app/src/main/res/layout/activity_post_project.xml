@@ -17,40 +17,71 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/layout_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp">
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" >
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/ava_post"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/main_kate_ava"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/text_main_messege"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kate Sheptukhina"
-                    android:layout_toEndOf="@+id/ava_post"
-                    android:textSize="20sp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/google_sans_medium"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp" >
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="_kate_sheee_"
-                    android:layout_toEndOf="@+id/ava_post"
-                    android:layout_below="@+id/text_main_messege"
-                    android:layout_marginStart="10dp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ava_post"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/main_kate_ava"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/text_main_profile_post_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kate Sheptukhina"
+                        android:layout_toEndOf="@+id/ava_post"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/google_sans_medium"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="_kate_sheee_"
+                        android:layout_toEndOf="@+id/ava_post"
+                        android:layout_below="@+id/text_main_profile_post_name"
+                        android:layout_marginStart="10dp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circle_border_post"
+                        android:layout_width="4dp"
+                        android:layout_height="4dp"
+                        android:src="@color/black"
+                        android:layout_toEndOf="@+id/text_main_profile_post_name"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="10dp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_toEndOf="@+id/circle_border_post"
+                        android:layout_marginTop="-3dp"
+                        android:layout_marginStart="2dp"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:text="Subscribe"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
             </RelativeLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"

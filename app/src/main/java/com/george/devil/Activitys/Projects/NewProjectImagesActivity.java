@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.george.devil.Activitys.Main.Pupil.MainActivity;
+import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
@@ -57,7 +57,7 @@ public class NewProjectImagesActivity extends AppCompatActivity {
              editor.putString("description_main", description_main);
              editor.apply();
 
-             startActivity(new Intent(NewProjectImagesActivity.this, MainActivity.class));
+             startActivity(new Intent(NewProjectImagesActivity.this, MainActivityPupil.class));
 
         });
 

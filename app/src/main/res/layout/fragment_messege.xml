@@ -124,8 +124,8 @@
 
                 </RelativeLayout>
 
-
                 <RelativeLayout
+                    android:id="@+id/second_layout_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -180,6 +180,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/fird_layout_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -233,8 +234,8 @@
 
                 </RelativeLayout>
 
-
                 <RelativeLayout
+                    android:id="@+id/four_layout_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"

@@ -23,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.settings_activity);
 
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_setting);
-        toolbar.setNavigationOnClickListener(v -> startActivity(new Intent(SettingsActivity.this, MainActivity.class)));
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()

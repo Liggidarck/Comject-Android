@@ -48,6 +48,7 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
         toolbar = findViewById(R.id.toolbar_tasks);
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         FloatingActionButton addTask = findViewById(R.id.add_task);
         addTask.setOnClickListener(v -> startActivity(new Intent(MyTasksActivity.this, AddTaskActivity.class)));

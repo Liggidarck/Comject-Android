@@ -22,7 +22,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.george.devil.Activitys.Main.Pupil.MainActivity;
+import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.BottomSheets.BottomSheetNotes;
 import com.george.devil.DataBases.NotesDatabase;
 import com.george.devil.R;
@@ -362,7 +362,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
     public void goHome(){
         db.close();
 
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivityPupil.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
 
@@ -378,7 +378,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
         String check_note = noteBox.getText().toString().trim();
 
         if(check_name.isEmpty() && check_note.isEmpty()) {
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent = new Intent(this, MainActivityPupil.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
             return false;
