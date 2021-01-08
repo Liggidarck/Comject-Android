@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -35,22 +38,30 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
     MaterialToolbar toolbar;
     private static final String TAG = "MyTaskActivity";
 
+    String themeChoosed = "Default";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_tasks);
 
-        //TODO: Доделать изменение темы. Нужно сделать сохранение состояния выбранной темы и отображение выбранной темы в BottomSheet
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+        themeChoosed =  prefs.getString("themeData", "Default");
+        Log.i(TAG, themeChoosed);
 
         TasksList = findViewById(R.id.list_tasks);
         theme_tasks = findViewById(R.id.theme_tasks);
-
         toolbar = findViewById(R.id.toolbar_tasks);
+        FloatingActionButton addTask = findViewById(R.id.add_task);
+
         toolbar.setTitleTextColor(Color.WHITE);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
-        FloatingActionButton addTask = findViewById(R.id.add_task);
+        ThemeChanged(themeChoosed);
+
         addTask.setOnClickListener(v -> startActivity(new Intent(MyTasksActivity.this, AddTaskActivity.class)));
 
         TasksList.setOnItemClickListener((parent, view1, position, id) -> {
@@ -109,60 +120,136 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
     @Override
     public void ThemeChoose(String tex) {
 
-        if(tex.equals("Default")){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = prefs.edit();
+
+        if(tex.equals("Default")) {
+            themeChoosed = "Default";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Red")) {
+            themeChoosed = "Red";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Orange")){
+            themeChoosed = "Orange";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Yellow")){
+            themeChoosed = "Yellow";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Green")){
+            themeChoosed = "Green";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Green Secondary")){
+            themeChoosed = "Green Secondary";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Light Blue")) {
+            themeChoosed = "Light Blue";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Blue")){
+            themeChoosed = "Blue";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Violet")){
+            themeChoosed = "Violet";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Pink")){
+            themeChoosed = "Pink";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        if(tex.equals("Gray")){
+            themeChoosed = "Gray";
+            editor.putString("themeData", themeChoosed);
+            ThemeChanged(themeChoosed);
+        }
+
+        editor.apply();
+
+    }
+
+    public void ThemeChanged(String theme) {
+
+        if(theme.equals("Default")) {
             theme_tasks.setBackgroundColor(Color.parseColor("#FAFAFA"));
             toolbar.setBackgroundColor(Color.parseColor("#3C80E7"));
         }
 
-        if(tex.equals("Red")){
+        if(theme.equals("Red")) {
             theme_tasks.setBackgroundColor(Color.parseColor("#FF8C8C"));
             toolbar.setBackgroundColor(Color.parseColor("#FF8C8C"));
         }
 
-        if(tex.equals("Orange")){
+        if(theme.equals("Orange")){
             theme_tasks.setBackgroundColor(Color.parseColor("#FFB661"));
             toolbar.setBackgroundColor(Color.parseColor("#FFB661"));
         }
 
-        if(tex.equals("Yellow")){
+        if(theme.equals("Yellow")){
             theme_tasks.setBackgroundColor(Color.parseColor("#FFD850"));
             toolbar.setBackgroundColor(Color.parseColor("#FFD850"));
         }
 
-        if(tex.equals("Green")){
+        if(theme.equals("Green")){
             theme_tasks.setBackgroundColor(Color.parseColor("#7AE471"));
             toolbar.setBackgroundColor(Color.parseColor("#7AE471"));
         }
 
-        if(tex.equals("Green Secondary")){
+        if(theme.equals("Green Secondary")){
             theme_tasks.setBackgroundColor(Color.parseColor("#56E0C7"));
             toolbar.setBackgroundColor(Color.parseColor("#56E0C7"));
         }
 
-        if(tex.equals("Light Blue")) {
+        if(theme.equals("Light Blue")) {
             theme_tasks.setBackgroundColor(Color.parseColor("#6CD3FF"));
             toolbar.setBackgroundColor(Color.parseColor("#6CD3FF"));
         }
 
-        if(tex.equals("Blue")){
+        if(theme.equals("Blue")){
             theme_tasks.setBackgroundColor(Color.parseColor("#819CFF"));
             toolbar.setBackgroundColor(Color.parseColor("#819CFF"));
         }
 
-        if(tex.equals("Violet")){
+        if(theme.equals("Violet")){
             theme_tasks.setBackgroundColor(Color.parseColor("#DD8BFA"));
             toolbar.setBackgroundColor(Color.parseColor("#DD8BFA"));
         }
 
-        if(tex.equals("Pink")){
+        if(theme.equals("Pink")){
             theme_tasks.setBackgroundColor(Color.parseColor("#FF6CA1"));
             toolbar.setBackgroundColor(Color.parseColor("#FF6CA1"));
         }
 
-        if(tex.equals("Gray")){
+        if(theme.equals("Gray")){
             theme_tasks.setBackgroundColor(Color.parseColor("#C4C4C4"));
             toolbar.setBackgroundColor(Color.parseColor("#C4C4C4"));
         }
 
     }
+
 }

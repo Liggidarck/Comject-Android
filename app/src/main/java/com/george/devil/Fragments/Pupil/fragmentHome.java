@@ -15,10 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.george.devil.Activitys.Projects.EditProjectActivity;
-import com.george.devil.Activitys.Projects.MainProjectActivity;
-import com.george.devil.Activitys.Projects.NewProjectActivity;
-import com.george.devil.Activitys.Projects.PrivatePublicProjectActivity;
+import com.george.devil.Activitys.Projects.EditsProject.EditProjectActivity;
+import com.george.devil.Activitys.Projects.PagesProjects.MainProjectActivity;
+import com.george.devil.Activitys.Projects.NewProject.NewProjectActivity;
+import com.george.devil.Activitys.Projects.PagesProjects.PrivatePublicProjectActivity;
+import com.george.devil.Activitys.Projects.PagesProjects.PublishProjectActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.card.MaterialCardView;
@@ -41,7 +42,7 @@ public class fragmentHome extends Fragment {
         main_description_project = view.findViewById(R.id.main_description_project);
         hastags_mail_proj_text   = view.findViewById(R.id.hastags_mail_proj_text);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getBaseContext());
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String titleMain = sharedPreferences.getString("nameMainProject", "empty_main_project");
         String username = sharedPreferences.getString("username", "empty_correct_username");
         String descroption = sharedPreferences.getString("descriptionMainProject", "empty_absic_description");
@@ -84,7 +85,10 @@ public class fragmentHome extends Fragment {
 
         Button edit_main_project_card_btn = view.findViewById(R.id.edit_main_project_card_btn);
         edit_main_project_card_btn.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), EditProjectActivity.class)));
-        
+
+        Button publish_main_project_brn = view.findViewById(R.id.publish_main_project_brn);
+        publish_main_project_brn.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), PublishProjectActivity.class)));
+
         return view;
     }
 }

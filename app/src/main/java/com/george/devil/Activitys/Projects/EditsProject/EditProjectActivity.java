@@ -1,4 +1,4 @@
-package com.george.devil.Activitys.Projects;
+package com.george.devil.Activitys.Projects.EditsProject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,12 +10,15 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
+import com.george.devil.Activitys.Projects.PagesProjects.MainProjectActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 import com.google.android.material.textfield.TextInputLayout;
+
+import java.util.Objects;
 
 public class EditProjectActivity extends AppCompatActivity {
 
@@ -42,9 +45,9 @@ public class EditProjectActivity extends AppCompatActivity {
         String topik = sharedPreferences.getString("topicMainProject", "topic_main_proj_empty");
         boolean private_public_proj_edit = sharedPreferences.getBoolean("private_public_mail_proj", false);
 
-        textField_name_proj_edit.getEditText().setText(name_project);
-        textField_description_proj_edit.getEditText().setText(description);
-        textField_topic_edit.getEditText().setText(topik);
+        Objects.requireNonNull(textField_name_proj_edit.getEditText()).setText(name_project);
+        Objects.requireNonNull(textField_description_proj_edit.getEditText()).setText(description);
+        Objects.requireNonNull(textField_topic_edit.getEditText()).setText(topik);
         switchPrivate_proj_EDIT.setChecked(private_public_proj_edit);
 
         String[] items = new String[] {

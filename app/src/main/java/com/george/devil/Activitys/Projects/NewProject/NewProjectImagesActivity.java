@@ -1,4 +1,4 @@
-package com.george.devil.Activitys.Projects;
+package com.george.devil.Activitys.Projects.NewProject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
+import com.george.devil.Activitys.Projects.EditsProject.FindMoreImagesActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 

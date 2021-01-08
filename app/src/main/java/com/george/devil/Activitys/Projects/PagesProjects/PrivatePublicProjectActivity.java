@@ -1,4 +1,4 @@
-package com.george.devil.Activitys.Projects;
+package com.george.devil.Activitys.Projects.PagesProjects;
 
 import androidx.appcompat.app.AppCompatActivity;
 

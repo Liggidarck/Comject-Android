@@ -1,7 +1,9 @@
 package com.george.devil.BottomSheets;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +23,7 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
 
     CircleImageView check_defualt_tasks, check_red_tasks, check_orange_tasks, check_yellow_tasks,
             check_green_tasks, check_green_secondary_tasks, check_blue_ligth_tasks, check_blue_tasks,
-            check_violet_tasks, check_pink_tasks, gray_layout_tasks;
+            check_violet_tasks, check_pink_tasks, check_gray_tasks;
 
     String themeTask;
 
@@ -29,6 +31,9 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_edit_theme_tasks_layout, container, false);
+        
+        SharedPreferences prefsBottomSheetThemeTask = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+        themeTask =  prefsBottomSheetThemeTask.getString("themeData", "Default");
 
         check_defualt_tasks = view.findViewById(R.id.check_defualt_tasks);
         check_red_tasks = view.findViewById(R.id.check_red_tasks);
@@ -40,7 +45,40 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
         check_blue_tasks = view.findViewById(R.id.check_blue_tasks);
         check_violet_tasks = view.findViewById(R.id.check_violet_tasks);
         check_pink_tasks = view.findViewById(R.id.check_pink_tasks);
-        gray_layout_tasks = view.findViewById(R.id.gray_layout_tasks);
+        check_gray_tasks = view.findViewById(R.id.check_gray_tasks);
+
+        if(themeTask.equals("Default"))
+            check_defualt_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Red"))
+            check_red_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Orange"))
+            check_orange_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Yellow"))
+            check_yellow_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Green"))
+            check_green_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Green Secondary"))
+            check_green_secondary_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Light Blue"))
+            check_blue_ligth_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Blue"))
+            check_blue_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Violet"))
+            check_violet_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Pink"))
+            check_pink_tasks.setVisibility(View.VISIBLE);
+
+        if(themeTask.equals("Gray"))
+            check_gray_tasks.setVisibility(View.VISIBLE);
 
         RelativeLayout default_theme = view.findViewById(R.id.white_layout_tasks);
         default_theme.setOnClickListener(v -> {

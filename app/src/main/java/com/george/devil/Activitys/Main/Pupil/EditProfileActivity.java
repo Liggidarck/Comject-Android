@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -46,7 +47,9 @@ public class EditProfileActivity extends AppCompatActivity {
     Calendar myCalendar;
 
     CircleImageView changable_ava;
-    private final int Pick_image = 1;
+    ImageView main_profile_image_edit;
+    private final int ava_data_pick = 1;
+    private final int main_image_pick = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,20 +58,27 @@ public class EditProfileActivity extends AppCompatActivity {
 
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_edit_profile);
 
-        namePersonTextLayout = findViewById(R.id.name_account_edit_profile);
-        usernameTextLayout   = findViewById(R.id.username_layout_editProfile);
-        topikTextLayout      = findViewById(R.id.topic_layout);
-        emailTextLayout      = findViewById(R.id.email_layout_edit_profile);
-        cityTextLayout       = findViewById(R.id.city_layout_edit_profile);
-        schoolTextLayout     = findViewById(R.id.school_edit_profile);
-        gradeTextLayout      = findViewById(R.id.grade_edit_profile);
-        birdayTextLayout     = findViewById(R.id.textField_bithday_edit_profile);
-        changable_ava        = findViewById(R.id.changable_ava);
+        namePersonTextLayout    = findViewById(R.id.name_account_edit_profile);
+        usernameTextLayout      = findViewById(R.id.username_layout_editProfile);
+        topikTextLayout         = findViewById(R.id.topic_layout);
+        emailTextLayout         = findViewById(R.id.email_layout_edit_profile);
+        cityTextLayout          = findViewById(R.id.city_layout_edit_profile);
+        schoolTextLayout        = findViewById(R.id.school_edit_profile);
+        gradeTextLayout         = findViewById(R.id.grade_edit_profile);
+        birdayTextLayout        = findViewById(R.id.textField_bithday_edit_profile);
+        changable_ava           = findViewById(R.id.changable_ava);
+        main_profile_image_edit = findViewById(R.id.main_profile_image_edit);
 
         changable_ava.setOnClickListener(v -> {
             Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
             photoPickerIntent.setType("image/*");
-            startActivityForResult(photoPickerIntent, Pick_image);
+            startActivityForResult(photoPickerIntent, ava_data_pick);
+        });
+
+        main_profile_image_edit.setOnClickListener(v -> {
+            Intent photoPik = new Intent(Intent.ACTION_PICK);
+            photoPik.setType("image/*");
+            startActivityForResult(photoPik, main_image_pick);
         });
 
         MaterialAutoCompleteTextView autoCompleteTextView = findViewById(R.id.topic_auto_edit_profile);
@@ -142,9 +152,10 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == Pick_image) {
+        if (requestCode == ava_data_pick) {
             if (resultCode == RESULT_OK) {
                 try {
+                    assert data != null;
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                     final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
@@ -155,6 +166,21 @@ public class EditProfileActivity extends AppCompatActivity {
                 }
             }
         }
+
+        if(requestCode == main_image_pick){
+            if(resultCode == RESULT_OK){
+                try {
+                    assert data != null;
+                    final Uri image = data.getData();
+                    final InputStream imageStream = getContentResolver().openInputStream(image);
+                    final Bitmap selectedIm = BitmapFactory.decodeStream(imageStream);
+                    main_profile_image_edit.setImageBitmap(selectedIm);
+                } catch (FileNotFoundException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
 

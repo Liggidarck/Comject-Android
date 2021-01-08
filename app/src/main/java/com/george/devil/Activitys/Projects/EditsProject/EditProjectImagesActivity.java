@@ -1,4 +1,4 @@
-package com.george.devil.Activitys.Projects;
+package com.george.devil.Activitys.Projects.EditsProject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.widget.Button;
 import android.widget.EditText;
 
+import com.george.devil.Activitys.Projects.PagesProjects.MainProjectActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -45,6 +47,9 @@ public class EditProjectImagesActivity extends AppCompatActivity {
             saveData();
             startActivity(new Intent(EditProjectImagesActivity.this, EditProjectActivity.class));
         });
+
+        Button find_more_images_btn_edit = findViewById(R.id.find_more_images_btn_edit);
+        find_more_images_btn_edit.setOnClickListener(v -> startActivity(new Intent(EditProjectImagesActivity.this, FindMoreImagesActivity.class)));
 
     }
 

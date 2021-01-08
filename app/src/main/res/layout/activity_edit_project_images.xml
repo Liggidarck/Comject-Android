@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.EditProjectImagesActivity">
+    tools:context=".Activitys.Projects.EditsProject.EditProjectImagesActivity">
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/save_btn_images_edit"
@@ -145,6 +145,7 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <Button
+                    android:id="@+id/find_more_images_btn_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="find more"

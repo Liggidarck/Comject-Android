@@ -2,28 +2,23 @@ package com.george.devil.Fragments.Pupil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 
-import com.george.devil.Activitys.Projects.PostProjectActivity;
+import com.george.devil.Activitys.Projects.PagesProjects.PostProjectActivity;
 import com.george.devil.BottomSheets.BottomSheetFilters;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.card.MaterialCardView;
-
-import java.util.Objects;
 
 public class fragmentExplore extends Fragment {
 

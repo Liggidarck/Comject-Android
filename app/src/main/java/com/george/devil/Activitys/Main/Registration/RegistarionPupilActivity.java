@@ -13,7 +13,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.george.devil.Activitys.Projects.NewProjectActivity;
+import com.george.devil.Activitys.Projects.NewProject.NewProjectActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
@@ -34,6 +34,8 @@ public class RegistarionPupilActivity extends AppCompatActivity {
 
     Button registr;
 
+    MaterialToolbar toolbar;
+
     Calendar myCalendar;
 
     public static final String TAG = "RegistrationPupilActivity";
@@ -43,25 +45,22 @@ public class RegistarionPupilActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registarion_pupil);
 
-        textField_name_regis_pupil = findViewById(R.id.textField_name_regis_pupil);
+        textField_name_regis_pupil     = findViewById(R.id.textField_name_regis_pupil);
         textField_username_regis_pupil = findViewById(R.id.textField_username_regis_pupil);
-        textField_topic_edit = findViewById(R.id.textField_topic_edit);
-        textField_email_regis_pupil = findViewById(R.id.textField_email_regis_pupil);
-        textField_city_regis_pupil = findViewById(R.id.textField_city_regis_pupil);
-        textField_school_regis_pupil = findViewById(R.id.textField_school_regis_pupil);
-        textField_grade_regis_pupil = findViewById(R.id.textField_grade_regis_pupil);
-        textField_bithday_regis_pupil = findViewById(R.id.textField_bithday_regis_pupil);
+        textField_topic_edit           = findViewById(R.id.textField_topic_edit);
+        textField_email_regis_pupil    = findViewById(R.id.textField_email_regis_pupil);
+        textField_city_regis_pupil     = findViewById(R.id.textField_city_regis_pupil);
+        textField_school_regis_pupil   = findViewById(R.id.textField_school_regis_pupil);
+        textField_grade_regis_pupil    = findViewById(R.id.textField_grade_regis_pupil);
+        textField_bithday_regis_pupil  = findViewById(R.id.textField_bithday_regis_pupil);
         textField_password_regis_pupil = findViewById(R.id.textField_password_regis_pupil);
-
-        topic_auto_regis_pupil = findViewById(R.id.topic_auto_regis_pupil_new);
-        registr = findViewById(R.id.reg_pupil);
+        topic_auto_regis_pupil         = findViewById(R.id.topic_auto_regis_pupil_new);
+        registr                        = findViewById(R.id.reg_pupil);
+        toolbar                        = findViewById(R.id.topAppBar_reg_pupil);
 
         clearErrors();
 
-        MaterialToolbar toolbar = findViewById(R.id.topAppBar_reg_pupil);
-        toolbar.setNavigationOnClickListener(v -> {
-            onBackPressed();
-        });
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         myCalendar = Calendar.getInstance();
         DatePickerDialog.OnDateSetListener date = (view, year, month, dayOfMonth) -> {
@@ -102,15 +101,15 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             if (!validateName() | !validateUserName() | !validateTopik() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() | !validatePassword()) {
                 return;
             } else {
-                String name = textField_name_regis_pupil.getEditText().getText().toString();
-                String userName = textField_username_regis_pupil.getEditText().getText().toString();
-                String topic = textField_topic_edit.getEditText().getText().toString();
-                String email = textField_email_regis_pupil.getEditText().getText().toString();
-                String city = textField_city_regis_pupil.getEditText().getText().toString();
-                String school = textField_school_regis_pupil.getEditText().getText().toString();
-                String grade = textField_grade_regis_pupil.getEditText().getText().toString();
-                String birthday = textField_bithday_regis_pupil.getEditText().getText().toString();
-                String pas = textField_password_regis_pupil.getEditText().getText().toString();
+                String name = Objects.requireNonNull(textField_name_regis_pupil.getEditText()).getText().toString();
+                String userName = Objects.requireNonNull(textField_username_regis_pupil.getEditText()).getText().toString();
+                String topic = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString();
+                String email = Objects.requireNonNull(textField_email_regis_pupil.getEditText()).getText().toString();
+                String city = Objects.requireNonNull(textField_city_regis_pupil.getEditText()).getText().toString();
+                String school = Objects.requireNonNull(textField_school_regis_pupil.getEditText()).getText().toString();
+                String grade = Objects.requireNonNull(textField_grade_regis_pupil.getEditText()).getText().toString();
+                String birthday = Objects.requireNonNull(textField_bithday_regis_pupil.getEditText()).getText().toString();
+                String pas = Objects.requireNonNull(textField_password_regis_pupil.getEditText()).getText().toString();
 
                 Log.i(TAG, "name = " + name);
                 Log.i(TAG, "userName = " + userName);
@@ -275,7 +274,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
 
     public void clearErrors() {
 
-        textField_name_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_name_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_name_regis_pupil.setError(null);
@@ -292,7 +291,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_username_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_username_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_username_regis_pupil.setError(null);
@@ -309,7 +308,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_topic_edit.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_topic_edit.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_topic_edit.setError(null);
@@ -326,7 +325,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_email_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_email_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_email_regis_pupil.setError(null);
@@ -343,7 +342,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_city_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_city_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_city_regis_pupil.setError(null);
@@ -360,7 +359,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_school_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_school_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_school_regis_pupil.setError(null);
@@ -377,7 +376,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_grade_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_grade_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_grade_regis_pupil.setError(null);
@@ -394,7 +393,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_bithday_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_bithday_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_bithday_regis_pupil.setError(null);
@@ -411,7 +410,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
             }
         });
 
-        textField_password_regis_pupil.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_password_regis_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_password_regis_pupil.setError(null);

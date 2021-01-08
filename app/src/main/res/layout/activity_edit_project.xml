@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.EditProjectActivity">
+    tools:context=".Activitys.Projects.EditsProject.EditProjectActivity">
 
     <Button
         android:id="@+id/next_edit_btn"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.FindMoreImagesActivity">
+    tools:context=".Activitys.Projects.EditsProject.FindMoreImagesActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar_pic_images"

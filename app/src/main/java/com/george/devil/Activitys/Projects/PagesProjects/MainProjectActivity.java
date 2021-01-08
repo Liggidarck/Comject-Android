@@ -1,4 +1,4 @@
-package com.george.devil.Activitys.Projects;
+package com.george.devil.Activitys.Projects.PagesProjects;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -15,6 +15,8 @@ import com.george.devil.Activitys.Changes.ChangesActivity;
 import com.george.devil.Activitys.Main.Pupil.CommentsActivity;
 import com.george.devil.Activitys.Issues.IsuuesActivity;
 import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
+import com.george.devil.Activitys.Projects.EditsProject.EditProjectActivity;
+import com.george.devil.Activitys.Projects.InformationFromTeacherActivity;
 import com.george.devil.BottomSheets.BottomSheetHastags;
 import com.george.devil.Fragments.Pupil.likes_fragment;
 import com.george.devil.Fragments.Pupil.lock_fragment;
@@ -60,6 +62,9 @@ public class MainProjectActivity extends AppCompatActivity {
             BottomSheetHastags hastags = new BottomSheetHastags();
             hastags.show(getSupportFragmentManager(), "BottomSheetHas");
         });
+
+        Button publish_main_prokect = findViewById(R.id.publish_main_prokect);
+        publish_main_prokect.setOnClickListener(v -> startActivity(new Intent(MainProjectActivity.this, PublishProjectActivity.class)));
 
         SharedPreferences sharedPrefsMainProject = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String titleMain = sharedPrefsMainProject.getString("nameMainProject", "empty_main_project");
