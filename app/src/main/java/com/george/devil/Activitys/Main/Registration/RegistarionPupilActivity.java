@@ -36,7 +36,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
 
     MaterialToolbar toolbar;
 
-    Calendar myCalendar;
+    Calendar calendarDatePick;
 
     public static final String TAG = "RegistrationPupilActivity";
 
@@ -62,24 +62,23 @@ public class RegistarionPupilActivity extends AppCompatActivity {
 
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
-        myCalendar = Calendar.getInstance();
+        calendarDatePick = Calendar.getInstance();
         DatePickerDialog.OnDateSetListener date = (view, year, month, dayOfMonth) -> {
-            myCalendar.set(Calendar.YEAR, year);
-            myCalendar.set(Calendar.MONTH, month);
-            myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+            calendarDatePick.set(Calendar.YEAR, year);
+            calendarDatePick.set(Calendar.MONTH, month);
+            calendarDatePick.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             updateLabel();
         };
 
-        TextInputEditText text = findViewById(R.id.date_textView_3);
+        TextInputEditText textDate = findViewById(R.id.date_textView_3);
 
-        text.setOnClickListener(v -> {
+        textDate.setOnClickListener(v -> {
 
-            new DatePickerDialog(RegistarionPupilActivity.this, date, myCalendar
-                    .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
-                    myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            new DatePickerDialog(RegistarionPupilActivity.this, date, calendarDatePick
+                    .get(Calendar.YEAR), calendarDatePick.get(Calendar.MONTH),
+                    calendarDatePick.get(Calendar.DAY_OF_MONTH)).show();
 
         });
-
 
         String[] items = new String[]{
                 "Biology", "Chemistry", "Economics", "English",
@@ -144,10 +143,10 @@ public class RegistarionPupilActivity extends AppCompatActivity {
     }
 
     private void updateLabel() {
-        String myFormat = "MM.dd.yyyy"; //In which you need put here
+        String myFormat = "MM.dd.yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
-        Objects.requireNonNull(textField_bithday_regis_pupil.getEditText()).setText(sdf.format(myCalendar.getTime()));
+        Objects.requireNonNull(textField_bithday_regis_pupil.getEditText()).setText(sdf.format(calendarDatePick.getTime()));
     }
 
     @Override

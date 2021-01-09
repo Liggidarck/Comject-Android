@@ -42,10 +42,9 @@ public class LoginActivity extends AppCompatActivity {
         password_login_text_layout = findViewById(R.id.password_login_text_layout);
         ImageView login_btn = findViewById(R.id.sign_in_btn_1);
 
-
         login_btn.setOnClickListener(v -> {
-            String email = email_login_text_layout.getEditText().getText().toString();
-            String password = password_login_text_layout.getEditText().getText().toString();
+            String email = Objects.requireNonNull(email_login_text_layout.getEditText()).getText().toString();
+            String password = Objects.requireNonNull(password_login_text_layout.getEditText()).getText().toString();
             if(email.equals("liggidarck@gmail.com") & password.equals("qwerty")){
 
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -67,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
-
 
     }
 

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import com.george.devil.DataBases.NotesDatabase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.Objects;
 
 public class fragmentNote extends Fragment {
 
@@ -43,17 +46,18 @@ public class fragmentNote extends Fragment {
         add.setOnClickListener(v -> startActivity(new Intent(fragmentNote.this.getActivity(), AddNoteActivity.class)));
 
         notesList = view.findViewById(R.id.notebook_list);
-
         notesList.setOnItemClickListener((parent, view1, position, id) -> {
-            Intent intent = new Intent(getActivity().getApplicationContext(), AddNoteActivity.class);
+            Intent intent = new Intent(requireActivity().getApplicationContext(), AddNoteActivity.class);
             intent.putExtra("id", id);
             startActivity(intent);
         });
 
-        databaseHelper = new NotesDatabase(getActivity().getApplicationContext());
+        databaseHelper = new NotesDatabase(requireContext().getApplicationContext());
 
         View empty = view.findViewById(R.id.empty_layout);
         notesList.setEmptyView(empty);
+
+
 
         return view;
     }

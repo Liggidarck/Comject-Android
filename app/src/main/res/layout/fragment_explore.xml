@@ -188,7 +188,7 @@
                                         android:id="@+id/icon_comment_1"
                                         android:layout_width="25dp"
                                         android:layout_height="25dp"
-                                        android:src="@drawable/chat"
+                                        android:src="@drawable/ic_chat"
                                         android:layout_toEndOf="@id/val_likes1"
                                         android:layout_marginStart="26dp" />
 
@@ -235,7 +235,7 @@
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
-                                        android:text="COMMENT"
+                                        android:text="Comment"
                                         android:textColor="#4A4A4A"
                                         app:icon="@drawable/ic_outline_chat_24"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
@@ -383,7 +383,7 @@
                                         android:id="@+id/icon_comment_2"
                                         android:layout_width="25dp"
                                         android:layout_height="25dp"
-                                        android:src="@drawable/chat"
+                                        android:src="@drawable/ic_chat"
                                         android:layout_toEndOf="@id/val_likes2"
                                         android:layout_marginStart="26dp" />
 

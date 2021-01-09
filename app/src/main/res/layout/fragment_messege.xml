@@ -31,7 +31,8 @@
                 android:layout_height="?attr/actionBarSize"
                 app:title="Chats"
                 android:elevation="4dp"
-                style="@style/Widget.MaterialComponents.Toolbar.Surface" />
+                app:menu="@menu/search_menu"
+                style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 
         </com.google.android.material.appbar.AppBarLayout>
 

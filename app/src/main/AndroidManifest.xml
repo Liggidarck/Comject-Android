@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/ProjectDevil">
-        <activity android:name=".Activitys.Projects.PagesProjects.PublishProjectActivity"></activity>
+        <activity android:name=".Activitys.Projects.PagesProjects.PublishProjectActivity"/>
         <activity android:name=".Activitys.Main.Pupil.ProfileActivityPupil" />
         <activity android:name=".Activitys.Main.Registration.RegistrationTeatherActivity" />
         <activity android:name=".Activitys.Main.Teather.MainActivityTeather" />
@@ -36,15 +36,16 @@
         <activity android:name=".Activitys.Main.Pupil.MessageActivity" />
         <activity android:name=".Activitys.Projects.EditsProject.FindMoreImagesActivity" />
         <activity android:name=".Activitys.Main.Registration.RegistarionPupilActivity" />
-        <activity android:name=".Activitys.Main.LoginActivity" />
         <activity android:name=".Activitys.Projects.EditsProject.EditProjectImagesActivity" />
         <activity android:name=".Activitys.Projects.EditsProject.EditProjectActivity" />
         <activity android:name=".Activitys.Projects.PagesProjects.MainProjectActivity" />
         <activity android:name=".Activitys.Notebook.AddNoteActivity" />
         <activity android:name=".Activitys.Projects.NewProject.NewProjectImagesActivity" />
         <activity android:name=".Activitys.Projects.NewProject.NewProjectActivity" />
+        <activity android:name=".Activitys.Main.Pupil.MainActivityPupil"/>
+
         <activity
-            android:name=".Activitys.Main.Pupil.MainActivityPupil"
+            android:name=".Activitys.Main.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/ProjectDevil.Launcher">
             <intent-filter>
@@ -52,7 +53,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
     </application>
 
 </manifest>

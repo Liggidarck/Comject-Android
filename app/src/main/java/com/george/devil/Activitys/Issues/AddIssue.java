@@ -109,8 +109,6 @@ public class AddIssue extends AppCompatActivity {
         Log.i(TAG, "Полученое значение заметки - " + noteissue);
         text_note_issue.setText(noteissue);
 
-
-
         Date currentDate = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
         String dateText = dateFormat.format(currentDate);
@@ -120,7 +118,6 @@ public class AddIssue extends AppCompatActivity {
         dateViewIssue.setText(dateFullIssue);
 
         if (issuesId > 0) {
-
             userCursor = db.rawQuery("select * from " + IssuesDataBase.TABLE + " where " + IssuesDataBase.COLUMN_ID + "=?", new String[]{String.valueOf(issuesId)});
             userCursor.moveToFirst();
 

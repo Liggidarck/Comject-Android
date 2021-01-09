@@ -27,7 +27,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class fragmentHome extends Fragment {
 
-    TextView main_title_project_1, main_username_project, main_description_project, hastags_mail_proj_text;
+    TextView main_title_project_1, main_description_project, hastags_mail_proj_text;
 
     @Nullable
     @Override
@@ -38,7 +38,6 @@ public class fragmentHome extends Fragment {
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         main_title_project_1     = view.findViewById(R.id.main_title_project);
-        main_username_project    = view.findViewById(R.id.main_username_project);
         main_description_project = view.findViewById(R.id.main_description_project);
         hastags_mail_proj_text   = view.findViewById(R.id.hastags_mail_proj_text);
 
@@ -47,14 +46,11 @@ public class fragmentHome extends Fragment {
         String username = sharedPreferences.getString("username", "empty_correct_username");
         String descroption = sharedPreferences.getString("descriptionMainProject", "empty_absic_description");
         String topic = sharedPreferences.getString("topicMainProject", "topic_main_proj_empty");
-
         String hastags = sharedPreferences.getString("hastags", "Edit project hastags!");
 
         main_title_project_1.setText(titleMain);
-        main_username_project.setText(username);
         main_description_project.setText(descroption);
         hastags_mail_proj_text.setText(hastags);
-
 
         FloatingActionButton add_proj = view.findViewById(R.id.add_proj);
         add_proj.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), NewProjectActivity.class)));

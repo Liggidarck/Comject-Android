@@ -1,15 +1,21 @@
 package com.george.devil.Activitys.Changes;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.george.devil.Activitys.Issues.AddIssue;
 import com.george.devil.DataBases.ChangesDataBase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -44,6 +50,27 @@ public class AddChange extends AppCompatActivity {
 
         MaterialToolbar topAppBar_add_change = findViewById(R.id.topAppBar_add_change);
         topAppBar_add_change.setNavigationOnClickListener(v -> save());
+
+        ImageView delete_change = findViewById(R.id.delete_change);
+        delete_change.setOnClickListener(v -> {
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            boolean confirmDelet = preferences.getBoolean("delet_bool", true);
+            if (confirmDelet) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AddChange.this);
+                builder.setTitle("Внимание");
+                builder.setMessage("Вы действительно хотите удалить change?");
+
+                builder.setPositiveButton("Ок", (dialog, id) -> {
+                    delete();
+                    dialog.dismiss();
+                });
+
+                builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+
+                builder.show();
+            } else
+                delete();
+        });
 
         name_chage = findViewById(R.id.name_change);
         edit_text_due_day_change = findViewById(R.id.edit_text_due_day_change);
@@ -116,6 +143,11 @@ public class AddChange extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
 
+    }
+
+    public void delete() {
+        db.delete(ChangesDataBase.TABLE, "_id = ?", new String[]{String.valueOf(changesId)});
+        goHome();
     }
 
     @Override

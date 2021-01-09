@@ -33,16 +33,16 @@ public class MainActivityPupil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String name_user = sharedPreferences.getString("full_name", "empty_user_name");
-        if(name_user.equals("empty_user_name"))
-            startActivity(new Intent(MainActivityPupil.this, LoginActivity.class));
+//        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+//        String name_user = sharedPreferences.getString("full_name", "empty_user_name");
+//        if(name_user.equals("empty_user_name"))
+//            startActivity(new Intent(MainActivityPupil.this, LoginActivity.class));
 
-        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_pupil_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
         if (savedInstanceState == null)
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new fragmentHome()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, new fragmentHome()).commit();
 
         start_seesion = 4231.1;
         load_component = 322;
@@ -77,7 +77,7 @@ public class MainActivityPupil extends AppCompatActivity {
                         break;
                 }
                 assert selectedFragment != null;
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, selectedFragment).commit();
 
                 return true;
             };

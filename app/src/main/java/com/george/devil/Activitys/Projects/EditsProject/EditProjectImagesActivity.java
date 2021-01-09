@@ -15,6 +15,8 @@ import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 public class EditProjectImagesActivity extends AppCompatActivity {
 
     TextInputLayout textField_name_proj_edit_images;
@@ -32,7 +34,7 @@ public class EditProjectImagesActivity extends AppCompatActivity {
         String name_project = sharedPreferences.getString("nameMainProject", "empty_main_project");
         String description = sharedPreferences.getString("description_main", "empty_description_main");
 
-        textField_name_proj_edit_images.getEditText().setText(name_project);
+        Objects.requireNonNull(textField_name_proj_edit_images.getEditText()).setText(name_project);
         main_description_proj_edit.setText(description);
 
         ExtendedFloatingActionButton save_btn_images_edit = findViewById(R.id.save_btn_images_edit);

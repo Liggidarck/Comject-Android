@@ -149,7 +149,7 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
         return view;
     }
 
-    public interface StateListener{
+    public interface StateListener {
         void ThemeChoose(String tex);
     }
 

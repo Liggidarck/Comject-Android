@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.fragment.app.Fragment;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.BottomSheets.BottomSheetNotes;
 import com.george.devil.DataBases.NotesDatabase;
+import com.george.devil.Fragments.Pupil.fragmentNote;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.snackbar.Snackbar;
@@ -52,7 +54,6 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
     CardView more_bottom;
 
     private static final String TAG = "addNote";
-
     String checkTheme = "Default";
 
     @Override
@@ -74,9 +75,8 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
         db = sqlHelper.getWritableDatabase();
 
         Bundle extras = getIntent().getExtras();
-        if (extras != null) {
+        if (extras != null)
             notesId = extras.getLong("id");
-        }
 
         Date currentDate = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
@@ -178,19 +178,12 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
             bottomSheetNotes.show(getSupportFragmentManager(), "BottomSheetNotes");
         });
-
-
     }
 
     public void save() {
-        if(!validateNameNote()){
-            /*
-            Сюда нужно было впихнуть заглушку, а то не работало бы.
-             */
-
+        if(!validateNameNote()) {
             return;
         } else {
-
             Date currentDate = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
             String dateText = dateFormat.format(currentDate);
@@ -205,13 +198,12 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
             cv.put(NotesDatabase.COLUMN_THEME, checkTheme);
 
             if (notesId > 0)
-                db.update(NotesDatabase.TABLE, cv, NotesDatabase.COLUMN_ID + "=" + String.valueOf(notesId), null);
+                db.update(NotesDatabase.TABLE, cv, NotesDatabase.COLUMN_ID + "=" + notesId, null);
             else
                 db.insert(NotesDatabase.TABLE, null, cv);
 
             goHome();
         }
-
     }
 
     @Override

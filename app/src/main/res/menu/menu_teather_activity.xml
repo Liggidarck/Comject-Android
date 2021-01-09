@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home_teather"
+        android:title="Home"
+        android:icon="@drawable/ic_outline_home_24" />
+
+    <item
+        android:id="@+id/nav_explore_teather"
+        android:title="Explore"
+        android:icon="@drawable/ic_outline_explore_24" />
+
+    <item
+        android:id="@+id/nav_message_teather"
+        android:title="Chat"
+        android:icon="@drawable/ic_outline_email_24" />
+
+    <item
+        android:id="@+id/nav_profile_teather"
+        android:title="Progile"
+        android:icon="@drawable/ic_outline_school_24" />
+
+</menu>

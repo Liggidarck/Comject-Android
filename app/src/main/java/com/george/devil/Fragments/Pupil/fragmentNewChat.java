@@ -34,7 +34,7 @@ public class fragmentNewChat extends Fragment {
         toolbar.setNavigationOnClickListener(v -> {
             Fragment fragmentMess = new fragmentMessege();
             assert getParentFragmentManager() != null;
-            getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, fragmentMess).commit();
+            getParentFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, fragmentMess).commit();
         });
 
         return view;

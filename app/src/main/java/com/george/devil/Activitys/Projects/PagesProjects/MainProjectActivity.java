@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -23,9 +24,11 @@ import com.george.devil.Fragments.Pupil.lock_fragment;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 
-public class MainProjectActivity extends AppCompatActivity {
+public class MainProjectActivity extends AppCompatActivity implements BottomSheetHastags.StateListenerHastags {
 
     TextView main_title_project_full, main_description_project_full, main_hastags, main_title_prokect_secondaty, main_description_proj;
+
+    static final String TAG = "MainProjectActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,17 +86,21 @@ public class MainProjectActivity extends AppCompatActivity {
         main_description_proj.setText(main_descroption);
 
         Fragment public_private_proj;
-
         if(private_public_pr)
             public_private_proj = new lock_fragment();
         else
             public_private_proj = new likes_fragment();
-
         getSupportFragmentManager().beginTransaction().replace(R.id.private_public_fragme_main_proj, public_private_proj).commit();
     }
 
     @Override
     public void onBackPressed() {
         startActivity(new Intent(MainProjectActivity.this, MainActivityPupil.class));
+    }
+
+    @Override
+    public void hastagsText(String textHast) {
+        Log.i(TAG, textHast);
+        main_hastags.setText(textHast);
     }
 }

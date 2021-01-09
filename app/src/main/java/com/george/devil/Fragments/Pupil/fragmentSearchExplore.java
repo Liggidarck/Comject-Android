@@ -22,9 +22,7 @@ public class fragmentSearchExplore extends Fragment {
         MaterialToolbar toolbar = view.findViewById(R.id.topAppBar_search_explore);
         toolbar.setNavigationOnClickListener(v -> {
             Fragment goToExplore = new fragmentExplore();
-            assert getParentFragmentManager() != null;
-            getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, goToExplore).commit();
-
+            getParentFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, goToExplore).commit();
         });
 
         return view;

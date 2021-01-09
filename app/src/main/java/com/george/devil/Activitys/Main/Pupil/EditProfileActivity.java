@@ -160,7 +160,6 @@ public class EditProfileActivity extends AppCompatActivity {
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                     final Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
                     changable_ava.setImageBitmap(selectedImage);
-
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }

@@ -29,6 +29,7 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_notes, container, false);
 
+        assert this.getArguments() != null;
         String theme = this.getArguments().getString("theme");
         Log.i(TAG, "val - " + theme);
 

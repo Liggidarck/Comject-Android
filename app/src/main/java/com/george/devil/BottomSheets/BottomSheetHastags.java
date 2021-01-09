@@ -1,6 +1,7 @@
 package com.george.devil.BottomSheets;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -20,6 +21,8 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.Objects;
 
 public class BottomSheetHastags extends BottomSheetDialogFragment {
+
+    private BottomSheetHastags.StateListenerHastags listenerHastags;
 
     TextView text_hatsk_sheet;
 
@@ -58,6 +61,7 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
                     sharedPreferences.edit().remove("hastags").apply();
                     sharedPreferences.edit().putString("hastags", hastags_edited).apply();
                     text_hatsk_sheet.setText(hastags_edited);
+                    listenerHastags.hastagsText("" + hastags_edited);
                     alertDialog.dismiss();
                 }
 
@@ -69,6 +73,10 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
         });
 
         return view;
+    }
+
+    public interface StateListenerHastags{
+        void hastagsText(String textHast);
     }
 
     public boolean validateHastags() {
@@ -86,4 +94,14 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
 
     }
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            listenerHastags = (StateListenerHastags) context;
+        } catch (ClassCastException e){
+            throw new ClassCastException(context.toString()
+                    + " must implement BottomSheetListener");
+        }
+    }
 }
