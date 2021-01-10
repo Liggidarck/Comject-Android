@@ -33,7 +33,7 @@
             android:id="@+id/name_profile_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="George Filatov"
+            android:text="null"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toEndOf="@+id/ava_settings"
@@ -44,7 +44,7 @@
             android:id="@+id/email_profile_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="liggidarck@gmail.com"
+            android:text="null"
             android:layout_toEndOf="@+id/ava_settings"
             android:layout_below="@+id/name_profile_settings"
             android:layout_marginStart="10dp" />

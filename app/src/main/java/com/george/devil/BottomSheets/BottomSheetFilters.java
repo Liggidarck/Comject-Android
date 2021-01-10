@@ -10,11 +10,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.george.devil.Activitys.Main.Pupil.EditProfileActivity;
 import com.george.devil.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class BottomSheetFilters extends BottomSheetDialogFragment {

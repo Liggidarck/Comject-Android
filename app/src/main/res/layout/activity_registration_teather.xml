@@ -75,6 +75,41 @@
                     android:layout_height="wrap_content" >
 
                     <ImageView
+                        android:id="@+id/icon_username_regis_teather"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="15dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textField_username_regis_teather"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/icon_username_regis_teather"
+                        android:hint="Username"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginEnd="20dp"
+                        app:endIconMode="clear_text"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:errorEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/product_sans_medium"
+                            android:inputType="textPersonName"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
                         android:id="@+id/icon_email_regis_teather"
                         android:layout_width="35dp"
                         android:layout_height="35dp"

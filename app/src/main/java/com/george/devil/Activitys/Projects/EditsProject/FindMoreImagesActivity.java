@@ -2,12 +2,10 @@ package com.george.devil.Activitys.Projects.EditsProject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.george.devil.Activitys.Projects.NewProject.NewProjectImagesActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 

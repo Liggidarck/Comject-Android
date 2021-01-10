@@ -93,7 +93,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
             if (taskId > 0)
                 db.update(TasksDataBase.TABLE, cv, TasksDataBase.COLUMN_ID + "=" +
-                        String.valueOf(taskId), null);
+                        taskId, null);
             else
                 db.insert(TasksDataBase.TABLE, null, cv);
 

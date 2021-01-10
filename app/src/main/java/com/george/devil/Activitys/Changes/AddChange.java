@@ -10,12 +10,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.george.devil.Activitys.Issues.AddIssue;
 import com.george.devil.DataBases.ChangesDataBase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -110,9 +108,7 @@ public class AddChange extends AppCompatActivity {
 
     public void save() {
         String ckeckName = name_chage.getText().toString();
-        if(ckeckName.isEmpty()){
-            goHome();
-        } else {
+        if (!ckeckName.isEmpty()) {
             Date currentDate = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
             String dateText = dateFormat.format(currentDate);
@@ -128,12 +124,12 @@ public class AddChange extends AppCompatActivity {
 
             if (changesId > 0)
                 db.update(ChangesDataBase.TABLE, cv, ChangesDataBase.COLUMN_ID + "=" +
-                        String.valueOf(changesId), null);
+                        changesId, null);
             else
                 db.insert(ChangesDataBase.TABLE, null, cv);
 
-            goHome();
         }
+        goHome();
     }
 
     public void goHome() {

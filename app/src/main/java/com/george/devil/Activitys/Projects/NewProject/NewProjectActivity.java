@@ -67,13 +67,12 @@ public class NewProjectActivity extends AppCompatActivity {
         switchPrivate_proj.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 private_piblic_project[0] = true;
-                Log.i(TAG, "Переменная (true): " + private_piblic_project[0]);
-                editor.putBoolean("private_public_mail_proj", private_piblic_project[0]);
+                Log.i(TAG, "Переменная (true): " + true);
             } else {
                 private_piblic_project[0] = false;
-                Log.i(TAG, "Переменная (false): " + private_piblic_project[0]);
-                editor.putBoolean("private_public_mail_proj", private_piblic_project[0]);
+                Log.i(TAG, "Переменная (false): " + false);
             }
+            editor.putBoolean("private_public_mail_proj", private_piblic_project[0]);
 
         });
 
@@ -157,7 +156,7 @@ public class NewProjectActivity extends AppCompatActivity {
 
     public void cleanErrors() {
 
-        textField_name_proj.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_name_proj.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_name_proj.setError(null);
@@ -174,7 +173,7 @@ public class NewProjectActivity extends AppCompatActivity {
             }
         });
 
-        textField_description_proj.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_description_proj.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_description_proj.setError(null);
@@ -191,7 +190,7 @@ public class NewProjectActivity extends AppCompatActivity {
             }
         });
 
-        textField_topic.getEditText().addTextChangedListener(new TextWatcher() {
+        Objects.requireNonNull(textField_topic.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 textField_topic.setError(null);

@@ -1,19 +1,13 @@
 package com.george.devil.Activitys.Main.Teather;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 
-import com.george.devil.Fragments.Pupil.fragmentExplore;
-import com.george.devil.Fragments.Pupil.fragmentHome;
-import com.george.devil.Fragments.Pupil.fragmentMessege;
-import com.george.devil.Fragments.Pupil.fragmentNote;
-import com.george.devil.Fragments.Pupil.fragmentProfile;
+import com.george.devil.Fragments.Common.fragmentExplore;
 import com.george.devil.Fragments.Teather.fragmentHomeTeather;
 import com.george.devil.Fragments.Teather.fragmentMessageTeather;
 import com.george.devil.Fragments.Teather.fragmentProfileTeather;

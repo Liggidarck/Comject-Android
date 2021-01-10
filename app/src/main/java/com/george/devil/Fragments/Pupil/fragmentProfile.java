@@ -18,9 +18,9 @@ import androidx.fragment.app.Fragment;
 
 import com.george.devil.BottomSheets.BottomSheetInformationProfile;
 import com.george.devil.Activitys.Main.Pupil.EditProfileActivity;
-import com.george.devil.Activitys.Main.Pupil.FollowingFollowersActivity;
+import com.george.devil.Activitys.Main.Common.FollowingFollowersActivity;
 import com.george.devil.R;
-import com.george.devil.Activitys.Main.Pupil.SettingsActivity;
+import com.george.devil.Activitys.Main.Common.SettingsActivity;
 
 public class fragmentProfile extends Fragment {
 
@@ -58,7 +58,7 @@ public class fragmentProfile extends Fragment {
         nameProfile = view.findViewById(R.id.main_name_profile);
         usernameText = view.findViewById(R.id.main_username);
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getBaseContext());
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String name_user = sharedPreferences.getString("full_name", "empty_user_name");
         String username = sharedPreferences.getString("username", "empty_correct_username");
 

@@ -216,7 +216,7 @@
                                     android:layout_height="match_parent" >
 
                                     <Button
-                                        android:id="@+id/share_btn1"
+                                        android:id="@+id/like_btn_1"
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
                                         android:fontFamily="@font/google_sans_medium"
@@ -225,13 +225,29 @@
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
+                                        android:visibility="visible"
                                         app:icon="@drawable/ic_baseline_favorite_border_24"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                     <Button
+                                        android:id="@+id/like_btn_2"
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
-                                        android:layout_toEndOf="@id/share_btn1"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="liked"
+                                        android:textColor="#4A4A4A"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:visibility="invisible"
+                                        app:icon="@drawable/ic_baseline_favorite_24_red"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    <Button
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:layout_toEndOf="@id/like_btn_1"
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"

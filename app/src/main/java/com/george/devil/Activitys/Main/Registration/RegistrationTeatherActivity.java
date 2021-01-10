@@ -12,9 +12,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.DatePicker;
 
-import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.Activitys.Main.Teather.MainActivityTeather;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -29,7 +27,7 @@ import java.util.Objects;
 
 public class RegistrationTeatherActivity extends AppCompatActivity {
 
-    TextInputLayout textField_name_regis_teather, textField_email_regis_teather, textField_city_regis_teather,
+    TextInputLayout textField_name_regis_teather, textField_username_regis_teather, textField_email_regis_teather, textField_city_regis_teather,
             textField_topic_teather, textField_school_regis_teather, textField_bithday_regis_teather, textField_password_regis_teather;
 
     TextInputEditText date_textView_teather;
@@ -50,6 +48,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registration_teather);
 
         textField_name_regis_teather = findViewById(R.id.textField_name_regis_teather);
+        textField_username_regis_teather = findViewById(R.id.textField_username_regis_teather);
         textField_email_regis_teather = findViewById(R.id.textField_email_regis_teather);
         textField_city_regis_teather = findViewById(R.id.textField_city_regis_teather);
         textField_topic_teather = findViewById(R.id.textField_topic_teather);
@@ -100,6 +99,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
                 Log.i(TAG, "Во время ввода данных какое-то поле оказалось пустым");
             } else {
                 String name = Objects.requireNonNull(textField_name_regis_teather.getEditText()).getText().toString();
+                String username = Objects.requireNonNull(textField_username_regis_teather.getEditText()).getText().toString();
                 String email = Objects.requireNonNull(textField_email_regis_teather.getEditText()).getText().toString();
                 String city = Objects.requireNonNull(textField_city_regis_teather.getEditText()).getText().toString();
                 String topic = Objects.requireNonNull(textField_topic_teather.getEditText()).getText().toString();
@@ -111,12 +111,13 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = prefs.edit();
 
                 editor.putString("full_name_teather", name);
+                editor.putString("username_teather", username);
                 editor.putString("email_teather", email);
                 editor.putString("city_teather", city);
                 editor.putString("topic_teather", topic);
-                editor.putString("school", school);
-                editor.putString("birthay", birthay);
-                editor.putString("password", password);
+                editor.putString("school_teather", school);
+                editor.putString("birthay_teather", birthay);
+                editor.putString("password_teather", password);
 
                 editor.apply();
 

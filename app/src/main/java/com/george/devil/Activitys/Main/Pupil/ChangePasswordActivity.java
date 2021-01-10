@@ -10,7 +10,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.george.devil.R;
@@ -24,8 +27,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     TextInputLayout current_pass_LayoutText, new_pass_LayoutText, confirm_pass_LayoutText;
 
-    private static final String TAG = "ChangePasswordActivity";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,71 +36,137 @@ public class ChangePasswordActivity extends AppCompatActivity {
         new_pass_LayoutText = findViewById(R.id.new_pass_LayoutText);
         confirm_pass_LayoutText = findViewById(R.id.confirm_pass_LayoutText);
 
-
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_change_password);
-        toolbar.setNavigationOnClickListener(v -> {
-            Intent intent = new Intent(this, EditProfileActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-            startActivity(intent);
-        });
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
+
+        cleanErrors();
 
         Button changePs = findViewById(R.id.change);
         changePs.setOnClickListener(v -> {
-            if(!validateConfirmPas() | !validateNewPas() | !validatePas()){
-                return;
-            } else {
-                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                String password = sharedPreferences.getString("pas", "empty_pas");
-                Log.i(TAG, password+"");
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            String password = sharedPreferences.getString("pas", "empty_pas");
+            String password_teather = sharedPreferences.getString("password_teather","password_teather_empty");
 
-                String currnetPas = current_pass_LayoutText.getEditText().getText().toString();
-                String checkPasNew = new_pass_LayoutText.getEditText().getText().toString();
-                String checkPasConfirm = confirm_pass_LayoutText.getEditText().getText().toString();
+            if(!password.equals("empty_pas"))
+                ChangePupilPassword();
 
-
-                if(currnetPas.equals(password)) {
-
-                    if(checkPasNew.equals(checkPasConfirm)) {
-                        sharedPreferences.edit().remove("pas").apply();
-                        sharedPreferences.edit().putString("pas", checkPasConfirm).apply();
-
-                        AlertDialog.Builder builder = new AlertDialog.Builder(ChangePasswordActivity.this);
-                        builder.setTitle("Внимание");
-                        builder.setMessage("Вы действительно хотите изменить пароль?");
-                        builder.setPositiveButton("Ок", (dialog, id) -> {
-                            dialog.dismiss();
-                            startActivity(new Intent(ChangePasswordActivity.this, EditProfileActivity.class));
-                        });
-                        builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
-                        builder.show();
-
-                    } else {
-                        new_pass_LayoutText.setError("Пароль разный");
-                        confirm_pass_LayoutText.setError("Пароль разный");
-                    }
-
-                } else
-                    current_pass_LayoutText.setError("Неверный пароль");
-
-            }
+            if(!password_teather.equals("password_teather_empty"))
+                ChangeTeatherPassword();
         });
 
         Button forgotPaa = findViewById(R.id.forgot_pass);
         forgotPaa.setOnClickListener(v -> {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             String password = sharedPreferences.getString("pas", "empty_pas");
-            Snackbar
-                    .make(v, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
-                    .setAction("COPY", v1 -> {
-                        ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-                        ClipData clip = ClipData.newPlainText("", password);
-                        assert clipboard != null;
-                        clipboard.setPrimaryClip(clip);
-                    })
-                    .show();
+            String password_teather = sharedPreferences.getString("password_teather","password_teather_empty");
+
+            if(!password.equals("empty_pas"))
+                forgotPupilPassword(v);
+
+            if(!password_teather.equals("password_teather_empty"))
+                forgotTeatherPassword(v);
+
         });
 
 
+    }
+
+    public void ChangePupilPassword() {
+        if (!validateConfirmPas() | !validateNewPas() | !validatePas()) {
+            return;
+        } else {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            String password = sharedPreferences.getString("pas", "empty_pas");
+
+            String currnetPas = current_pass_LayoutText.getEditText().getText().toString();
+            String checkPasNew = new_pass_LayoutText.getEditText().getText().toString();
+            String checkPasConfirm = confirm_pass_LayoutText.getEditText().getText().toString();
+
+            if (currnetPas.equals(password)) {
+                if (checkPasNew.equals(checkPasConfirm)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ChangePasswordActivity.this);
+                    builder.setTitle("Внимание");
+                    builder.setMessage("Вы действительно хотите изменить пароль?");
+                    builder.setPositiveButton("Ок", (dialog, id) -> {
+                        sharedPreferences.edit().remove("pas").apply();
+                        sharedPreferences.edit().putString("pas", checkPasConfirm).apply();
+                        dialog.dismiss();
+                        onBackPressed();
+                    });
+                    builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+                    builder.show();
+                } else {
+                    new_pass_LayoutText.setError("Пароль разный");
+                    confirm_pass_LayoutText.setError("Пароль разный");
+                }
+
+            } else
+                current_pass_LayoutText.setError("Неверный пароль");
+
+        }
+    }
+
+    public void ChangeTeatherPassword() {
+        if (!validateConfirmPas() | !validateNewPas() | !validatePas()) {
+            return;
+        } else {
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            String password = sharedPreferences.getString("password_teather", "password_teather_empty");
+
+            String currnetPas = current_pass_LayoutText.getEditText().getText().toString();
+            String checkPasNew = new_pass_LayoutText.getEditText().getText().toString();
+            String checkPasConfirm = confirm_pass_LayoutText.getEditText().getText().toString();
+
+            if (currnetPas.equals(password)) {
+                if (checkPasNew.equals(checkPasConfirm)) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(ChangePasswordActivity.this);
+                    builder.setTitle("Внимание");
+                    builder.setMessage("Вы действительно хотите изменить пароль?");
+                    builder.setPositiveButton("Ок", (dialog, id) -> {
+                        sharedPreferences.edit().remove("password_teather").apply();
+                        sharedPreferences.edit().putString("password_teather", checkPasConfirm).apply();
+                        dialog.dismiss();
+                        onBackPressed();
+                    });
+                    builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+                    builder.show();
+                } else {
+                    new_pass_LayoutText.setError("Пароль разный");
+                    confirm_pass_LayoutText.setError("Пароль разный");
+                }
+
+            } else
+                current_pass_LayoutText.setError("Неверный пароль");
+
+        }
+    }
+
+    public void forgotPupilPassword(View v) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String password = sharedPreferences.getString("pas", "empty_pas");
+        Snackbar
+                .make(v, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
+                .setAction("COPY", v1 -> {
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("", password);
+                    assert clipboard != null;
+                    clipboard.setPrimaryClip(clip);
+                })
+                .show();
+    }
+
+    public void forgotTeatherPassword(View v) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String password = sharedPreferences.getString("password_teather", "password_teather_empty");
+        Snackbar
+                .make(v, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
+                .setAction("COPY", v1 -> {
+                    ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("", password);
+                    assert clipboard != null;
+                    clipboard.setPrimaryClip(clip);
+                })
+                .show();
     }
 
     public boolean validateConfirmPas() {
@@ -142,6 +209,57 @@ public class ChangePasswordActivity extends AppCompatActivity {
             return true;
         }
 
+    }
+
+    void cleanErrors() {
+        current_pass_LayoutText.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                current_pass_LayoutText.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        new_pass_LayoutText.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                new_pass_LayoutText.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        confirm_pass_LayoutText.getEditText().addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                confirm_pass_LayoutText.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
 }

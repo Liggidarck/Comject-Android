@@ -4,7 +4,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.fragment.app.Fragment;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -26,7 +25,6 @@ import android.widget.TextView;
 import com.george.devil.Activitys.Main.Pupil.MainActivityPupil;
 import com.george.devil.BottomSheets.BottomSheetNotes;
 import com.george.devil.DataBases.NotesDatabase;
-import com.george.devil.Fragments.Pupil.fragmentNote;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.snackbar.Snackbar;

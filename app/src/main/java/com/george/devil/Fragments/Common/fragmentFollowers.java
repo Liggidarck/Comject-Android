@@ -1,4 +1,4 @@
-package com.george.devil.Fragments.Pupil;
+package com.george.devil.Fragments.Common;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 
 import com.george.devil.R;
 
-public class fragmentFollowing extends Fragment {
+public class fragmentFollowers extends Fragment {
 
-    public fragmentFollowing() {
+    public fragmentFollowers() {
 
     }
 
@@ -25,7 +25,6 @@ public class fragmentFollowing extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_following, container, false);
-
+        return inflater.inflate(R.layout.fragment_fllowers, container, false);
     }
 }

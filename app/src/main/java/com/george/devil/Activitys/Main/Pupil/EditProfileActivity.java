@@ -41,6 +41,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class EditProfileActivity extends AppCompatActivity {
 
+    //TODO: Сделать что-нибудть с этим пиздецомю Читать этот код нереально!
+
     private static final String TAG = "EditProfileActivity";
 
     TextInputLayout namePersonTextLayout, usernameTextLayout, topikTextLayout, emailTextLayout, cityTextLayout, schoolTextLayout, gradeTextLayout, birdayTextLayout;
@@ -124,9 +126,7 @@ public class EditProfileActivity extends AppCompatActivity {
         });
 
         setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(v -> {
-            saveArrow();
-        });
+        toolbar.setNavigationOnClickListener(v -> saveArrow());
 
         String[] items = new String[] {
                 "Biology", "Chemistry", "Economics", "English",
@@ -182,7 +182,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
     }
 
-
     private void updateLabel() {
         String myFormat = "MM.dd.yyyy"; //In which you need put here
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
@@ -213,7 +212,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.save_changes_profile) {
 
-            if(!validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
+            if(validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
                 return super.onOptionsItemSelected(item);
             } else {
                 sharedPreferences.edit().remove("full_name").apply();
@@ -238,7 +237,6 @@ public class EditProfileActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-
 
         }
 
@@ -273,7 +271,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String grade_chek = Objects.requireNonNull(gradeTextLayout.getEditText()).getText().toString();
         String birthday_chek = Objects.requireNonNull(birdayTextLayout.getEditText()).getText().toString();
 
-        if(!validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
+        if(validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
             return;
         } else {
 
@@ -339,10 +337,10 @@ public class EditProfileActivity extends AppCompatActivity {
 
         if(check.isEmpty()){
             namePersonTextLayout.setError("Это поле не может быть пустом");
-            return false;
+            return true;
         } else {
             namePersonTextLayout.setError(null);
-            return true;
+            return false;
         }
     }
 

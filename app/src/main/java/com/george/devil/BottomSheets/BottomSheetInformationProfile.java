@@ -6,7 +6,6 @@ import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,29 +22,39 @@ public class BottomSheetInformationProfile extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_information_profile, container, false);
 
+        TextView topicTextView = view.findViewById(R.id.topik_bottom);
+        TextView bithdayTextView = view.findViewById(R.id.birthday_bottom);
+        TextView city_bottomTextView = view.findViewById(R.id.city_bottom);
+        TextView cityBottomTextView = view.findViewById(R.id.city_bottom_2);
+        TextView date_birthday = view.findViewById(R.id.date_birthday);
+
         ImageView close = view.findViewById(R.id.close_btn);
         close.setOnClickListener(v -> dismiss());
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity().getBaseContext());
-        String topic = sharedPreferences.getString("topik", "empty_topic");
-        String city = sharedPreferences.getString("city", "empty_city");
-        String birthday = sharedPreferences.getString("birthday", "empty_birthday");
+        String topic_pupil = sharedPreferences.getString("topik", "empty_topic");
+        String city_pupil = sharedPreferences.getString("city", "empty_city");
+        String birthday_pupil = sharedPreferences.getString("birthday", "empty_birthday");
 
-        TextView topicTextView = view.findViewById(R.id.topik_bottom);
-        topicTextView.setText("Profile: " + topic);
+        String topic_teather = sharedPreferences.getString("topic_teather", "topic_teather_empty");
+        String city_teather = sharedPreferences.getString("city_teather", "city_teather_empty");
+        String birthday_teather = sharedPreferences.getString("birthay_teather", "birthay_teather_empty");
 
-        TextView bithdayTextView = view.findViewById(R.id.birthday_bottom);
-        bithdayTextView.setText("Birthday: " + birthday);
+        if(!topic_pupil.equals("empty_topic")) {
+            topicTextView.setText("Profile: " + topic_pupil);
+            bithdayTextView.setText("Birthday: " + birthday_pupil);
+            city_bottomTextView.setText("City: " + city_pupil);
+            cityBottomTextView.setText(city_pupil);
+            date_birthday.setText(birthday_pupil);
+        }
 
-        TextView city_bottomTextView = view.findViewById(R.id.city_bottom);
-        city_bottomTextView.setText("City: " + city);
-
-        TextView cityBottomTextView = view.findViewById(R.id.city_bottom_2);
-        cityBottomTextView.setText(city);
-
-        TextView date_birthday = view.findViewById(R.id.date_birthday);
-        date_birthday.setText(birthday);
-
+        if(!topic_teather.equals("topic_teather_empty")){
+            topicTextView.setText("Profile: " + topic_teather);
+            bithdayTextView.setText("Birthday: " + birthday_teather);
+            city_bottomTextView.setText("City: " + city_teather);
+            cityBottomTextView.setText(city_teather);
+            date_birthday.setText(birthday_teather);
+        }
 
         return view;
     }

@@ -144,9 +144,7 @@ public class AddIssue extends AppCompatActivity {
         String chekName = name_issue.getText().toString();
         String checkPrioritet = choose_priority_TextEdit.getText().toString();
 
-        if(chekName.isEmpty() | checkPrioritet.isEmpty()) {
-            goHome();
-        } else {
+        if (!(chekName.isEmpty() | checkPrioritet.isEmpty())) {
             Date currentDate = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
             String dateText = dateFormat.format(currentDate);
@@ -161,12 +159,12 @@ public class AddIssue extends AppCompatActivity {
             cv.put(IssuesDataBase.COLUMN_DATE_SAVE, fullDate);
 
             if (issuesId > 0)
-                db.update(IssuesDataBase.TABLE, cv, IssuesDataBase.COLUMN_ID + "=" + String.valueOf(issuesId), null);
+                db.update(IssuesDataBase.TABLE, cv, IssuesDataBase.COLUMN_ID + "=" + issuesId, null);
             else
                 db.insert(IssuesDataBase.TABLE, null, cv);
 
-            goHome();
         }
+        goHome();
     }
 
     public void goHome() {

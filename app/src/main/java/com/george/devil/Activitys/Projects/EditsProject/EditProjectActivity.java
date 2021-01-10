@@ -86,9 +86,9 @@ public class EditProjectActivity extends AppCompatActivity {
     }
 
     public void BIG_DATA() {
-        String nameProj = textField_name_proj_edit.getEditText().getText().toString();
-        String descriptionProj = textField_description_proj_edit.getEditText().getText().toString();
-        String topicPjaj = textField_topic_edit.getEditText().getText().toString();
+        String nameProj = Objects.requireNonNull(textField_name_proj_edit.getEditText()).getText().toString();
+        String descriptionProj = Objects.requireNonNull(textField_description_proj_edit.getEditText()).getText().toString();
+        String topicPjaj = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString();
         boolean private_public_proj;
 
 
