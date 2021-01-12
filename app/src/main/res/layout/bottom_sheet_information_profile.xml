@@ -15,7 +15,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Information"
+                android:text="@string/information"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 
@@ -50,7 +50,6 @@
                 android:id="@+id/topik_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="null"
                 android:layout_toEndOf="@id/profile_icomge_sheet"
                 android:textSize="15sp"
                 android:textColor="#545454"
@@ -86,7 +85,6 @@
                     android:id="@+id/birthday_bottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="null"
                     android:layout_toEndOf="@id/bithday_image_sheet"
                     android:textSize="15sp"
                     android:textColor="#545454"
@@ -112,7 +110,6 @@
                     android:id="@+id/city_bottom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="null"
                     android:layout_toEndOf="@id/city_image_sheet"
                     android:textSize="15sp"
                     android:textColor="#545454"
@@ -145,7 +142,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Following"
+                android:text="@string/following"
                 android:layout_toEndOf="@id/following_image_sheet"
                 android:textSize="17sp"
                 android:textColor="@color/black"
@@ -180,7 +177,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Followers"
+                android:text="@string/followers"
                 android:layout_toEndOf="@id/followers_image_sheet"
                 android:textSize="17sp"
                 android:textColor="@color/black"
@@ -212,7 +209,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Basic information"
+                android:text="@string/basic_information"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 android:layout_marginTop="20dp"/>
@@ -220,7 +217,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Citiy"
+                android:text="@string/city"
                 android:layout_marginTop="11dp"
                 android:textSize="14sp" />
 
@@ -228,7 +225,6 @@
                 android:id="@+id/city_bottom_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Moscow"
                 android:textSize="14sp"
                 android:textColor="@color/black"/>
 
@@ -236,7 +232,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Birthday"
+                android:text="@string/birthday"
                 android:layout_marginTop="11dp"
                 android:textSize="14sp" />
 
@@ -244,7 +240,6 @@
                 android:id="@+id/date_birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="01.06.2004"
                 android:textSize="14sp"
                 android:textColor="@color/black"/>
 

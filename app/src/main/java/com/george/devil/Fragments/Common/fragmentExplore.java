@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.george.devil.Activitys.Projects.PagesProjects.PostProjectActivity;
+import com.george.devil.Activities.Projects.PagesProjects.PostProjectActivity;
 import com.george.devil.BottomSheets.BottomSheetFilters;
 import com.george.devil.Fragments.Pupil.fragmentSearchExplore;
 import com.george.devil.R;

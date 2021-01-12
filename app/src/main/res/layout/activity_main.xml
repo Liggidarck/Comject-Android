@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Pupil.MainActivityPupil" >
+    tools:context=".Activities.Main.Pupil.MainActivityPupil" >
 
     <FrameLayout
         android:id="@+id/fragment_pupil_container"

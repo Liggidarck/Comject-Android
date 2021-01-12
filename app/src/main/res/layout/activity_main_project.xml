@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.PagesProjects.MainProjectActivity" >
+    tools:context=".Activities.Projects.PagesProjects.MainProjectActivity" >
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -20,7 +20,6 @@
                 android:id="@+id/main_title_project_full"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gradient Notes"
                 android:fontFamily="@font/google_sans_medium"
                 android:textColor="@color/black"
                 android:textSize="25sp"
@@ -34,14 +33,12 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:text="Long default text for you project.  Long continuation of the description. Мой уровень английского не позволяет сделать мне более длинный текст на английском, поэтому продолжу на русском чтобы текст описания выглядил более объёмно."
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/main_hastags"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
                 android:textColor="#1E3F92"
                 android:textSize="14sp"
                 android:layout_marginStart="20dp"
@@ -62,7 +59,7 @@
                     android:layout_width="175dp"
                     android:layout_height="55dp"
                     android:fontFamily="@font/google_sans_medium"
-                    android:text="Publish"
+                    android:text="@string/publish"
                     android:textColor="#4A4A4A"
                     android:textAllCaps="false"
                     android:layout_marginStart="16dp"
@@ -75,7 +72,7 @@
                     android:layout_width="175dp"
                     android:layout_height="55dp"
                     android:fontFamily="@font/google_sans_medium"
-                    android:text="Edit Project"
+                    android:text="@string/edit_project"
                     android:textColor="#4A4A4A"
                     android:textAllCaps="false"
                     android:layout_marginEnd="16dp"
@@ -102,7 +99,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/red_issues"
@@ -129,7 +127,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Issues"
+                        android:text="@string/issues"
                         android:layout_toEndOf="@+id/red_issues"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
@@ -144,7 +142,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/violet"
@@ -171,7 +170,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Changes"
+                        android:text="@string/changes"
                         android:layout_toEndOf="@+id/violet"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
@@ -186,7 +185,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/green"
@@ -213,7 +213,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Information from teacher"
+                        android:text="@string/information_from_teacher"
                         android:layout_toEndOf="@+id/green"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
@@ -240,7 +240,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/orange_comment"
@@ -267,7 +268,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Comments"
+                        android:text="@string/comments"
                         android:layout_toEndOf="@+id/orange_comment"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
@@ -282,7 +283,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/blue_hashtag"
@@ -309,7 +311,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hashtags"
+                        android:text="@string/hashtags"
                         android:layout_toEndOf="@+id/blue_hashtag"
                         android:layout_centerVertical="true"
                         android:layout_marginStart="10dp"
@@ -329,7 +331,6 @@
                 android:id="@+id/main_title_prokect_secondaty"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gradient Notes"
                 android:fontFamily="@font/google_sans_medium"
                 android:textColor="@color/black"
                 android:textSize="25sp"

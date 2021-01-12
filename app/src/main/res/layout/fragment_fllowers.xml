@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -23,7 +24,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/follwer1_ava"
@@ -34,7 +36,6 @@
                         android:layout_marginBottom="10dp" >
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/ava_follower1"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:elevation="3dp"
@@ -60,7 +61,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_follower_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="_kate_sheee_"

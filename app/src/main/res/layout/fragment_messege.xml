@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/new_chat_fab"
@@ -29,7 +29,7 @@
                 android:id="@+id/topAppBar_message"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Chats"
+                app:title="@string/chats"
                 android:elevation="4dp"
                 app:menu="@menu/search_menu"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary" />
@@ -52,7 +52,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/profile_image_2"
@@ -106,7 +107,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_chat_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="_kate_sheee_"
@@ -131,7 +131,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_image_3"
@@ -161,7 +162,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_chat_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Teatcher"
@@ -186,7 +186,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_image_4"
@@ -216,7 +217,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_chat_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="thefireowl"
@@ -241,7 +241,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profile_image_5"
@@ -271,7 +272,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_chat_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="liggidarck"

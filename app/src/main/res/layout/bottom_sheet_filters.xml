@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +17,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Filters"
+                android:text="@string/filters"
                 android:textColor="@color/black"
                 android:textSize="22sp" />
 
@@ -39,10 +37,9 @@
             android:layout_marginTop="12dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/topic_layout_filter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Topic"
+            android:hint="@string/topic"
             android:layout_marginTop="12dp"
             app:endIconMode="dropdown_menu"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" >

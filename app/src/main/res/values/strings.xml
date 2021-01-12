@@ -1,16 +1,163 @@
 <resources>
     <string name="app_name" translatable="false">Comject</string>
 
+    <string name="home">Home</string>
+    <string name="notebook">Notebook</string>
+    <string name="explore">Explore</string>
+    <string name="chats">Chats</string>
+    <string name="profile">Profile</string>
+
+    <!-- fragment home -->
+    <string name="my_work">My Work</string>
+    <string name="my_main_project">MY MAIN PROJECT</string>
+    <string name="num_comments">1.3 Comments</string>
+    <string name="publish">Publish</string>
+    <string name="edit_project">Edit project</string>
+    <string name="my_others_projects">My Others Projects</string>
+
+    <!-- fragment notes -->
+    <string name="your_notes_will_be_here">Your notes will be here</string>
+
+    <!-- fragment explore -->
+    <string name="subscribe">Subscribe</string>
+    <string name="like">like</string>
+    <string name="liked">liked</string>
+    <string name="btn_comment">Comment</string>
+
+    <!-- fragment profile main pupil -->
+    <string name="edit_profile">edit profile</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="settings_profile">settings</string>
+    <string name="general_info">general info</string>
+
+    <!-- Activity Add Change, Issues -->
+    <string name="add_due_date">Add due date</string>
+    <string name="add_note">Add note</string>
+
+    <!-- Activity Add Change -->
+    <string name="name_change">Name Change</string>
+    <string name="add_changes">Add Changes</string>
+
+    <!-- Activity Changes -->
+    <string name="changes">Changes</string>
+    <string name="all_projects_changes_will_be_here">All projects changes will be here</string>
+
+    <!-- Activity Issues -->
+    <string name="issues">Issues</string>
+    <string name="all_problems_will_be_here">All problems will be here</string>
+
+    <!-- Activity Add Issue -->
+    <string name="name_issue">Name Issue</string>
+    <string name="choose_priority">Choose priority</string>
+
+    <!-- Activity Add Note -->
+    <string name="title">Title</string>
+    <string name="text">Text</string>
+
+    <!-- Activity Settings -->
+    <string name="settings">Settings</string>
+    <string name="edit_account">edit account</string>
+    <string name="sign_out">sign out</string>
+
+    <!-- Activity Change Password -->
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="change_password">change password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+
+    <!-- Activity Post -->
+    <string name="post">Post</string>
+
+    <!-- Activity Message -->
+    <string name="message">Message</string>
+    <string name="online">Online</string>
+
+    <!-- Activity Registrations -->
+    <string name="your_name">Your name</string>
+    <string name="username">Username</string>
+    <string name="topic">Topic</string>
+    <string name="e_mail">E-mail</string>
+    <string name="city">City</string>
+    <string name="school">School</string>
+    <string name="grade">Grade</string>
+    <string name="birthday">Birthday</string>
+    <string name="password">Password</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+
+    <!-- Activity Registration Teather -->
+    <string name="registration_teather">Registration Teather</string>
+
+    <!-- Activity Registration Pupil -->
+    <string name="registration_pupil">Registration Pupil</string>
+
+    <!-- Activity Edit Profiles -->
+    <string name="edit_profile_teather">Edit Profile</string>
+    <string name="name">Name</string>
+    <string name="security">Security</string>
+
+    <!-- Activity Login -->
+    <string name="let_s_get_started">Lets get started</string>
+    <string name="login">Login</string>
+    <string name="you_don_t_have_eny_account">You don’t have eny account?</string>
     <string name="regist"><u>Register</u></string>
-    <string name="title_activity_login_test">LoginActivityTest</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
+    <!-- Activity Edit Project -->
+    <string name="next">next</string>
+    <string name="save">save</string>
+    <string name="project_name">Project name</string>
+    <string name="project_description">Project Description</string>
+    <string name="project_topic">Project Topic</string>
+    <string name="private_project">Private Project</string>
+    <string name="anyone_can_see_this_project">Anyone can see this project</string>
+
+    <!-- Activity Edit Project Images -->
+    <string name="find_more">find more</string>
+
+    <!-- Activity Find more images -->
+
+    <!-- Activity new project images -->
+    <string name="done">done</string>
+    <string name="this_will_be_the_most_important_text_for_your_project">This will be the most important text for your project</string>
+
+    <!-- Activity Main Project -->
+    <string name="information_from_teacher">Information from teacher</string>
+    <string name="comments">Comments</string>
+    <string name="hashtags">Hashtags</string>
+    <string name="my_tasks">My tasks</string>
+
+    <!-- Activity New Post -->
+    <string name="New_Post">New Post</string>
+
+    <!-- Activity Information From Teather -->
+    <string name="information">Information</string>
+
+    <!-- Activity Add Task -->
+    <string name="Add_Task">Add Task</string>
+    <string name="text_task">Text Task</string>
+
+    <!-- Activity My Tasks -->
+    <string name="your_tasks_will_be_here">Your tasks will be here</string>
+
+    <!-- Bottom Sheet Filters, EditThemeTasks, Information, Notes, Hastag -->
+    <string name="choose_theme">Choose theme</string>
+    <string name="filters">Filters</string>
+    <string name="edit_chastags">edit chastags</string>
+    <string name="basic_information">Basic information</string>
+    <string name="actions_with_notes">Actions with notes</string>
+    <string name="delete">Delete</string>
+    <string name="copy_content">Copy content</string>
+    <string name="share">Share</string>
+
+    <!-- Fragment lock project -->
+    <string name="my_personal_project_private">My personal project (Private)</string>
+
+    <!-- Layout choose category -->
+    <string name="choose_category">Choose category</string>
+    <string name="pupil">Pupil</string>
+    <string name="teather">Teather</string>
 
 
 </resources>

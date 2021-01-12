@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,7 +15,7 @@
         android:id="@+id/text_acton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Actions with notes"
+        android:text="@string/actions_with_notes"
         android:fontFamily="@font/product_sans_bold"
         android:textSize="23sp"
         android:layout_marginTop="40dp"
@@ -38,7 +38,8 @@
             android:layout_marginBottom="10dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="UnusedAttribute">
 
             <ImageView
                 android:id="@+id/icon_del_note"
@@ -51,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delete"
+                android:text="@string/delete"
                 android:textSize="17sp"
                 android:layout_toEndOf="@id/icon_del_note"
                 android:layout_centerVertical="true"
@@ -68,7 +69,8 @@
             android:layout_marginBottom="10dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="UnusedAttribute">
 
             <ImageView
                 android:id="@+id/icon_copy_note"
@@ -82,7 +84,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Copy content"
+                android:text="@string/copy_content"
                 android:textSize="17sp"
                 android:layout_toEndOf="@id/icon_copy_note"
                 android:layout_centerVertical="true"
@@ -99,7 +101,8 @@
             android:layout_marginBottom="10dp"
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="UnusedAttribute">
 
             <ImageView
                 android:id="@+id/icon_share_note"
@@ -112,7 +115,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Share"
+                android:text="@string/share"
                 android:textSize="17sp"
                 android:layout_toEndOf="@id/icon_share_note"
                 android:layout_centerVertical="true"
@@ -123,7 +126,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose theme"
+            android:text="@string/choose_theme"
             android:fontFamily="@font/product_sans_bold"
             android:textSize="23sp"
             android:layout_marginTop="5dp"
@@ -162,7 +165,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/white_image"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:elevation="2dp"
@@ -191,7 +193,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/red_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -222,7 +223,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/orange_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -252,7 +252,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/yellow_image"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:layout_centerVertical="true"
@@ -281,7 +280,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/green_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -310,7 +308,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/green_seconary_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -340,7 +337,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/ligth_blue_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -371,7 +367,6 @@
 
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/blue_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -401,7 +396,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/violet_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -431,7 +425,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/pink_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -461,7 +454,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/gray_image"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"

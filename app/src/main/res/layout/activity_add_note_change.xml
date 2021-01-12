@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Changes.AddNoteChange">
+    tools:context=".Activities.Changes.AddNoteChange">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar_add_note_change_new"
@@ -16,7 +16,6 @@
         style="@style/Widget.MaterialComponents.Toolbar.Surface" />
 
     <LinearLayout
-        android:id="@+id/text_note"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="15dp"
@@ -28,8 +27,8 @@
             android:id="@+id/note_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|left"
-            android:hint="Add Note"
+            android:gravity="top|start"
+            android:hint="@string/add_note"
             android:textSize="18sp"
             app:borderWidth="0dp"
             android:fontFamily="@font/google_sans_medium"

@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/nav_home_teather"
-        android:title="Home"
+        android:title="@string/home"
         android:icon="@drawable/ic_outline_home_24" />
 
     <item
         android:id="@+id/nav_explore_teather"
-        android:title="Explore"
+        android:title="@string/explore"
         android:icon="@drawable/ic_outline_explore_24" />
 
     <item
         android:id="@+id/nav_message_teather"
-        android:title="Chat"
+        android:title="@string/chats"
         android:icon="@drawable/ic_outline_email_24" />
 
     <item
         android:id="@+id/nav_profile_teather"
-        android:title="Progile"
+        android:title="@string/profile"
         android:icon="@drawable/ic_outline_school_24" />
 
 </menu>

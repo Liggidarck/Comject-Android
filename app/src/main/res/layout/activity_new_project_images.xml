@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.NewProject.NewProjectImagesActivity">
+    tools:context=".Activities.Projects.NewProject.NewProjectImagesActivity">
 
     <Button
         android:id="@+id/done_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="done"
+        android:text="@string/done"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -101,7 +101,7 @@
                     android:id="@+id/find_more_images_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="find more"
+                    android:text="@string/find_more"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     app:icon="@drawable/ic_baseline_search_24"
@@ -119,7 +119,7 @@
                     android:id="@+id/description_main_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="This will be the most important text for your project"
+                    android:hint="@string/this_will_be_the_most_important_text_for_your_project"
                     android:textSize="18sp"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"

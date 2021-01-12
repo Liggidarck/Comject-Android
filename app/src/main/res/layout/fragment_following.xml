@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -23,7 +24,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/newChatAvaLayout_5"
@@ -34,7 +36,6 @@
                         android:layout_marginBottom="10dp" >
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/newChatAva_5"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:elevation="3dp"
@@ -60,7 +61,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_NewChat_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="___uliano4ka___"
@@ -87,7 +87,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <RelativeLayout
                         android:id="@+id/newChatAvaLayout_4"
@@ -98,7 +99,6 @@
                         android:layout_marginBottom="10dp" >
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/newChatAva_4"
                             android:layout_width="56dp"
                             android:layout_height="56dp"
                             android:elevation="3dp"
@@ -124,7 +124,6 @@
                             android:textSize="18sp" />
 
                         <TextView
-                            android:id="@+id/username_NewChat_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="stefa__vasiliadi"

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.EditsProject.EditProjectActivity">
+    tools:context=".Activities.Projects.EditsProject.EditProjectActivity">
 
     <Button
         android:id="@+id/next_edit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="next"
+        android:text="@string/next"
         style="?attr/materialButtonOutlinedStyle"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
@@ -21,7 +21,7 @@
         android:id="@+id/fab_save_edit_proj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="@string/save"
         app:icon="@drawable/ic_baseline_done_24"
         app:iconTint="@color/white"
         android:textColor="@color/white"
@@ -79,7 +79,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_name_proj_edit"
-                        android:hint="Project name"
+                        android:hint="@string/project_name"
                         android:layout_marginTop="15sp"
                         android:layout_marginStart="20sp"
                         android:layout_marginEnd="20sp"
@@ -113,7 +113,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_description_proj_edit"
-                        android:hint="Project Description"
+                        android:hint="@string/project_description"
                         android:layout_marginTop="15sp"
                         android:layout_marginStart="20sp"
                         android:layout_marginEnd="20sp"
@@ -146,7 +146,7 @@
                         android:id="@+id/textField_topic_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Project Topic"
+                        android:hint="@string/project_topic"
                         android:layout_marginTop="15sp"
                         android:layout_marginStart="20sp"
                         android:layout_marginEnd="20sp"
@@ -173,7 +173,8 @@
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <ImageView
                         android:id="@+id/private_proj_icon_edit"
@@ -188,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@+id/private_proj_icon_edit"
-                        android:text="Private Project"
+                        android:text="@string/private_project"
                         android:textSize="20sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/product_sans_medium"
@@ -198,7 +199,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Anyone can see this project"
+                        android:text="@string/anyone_can_see_this_project"
                         android:layout_below="@+id/text_private_proj_edit"
                         android:layout_toEndOf="@+id/private_proj_icon_edit"
                         android:layout_marginStart="20dp"

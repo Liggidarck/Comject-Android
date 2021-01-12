@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.EditsProject.EditProjectImagesActivity">
+    tools:context=".Activities.Projects.EditsProject.EditProjectImagesActivity">
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/save_btn_images_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="@string/save"
         app:icon="@drawable/ic_baseline_done_24"
         app:iconTint="@color/white"
         android:textColor="@color/white"
@@ -68,7 +68,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_name_proj_edit_images"
-                        android:hint="Project name"
+                        android:hint="@string/project_name"
                         android:layout_marginTop="15sp"
                         android:layout_marginStart="20sp"
                         android:layout_marginEnd="20sp"
@@ -100,7 +100,8 @@
                     android:fontFamily="@font/product_sans_regular"
                     android:background="@null"
                     android:padding="8dp"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:autofillHints="" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -148,7 +149,7 @@
                     android:id="@+id/find_more_images_btn_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="find more"
+                    android:text="@string/find_more"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="20dp"
                     app:icon="@drawable/ic_baseline_search_24"

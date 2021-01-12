@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Registration.RegistarionPupilActivity" >
+    tools:context=".Activities.Main.Registration.RegistarionPupilActivity" >
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -12,7 +12,6 @@
         android:fitsSystemWindows="true" >
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/nested_kal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -39,7 +38,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_name_regis_pupil"
-                        android:hint="Your name"
+                        android:hint="@string/your_name"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginStart="20dp"
@@ -74,7 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_username_regis_pupil"
-                        android:hint="Username"
+                        android:hint="@string/username"
                         android:layout_marginStart="20dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginEnd="20dp"
@@ -108,7 +107,7 @@
                         android:id="@+id/textField_topic_edit"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Topic"
+                        android:hint="@string/topic"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -148,7 +147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_email_regis_pupil"
-                        android:hint="E-mail"
+                        android:hint="@string/e_mail"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -183,7 +182,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_city_regis_pupil"
-                        android:hint="City"
+                        android:hint="@string/city"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -219,7 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_school_regis_pupil"
-                        android:hint="School"
+                        android:hint="@string/school"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -253,7 +252,7 @@
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_grade_regis_pupil"
-                        android:hint="Grade"
+                        android:hint="@string/grade"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -288,7 +287,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_bithday_regis_pupil"
-                        android:hint="Birthday"
+                        android:hint="@string/birthday"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -325,7 +324,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_password_regis_pupil"
-                        android:hint="Password"
+                        android:hint="@string/password"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -351,7 +350,7 @@
                         android:id="@+id/reg_pupil"
                         android:layout_width="wrap_content"
                         android:layout_height="55dp"
-                        android:text="CREATE ACCOUNT"
+                        android:text="@string/create_account"
                         android:layout_centerHorizontal="true"
                         style="?attr/materialButtonOutlinedStyle" />
 
@@ -373,7 +372,7 @@
                 android:id="@+id/topAppBar_reg_pupil"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Registration Pupil"
+                app:title="@string/registration_pupil"
                 app:titleTextColor="@android:color/white"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"

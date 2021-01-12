@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIcon="@drawable/ic_outline_filter_alt_white"
-                app:title="Explore" />
+                app:title="@string/explore" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -80,7 +80,6 @@
                                     android:textSize="16sp"/>
 
                                 <TextView
-                                    android:id="@+id/namespace_card_eee"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Liggidarck"
@@ -98,14 +97,13 @@
                                     android:layout_marginStart="10dp" />
 
                                 <Button
-                                    android:id="@+id/subscribe_btn"
                                     android:layout_width="wrap_content"
                                     android:layout_height="40dp"
                                     android:layout_toEndOf="@+id/circle_border"
                                     android:layout_marginTop="7dp"
                                     android:layout_marginStart="3dp"
                                     style="@style/Widget.MaterialComponents.Button.TextButton"
-                                    android:text="Subscribe"
+                                    android:text="@string/subscribe"
                                     android:textSize="11sp" />
 
                             </RelativeLayout>
@@ -195,7 +193,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="1.3 Comments"
+                                        android:text="@string/num_comments"
                                         android:layout_toEndOf="@id/icon_comment_1"
                                         android:layout_marginStart="8dp"
                                         android:textSize="15sp"
@@ -220,7 +218,7 @@
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
                                         android:fontFamily="@font/google_sans_medium"
-                                        android:text="like"
+                                        android:text="@string/like"
                                         android:textColor="#4A4A4A"
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
@@ -234,7 +232,7 @@
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
                                         android:fontFamily="@font/google_sans_medium"
-                                        android:text="liked"
+                                        android:text="@string/liked"
                                         android:textColor="#4A4A4A"
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
@@ -251,7 +249,7 @@
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
-                                        android:text="Comment"
+                                        android:text="@string/btn_comment"
                                         android:textColor="#4A4A4A"
                                         app:icon="@drawable/ic_outline_chat_24"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
@@ -269,7 +267,6 @@
                     android:layout_height="wrap_content" >
 
                     <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/card2_explore"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:cardElevation="6dp"
@@ -311,7 +308,6 @@
                                     android:textSize="16sp"/>
 
                                 <TextView
-                                    android:id="@+id/namespace_card_eee2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="_kate_sheee_"
@@ -406,7 +402,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="1.3 Comments"
+                                        android:text="@string/num_comments"
                                         android:layout_toEndOf="@id/icon_comment_2"
                                         android:layout_marginStart="8dp"
                                         android:textSize="15sp"
@@ -431,7 +427,7 @@
                                         android:layout_width="170dp"
                                         android:layout_height="55dp"
                                         android:fontFamily="@font/google_sans_medium"
-                                        android:text="like"
+                                        android:text="@string/like"
                                         android:textColor="#4A4A4A"
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
@@ -446,7 +442,7 @@
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
-                                        android:text="COMMENT"
+                                        android:text="@string/btn_comment"
                                         android:textColor="#4A4A4A"
                                         app:icon="@drawable/ic_outline_chat_24"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />

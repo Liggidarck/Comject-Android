@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Pupil.ProfileActivityPupil"
+    tools:context=".Activities.Main.Pupil.ProfileActivityPupil"
     android:scrollbars="none" >
 
     <LinearLayout
@@ -39,7 +39,6 @@
                 android:id="@+id/main_name_profile_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="null"
                 android:layout_below="@id/main_ava_post_profile"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -51,15 +50,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/main_name_profile_post"
-                android:text="null"
                 android:textSize="17sp"
                 android:layout_marginStart="15dp" />
 
             <Button
-                android:id="@+id/subscribe_profile_post_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="subscribe"
+                android:text="@string/subscribe"
                 android:layout_below="@id/main_ava_post_profile"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
@@ -79,7 +76,8 @@
                 android:layout_marginTop="30dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" >
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
 
                 <TextView
                     android:id="@+id/text_num_posts"
@@ -94,7 +92,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Posts"
+                    android:text="@string/posts"
                     android:textColor="@color/black"
                     android:textSize="19sp"
                     android:fontFamily="@font/product_sans_light"
@@ -105,7 +103,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/followers_post_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:padding="4dp"
@@ -113,7 +110,8 @@
                 android:layout_centerHorizontal="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" >
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
 
                 <TextView
                     android:id="@+id/text_num_followers"
@@ -128,7 +126,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Followers"
+                    android:text="@string/followers"
                     android:textColor="@color/black"
                     android:textSize="19sp"
                     android:fontFamily="@font/product_sans_light"
@@ -139,7 +137,6 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/following_post_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="70dp"
                 android:padding="4dp"
@@ -148,7 +145,8 @@
                 android:layout_marginEnd="20dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" >
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
 
                 <TextView
                     android:id="@+id/text_num_following"
@@ -163,7 +161,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Following"
+                    android:text="@string/following"
                     android:textColor="@color/black"
                     android:textSize="19sp"
                     android:fontFamily="@font/product_sans_light"
@@ -181,18 +179,16 @@
             android:layout_marginTop="5dp">
 
             <Button
-                android:id="@+id/message_btn"
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
-                android:text="message"
+                android:text="@string/message"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_marginStart="15dp"/>
 
             <Button
-                android:id="@+id/general_info_pupuil"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
-                android:text="general info"
+                android:text="@string/general_info"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="15dp" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Teather.EditProfileTeacher" >
+    tools:context=".Activities.Main.Teacher.EditProfileTeacher" >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="Edit Profile"
+            app:title="@string/edit_profile_teather"
             app:menu="@menu/menu_edit_profile"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -97,7 +97,7 @@
                     android:id="@+id/name_account_edit_profile_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
+                    android:hint="@string/name"
                     android:layout_marginTop="15dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -123,7 +123,7 @@
                     android:id="@+id/username_layout_editProfile_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Username"
+                    android:hint="@string/username"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -149,7 +149,7 @@
                     android:id="@+id/email_layout_editProfile_tether"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="@string/e_mail"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -175,7 +175,7 @@
                     android:id="@+id/city_layout_editProfile_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="City"
+                    android:hint="@string/city"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -201,7 +201,7 @@
                     android:id="@+id/topic_layout_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Topic"
+                    android:hint="@string/topic"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -230,7 +230,7 @@
                     android:id="@+id/school_layout_editProfile_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="School"
+                    android:hint="@string/school"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -256,7 +256,7 @@
                     android:id="@+id/textField_bithday_edit_profile_teather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Birthday"
+                    android:hint="@string/birthday"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -288,7 +288,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="Security"
+                    android:text="@string/security"
                     android:fontFamily="@font/product_sans_bold"
                     android:textColor="@color/black"
                     android:textSize="25sp" />
@@ -303,7 +303,7 @@
                     android:id="@+id/chan_pas_teather"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:text="Change password"
+                    android:text="@string/change_password"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="10dp"

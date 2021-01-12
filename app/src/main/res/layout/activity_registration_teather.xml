@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Registration.RegistrationTeatherActivity" >
+    tools:context=".Activities.Main.Registration.RegistrationTeatherActivity" >
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-                app:title="Registration Teather" />
+                app:title="@string/registration_teather" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -51,7 +51,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_name_regis_teather"
-                        android:hint="Your name"
+                        android:hint="@string/your_name"
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginStart="20dp"
@@ -86,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_username_regis_teather"
-                        android:hint="Username"
+                        android:hint="@string/username"
                         android:layout_marginStart="20dp"
                         android:layout_marginBottom="15dp"
                         android:layout_marginEnd="20dp"
@@ -122,7 +122,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_email_regis_teather"
-                        android:hint="E-mail"
+                        android:hint="@string/e_mail"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -157,7 +157,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_city_regis_teather"
-                        android:hint="City"
+                        android:hint="@string/city"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -191,7 +191,7 @@
                         android:id="@+id/textField_topic_teather"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Topic"
+                        android:hint="@string/topic"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -232,7 +232,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_school_regis_teather"
-                        android:hint="School"
+                        android:hint="@string/school"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -267,7 +267,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_bithday_regis_tether"
-                        android:hint="Birthday"
+                        android:hint="@string/birthday"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -304,7 +304,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_toEndOf="@id/icon_password_regis_teather"
-                        android:hint="Password"
+                        android:hint="@string/password"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="15dp"
@@ -332,7 +332,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:text="CREATE ACCOUNT" />
+                        android:text="@string/create_account" />
 
                 </RelativeLayout>
 

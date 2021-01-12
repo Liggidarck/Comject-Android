@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Notebook.AddNoteActivity" >
+    tools:context=".Activities.Notebook.AddNoteActivity" >
 
     <View
         android:id="@+id/theme_view_add_note"
@@ -36,7 +36,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:background="@null"
-        android:hint="Title"
+        android:hint="@string/title"
         android:fontFamily="@font/google_sans_medium"
         android:inputType="textMultiLine"
         android:padding="8dp"
@@ -44,7 +44,6 @@
         android:textSize="25sp" />
 
     <LinearLayout
-        android:id="@+id/text_note"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="15dp"
@@ -57,8 +56,8 @@
             android:id="@+id/note_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|left"
-            android:hint="Text"
+            android:gravity="top|start"
+            android:hint="@string/text"
             android:textSize="18sp"
             app:borderWidth="0dp"
             android:fontFamily="@font/google_sans_medium"
@@ -97,7 +96,8 @@
                 android:layout_marginEnd="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                tools:ignore="UnusedAttribute" />
 
         </RelativeLayout>
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Issues.AddIssue">
+    tools:context=".Activities.Issues.AddIssue">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -35,7 +35,6 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/name_issue_layout"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     app:cardElevation="6dp">
@@ -48,7 +47,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
                         android:background="@null"
-                        android:hint="Name Issue"
+                        android:hint="@string/name_issue"
                         android:fontFamily="@font/google_sans_medium"
                         android:inputType="textMultiLine"
                         android:padding="8dp"
@@ -69,13 +68,13 @@
                         android:orientation="vertical" >
 
                         <RelativeLayout
-                            android:id="@+id/priority_layout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:clickable="true"
-                            android:focusable="true">
+                            android:focusable="true"
+                            tools:ignore="UnusedAttribute">
 
                             <ImageView
                                 android:id="@+id/image_priority"
@@ -95,7 +94,7 @@
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="10dp"
                                 android:textSize="18sp"
-                                android:hint="Choose priority"
+                                android:hint="@string/choose_priority"
                                 android:textColorHint="#868686" />
 
 
@@ -103,7 +102,7 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="3sp"
+                            android:layout_height="3dp"
                             android:src="@drawable/line_gray"
                             android:layout_marginStart="45dp" />
 
@@ -125,7 +124,7 @@
                                 android:id="@+id/editText_add_due_date"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:hint="Add due date"
+                                android:hint="@string/add_due_date"
                                 android:textColorHint="#868686"
                                 android:inputType="date"
                                 android:background="@null"
@@ -162,7 +161,7 @@
                                 android:id="@+id/text_note_issue"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Add note"
+                                android:text="@string/add_note"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
                                 android:textSize="16sp" />
@@ -193,13 +192,12 @@
                 android:id="@+id/date_issue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Последнее изменение: 11.12 в 00:29"
                 android:fontFamily="@font/product_sans_medium"
                 android:textColor="@color/black"
                 android:layout_centerInParent="true" />
 
             <ImageView
-                android:id="@+id/delete_isseue"
+                android:id="@+id/delete_issue"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:padding="11dp"
@@ -209,7 +207,8 @@
                 android:layout_marginEnd="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                tools:ignore="UnusedAttribute" />
 
         </RelativeLayout>
 

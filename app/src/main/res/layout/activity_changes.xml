@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Changes.ChangesActivity">
+    tools:context=".Activities.Changes.ChangesActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_chage"
@@ -31,7 +31,6 @@
             android:layout_height="150dp" />
 
         <TextView
-            android:id="@+id/empty_issue_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
@@ -39,7 +38,7 @@
             android:textColor="#4B4B4B"
             android:textSize="20sp"
             android:fontFamily="@font/product_sans_bold"
-            android:text="All projects changes will be here"
+            android:text="@string/all_projects_changes_will_be_here"
             android:layout_below="@id/empty_chenge_image"/>
 
     </RelativeLayout>

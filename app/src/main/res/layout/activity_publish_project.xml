@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.PagesProjects.PublishProjectActivity" >
+    tools:context=".Activities.Projects.PagesProjects.PublishProjectActivity" >
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:id="@+id/topAppBar_new_post"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:title="New Post"
+            app:title="@string/New_Post"
             app:menu="@menu/menu_publish"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
             style="@style/Widget.MaterialComponents.Toolbar.Primary" />

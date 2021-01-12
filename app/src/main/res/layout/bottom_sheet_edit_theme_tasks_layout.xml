@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose theme"
+            android:text="@string/choose_theme"
             android:fontFamily="@font/product_sans_bold"
             android:textSize="23sp"
             android:layout_marginTop="5dp"
@@ -59,7 +59,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/white_image_tasks"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:elevation="2dp"
@@ -87,7 +86,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/red_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -116,7 +114,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/orange_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -145,7 +142,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/yellow_image_tasks"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:layout_centerVertical="true"
@@ -174,7 +170,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/green_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -203,7 +198,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/green_seconary_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -232,7 +226,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/ligth_blue_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -262,7 +255,6 @@
 
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/blue_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -291,7 +283,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/violet_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -320,7 +311,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/pink_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -349,7 +339,6 @@
                             android:visibility="invisible"/>
 
                         <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/gray_image_tasks"
                             android:padding="3dp"
                             android:layout_width="45dp"
                             android:layout_height="45dp"
@@ -359,6 +348,7 @@
 
                     </RelativeLayout>
                 </RelativeLayout>
+
             </HorizontalScrollView>
         </RelativeLayout>
 

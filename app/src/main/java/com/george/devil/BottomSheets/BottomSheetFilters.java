@@ -17,7 +17,6 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class BottomSheetFilters extends BottomSheetDialogFragment {
 
-    TextInputLayout topic_layout_filter;
     MaterialAutoCompleteTextView topic_auto_edit_filter;
 
 

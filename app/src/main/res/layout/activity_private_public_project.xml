@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Projects.PagesProjects.PrivatePublicProjectActivity" >
+    tools:context=".Activities.Projects.PagesProjects.PrivatePublicProjectActivity" >
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -47,7 +47,6 @@
                     android:layout_marginTop="12dp" />
 
                 <FrameLayout
-                    android:id="@+id/private_public_fragme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -56,11 +55,10 @@
                     android:layout_height="wrap_content" >
 
                     <Button
-                        android:id="@+id/share_btn5"
                         android:layout_width="175dp"
                         android:layout_height="55dp"
                         android:fontFamily="@font/google_sans_medium"
-                        android:text="Publish"
+                        android:text="@string/publish"
                         android:textColor="#4A4A4A"
                         android:textAllCaps="false"
                         android:layout_marginStart="16dp"
@@ -73,7 +71,7 @@
                         android:layout_width="175dp"
                         android:layout_height="55dp"
                         android:fontFamily="@font/google_sans_medium"
-                        android:text="Edit Project"
+                        android:text="@string/edit_project"
                         android:textColor="#4A4A4A"
                         android:textAllCaps="false"
                         android:layout_marginEnd="16dp"
@@ -101,7 +99,8 @@
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true" >
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
 
                         <RelativeLayout
                             android:id="@+id/red_issues"
@@ -128,7 +127,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Issues"
+                            android:text="@string/issues"
                             android:layout_toEndOf="@+id/red_issues"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
@@ -143,7 +142,8 @@
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true">
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
 
                         <RelativeLayout
                             android:id="@+id/violet"
@@ -170,7 +170,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Changes"
+                            android:text="@string/changes"
                             android:layout_toEndOf="@+id/violet"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
@@ -185,7 +185,8 @@
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true">
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
 
                         <RelativeLayout
                             android:id="@+id/green"
@@ -212,7 +213,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="My tasks"
+                            android:text="@string/my_tasks"
                             android:layout_toEndOf="@+id/green"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
@@ -240,7 +241,8 @@
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true" >
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
 
                         <RelativeLayout
                             android:id="@+id/orange_comment"
@@ -267,7 +269,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Comments"
+                            android:text="@string/comments"
                             android:layout_toEndOf="@+id/orange_comment"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
@@ -282,7 +284,8 @@
                         android:layout_height="wrap_content"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:clickable="true"
-                        android:focusable="true">
+                        android:focusable="true"
+                        tools:ignore="UnusedAttribute">
 
                         <RelativeLayout
                             android:id="@+id/blue_hashtag"
@@ -309,7 +312,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Hashtags"
+                            android:text="@string/hashtags"
                             android:layout_toEndOf="@+id/blue_hashtag"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"

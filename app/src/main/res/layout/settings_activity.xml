@@ -7,7 +7,7 @@
         android:id="@+id/topAppBar_setting"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="Settings"
+        app:title="@string/settings"
         app:titleTextColor="@android:color/white"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         app:layout_collapseMode="pin"
@@ -33,7 +33,6 @@
             android:id="@+id/name_profile_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="null"
             android:textSize="20sp"
             android:textColor="@color/black"
             android:layout_toEndOf="@+id/ava_settings"
@@ -44,7 +43,6 @@
             android:id="@+id/email_profile_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="null"
             android:layout_toEndOf="@+id/ava_settings"
             android:layout_below="@+id/name_profile_settings"
             android:layout_marginStart="10dp" />
@@ -63,7 +61,7 @@
             android:id="@+id/btn_edit_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="edit account"
+            android:text="@string/edit_account"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_below="@+id/line_settings_1"
             android:layout_toEndOf="@+id/ava_settings"
@@ -83,7 +81,7 @@
             android:id="@+id/btn_sign_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="sign out"
+            android:text="@string/sign_out"
             android:textColor="#E73C3C"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_below="@+id/line_settings_2"
@@ -91,7 +89,6 @@
             android:layout_marginTop="5dp" />
 
         <ImageView
-            android:id="@+id/line_settings_3"
             android:layout_width="match_parent"
             android:layout_height="3dp"
             android:src="@drawable/line_gray_dark"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.Pupil.MessageActivity">
+    tools:context=".Activities.Main.Pupil.MessageActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -12,7 +12,6 @@
         android:fitsSystemWindows="true" >
 
         <androidx.core.widget.NestedScrollView
-            android:id="@+id/nested_kal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
@@ -64,7 +63,6 @@
                         android:id="@+id/text_main_messege"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="null"
                         android:layout_toEndOf="@+id/ava_messege_main"
                         android:textSize="20sp"
                         android:textColor="@color/black"
@@ -75,7 +73,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Online"
+                        android:text="@string/online"
                         android:layout_toEndOf="@+id/ava_messege_main"
                         android:layout_below="@+id/text_main_messege"
                         android:layout_marginStart="10dp" />
@@ -87,7 +85,6 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom">
@@ -104,10 +101,9 @@
                     android:layout_centerVertical="true"/>
 
                 <EditText
-                    android:id="@+id/EditText_message"
                     android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
-                    android:hint="Message"
+                    android:hint="@string/message"
                     android:background="@null"
                     android:layout_marginStart="5dp"
                     android:layout_centerVertical="true"

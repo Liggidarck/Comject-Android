@@ -4,31 +4,31 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_outline_home_24"
-        android:title="Home">
+        android:title="@string/home">
     </item>
 
     <item
         android:id="@+id/nav_note"
         android:icon="@drawable/ic_outline_class_24"
-        android:title="Notebook">
+        android:title="@string/notebook">
     </item>
 
     <item
         android:id="@+id/nav_explore"
         android:icon="@drawable/ic_outline_explore_24"
-        android:title="Explore">
+        android:title="@string/explore">
     </item>
 
     <item
         android:id="@+id/nav_messeg"
         android:icon="@drawable/ic_outline_email_24"
-        android:title="Chats" >
+        android:title="@string/chats" >
     </item>
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/ic_outline_school_24"
-        android:title="Profile">
+        android:title="@string/profile">
     </item>
 
 </menu>

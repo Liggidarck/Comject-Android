@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Main.LoginActivity"
+    tools:context=".Activities.Main.LoginActivity"
     android:background="@mipmap/backgraund_main" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let's get \nstarted"
+        android:text="@string/let_s_get_started"
         android:fontFamily="@font/product_sans_bold"
         android:layout_marginTop="45dp"
         android:layout_marginStart="30dp"
@@ -28,10 +28,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email_login_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="E-mail"
+            android:hint="@string/e_mail"
             android:layout_gravity="center"
             android:inputType="textEmailAddress" />
 
@@ -50,10 +49,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_login_edittex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="@string/password"
             android:layout_gravity="center"
             android:inputType="textPassword"/>
 
@@ -76,7 +74,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:layout_centerHorizontal="true"
@@ -97,7 +95,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="You don’t have eny account?"
+                android:text="@string/you_don_t_have_eny_account"
                 android:layout_marginBottom="30dp"
                 android:textSize="16sp"/>
 

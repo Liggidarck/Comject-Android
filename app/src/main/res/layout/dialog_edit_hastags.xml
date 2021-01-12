@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="hastags">
+        android:hint="@string/hashtags">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         android:id="@+id/cancel_button_edit_hsatag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="cancel"
+        android:text="@android:string/cancel"
         android:layout_below="@+id/schats_editex"
         android:layout_marginTop="10dp" />
 
@@ -34,7 +34,7 @@
         android:layout_below="@+id/schats_editex"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
-        android:text="ok" />
+        android:text="@android:string/ok" />
 
 
 </RelativeLayout>

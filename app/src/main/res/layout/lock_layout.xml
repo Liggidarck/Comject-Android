@@ -15,11 +15,10 @@
             android:layout_marginBottom="15dp"/>
 
         <TextView
-            android:id="@+id/val_likes5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/like_icon"
-            android:text="My personal project (Private)"
+            android:text="@string/my_personal_project_private"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
             android:textColor="@color/black" />

@@ -15,11 +15,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.george.devil.Activitys.Projects.EditsProject.EditProjectActivity;
-import com.george.devil.Activitys.Projects.PagesProjects.MainProjectActivity;
-import com.george.devil.Activitys.Projects.NewProject.NewProjectActivity;
-import com.george.devil.Activitys.Projects.PagesProjects.PrivatePublicProjectActivity;
-import com.george.devil.Activitys.Projects.PagesProjects.PublishProjectActivity;
+import com.george.devil.Activities.Projects.EditsProject.EditProjectActivity;
+import com.george.devil.Activities.Projects.PagesProjects.MainProjectActivity;
+import com.george.devil.Activities.Projects.NewProject.NewProjectActivity;
+import com.george.devil.Activities.Projects.PagesProjects.PrivatePublicProjectActivity;
+import com.george.devil.Activities.Projects.PagesProjects.PublishProjectActivity;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.card.MaterialCardView;

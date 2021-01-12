@@ -41,7 +41,6 @@
                     android:id="@+id/main_name_profile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="null"
                     android:layout_below="@id/main_ava"
                     android:textColor="@color/black"
                     android:textSize="24sp"
@@ -53,7 +52,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/main_name_profile"
-                    android:text="null"
                     android:textSize="17sp"
                     android:layout_marginStart="15dp" />
 
@@ -61,7 +59,7 @@
                     android:id="@+id/edit_profile_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="edit profile"
+                    android:text="@string/edit_profile"
                     android:layout_below="@id/main_ava"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="20dp"
@@ -81,7 +79,8 @@
                     android:layout_marginTop="30dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <TextView
                         android:id="@+id/text_num_posts"
@@ -96,7 +95,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Posts"
+                        android:text="@string/posts"
                         android:textColor="@color/black"
                         android:textSize="19sp"
                         android:fontFamily="@font/product_sans_light"
@@ -115,7 +114,8 @@
                     android:layout_centerHorizontal="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <TextView
                         android:id="@+id/text_num_followers"
@@ -130,7 +130,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Followers"
+                        android:text="@string/followers"
                         android:textColor="@color/black"
                         android:textSize="19sp"
                         android:fontFamily="@font/product_sans_light"
@@ -150,7 +150,8 @@
                     android:layout_marginEnd="20dp"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    tools:ignore="UnusedAttribute">
 
                     <TextView
                         android:id="@+id/text_num_following"
@@ -165,7 +166,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Following"
+                        android:text="@string/following"
                         android:textColor="@color/black"
                         android:textSize="19sp"
                         android:fontFamily="@font/product_sans_light"
@@ -186,7 +187,7 @@
                     android:id="@+id/settings_btn"
                     android:layout_width="180dp"
                     android:layout_height="match_parent"
-                    android:text="settings"
+                    android:text="@string/settings_profile"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_marginStart="15dp"/>
 
@@ -194,7 +195,7 @@
                     android:id="@+id/general_info"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
-                    android:text="general info"
+                    android:text="@string/general_info"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="15dp" />

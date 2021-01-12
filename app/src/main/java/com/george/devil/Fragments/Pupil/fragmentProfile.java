@@ -17,10 +17,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.george.devil.BottomSheets.BottomSheetInformationProfile;
-import com.george.devil.Activitys.Main.Pupil.EditProfileActivity;
-import com.george.devil.Activitys.Main.Common.FollowingFollowersActivity;
+import com.george.devil.Activities.Main.Pupil.EditProfileActivity;
+import com.george.devil.Activities.Main.Common.FollowingFollowersActivity;
 import com.george.devil.R;
-import com.george.devil.Activitys.Main.Common.SettingsActivity;
+import com.george.devil.Activities.Main.Common.SettingsActivity;
 
 public class fragmentProfile extends Fragment {
 

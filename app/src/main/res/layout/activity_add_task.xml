@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activitys.Tasks.AddTaskActivity">
+    tools:context=".Activities.Tasks.AddTaskActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Add Task"
+                app:title="@string/Add_Task"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_dark"/>
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -35,7 +35,6 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/name_task_layout"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     app:cardElevation="6dp">
@@ -48,7 +47,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginTop="10dp"
                         android:background="@null"
-                        android:hint="Text Task"
+                        android:hint="@string/text_task"
                         android:fontFamily="@font/google_sans_medium"
                         android:inputType="textMultiLine"
                         android:padding="8dp"
@@ -80,7 +79,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Add note"
+                                android:text="@string/add_note"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="10dp"
                                 android:textSize="16sp" />
@@ -110,7 +109,6 @@
                 android:id="@+id/text_edit_task"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Последнее изменение: 11.12 в 02:46"
                 android:fontFamily="@font/product_sans_medium"
                 android:textColor="@color/black"
                 android:layout_centerInParent="true" />
@@ -125,7 +123,8 @@
                 android:layout_marginEnd="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                tools:ignore="UnusedAttribute" />
 
         </RelativeLayout>
 

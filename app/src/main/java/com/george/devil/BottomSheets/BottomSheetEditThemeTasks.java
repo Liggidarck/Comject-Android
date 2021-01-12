@@ -32,7 +32,7 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_edit_theme_tasks_layout, container, false);
         
-        SharedPreferences prefsBottomSheetThemeTask = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
+        SharedPreferences prefsBottomSheetThemeTask = PreferenceManager.getDefaultSharedPreferences(requireActivity().getApplicationContext());
         themeTask =  prefsBottomSheetThemeTask.getString("themeData", "Default");
 
         check_defualt_tasks = view.findViewById(R.id.check_defualt_tasks);
