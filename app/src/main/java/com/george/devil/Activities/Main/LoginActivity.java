@@ -74,15 +74,15 @@ public class LoginActivity extends AppCompatActivity {
         String birthay_teather = sharedPreferences.getString("birthay_teather","birthay_teather_empty");
         String password_teather = sharedPreferences.getString("password_teather","password_teather_empty");
 
-        Log.e(TAG, "Teather data");
-        Log.e(TAG, "name teather - " + name_teather);
-        Log.e(TAG, "username teather - " + username_teather);
-        Log.e(TAG, "email teather - " + email_teather);
-        Log.e(TAG, "city teathret - " + city_teather);
-        Log.e(TAG, "topic teather - " + topic_teather);
-        Log.e(TAG, "school teather - " + school_teather);
-        Log.e(TAG, "birtghay teather - " + birthay_teather);
-        Log.e(TAG, "password teather - " + password_teather);
+        Log.e(TAG, "Teacher data");
+        Log.e(TAG, "name teacher - " + name_teather);
+        Log.e(TAG, "username teacher - " + username_teather);
+        Log.e(TAG, "email teacher - " + email_teather);
+        Log.e(TAG, "city teacher - " + city_teather);
+        Log.e(TAG, "topic teacher - " + topic_teather);
+        Log.e(TAG, "school teacher - " + school_teather);
+        Log.e(TAG, "birtghay teacher - " + birthay_teather);
+        Log.e(TAG, "password teacher - " + password_teather);
 
         if(!name_user_pupil.equals("empty_user_name")) {
             Log.i(TAG, "Имя ученика НЕПУСТОЕ");
@@ -148,10 +148,10 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private boolean validatePssword() {
+    private boolean validatePassword() {
         String email = Objects.requireNonNull(email_login_text_layout.getEditText()).getText().toString();
 
-        if(email.isEmpty()){
+        if(email.isEmpty()) {
             email_login_text_layout.setError("Ошибка! Поле не может быть пустым");
             return false;
         } else {

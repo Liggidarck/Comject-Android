@@ -62,8 +62,10 @@ public class fragmentProfile extends Fragment {
         String name_user = sharedPreferences.getString("full_name", "empty_user_name");
         String username = sharedPreferences.getString("username", "empty_correct_username");
 
+        String username_full = "@" + username;
+
         nameProfile.setText(name_user);
-        usernameText.setText(username);
+        usernameText.setText(username_full);
 
 
         return view;

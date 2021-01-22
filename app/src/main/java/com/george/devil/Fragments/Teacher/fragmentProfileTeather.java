@@ -34,9 +34,9 @@ public class fragmentProfileTeather extends Fragment {
 
         main_name_profile_teather = view.findViewById(R.id.main_name_profile_teather);
         main_username_teather = view.findViewById(R.id.main_username_teather);
-        edit_profile_btn_teather = view.findViewById(R.id.edit_profile_btn_teather);
         settings_btn_teather = view.findViewById(R.id.settings_btn_teather);
-        general_info_teather = view.findViewById(R.id.general_info_teather);
+        edit_profile_btn_teather = view.findViewById(R.id.edit_profile_teather);
+
         followers_layout_teather = view.findViewById(R.id.followers_layout_teather);
         following_layout_teather = view.findViewById(R.id.following_layout_teather);
 
@@ -44,17 +44,15 @@ public class fragmentProfileTeather extends Fragment {
         String name_teather = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
         String username_teather = sharedPreferences.getString("username_teather", "username_teather_empty");
 
+        String username = "@" + username_teather;
         main_name_profile_teather.setText(name_teather);
-        main_username_teather.setText(username_teather);
+        main_username_teather.setText(username);
 
         edit_profile_btn_teather.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeather.this.getActivity(), EditProfileTeacher.class)));
         settings_btn_teather.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeather.this.getActivity(), SettingsActivity.class)));
         followers_layout_teather.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeather.this.getActivity(), FollowingFollowersActivity.class)));
         following_layout_teather.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeather.this.getActivity(), FollowingFollowersActivity.class)));
-        general_info_teather.setOnClickListener(v -> {
-            BottomSheetInformationProfile bottomSheet = new BottomSheetInformationProfile();
-            bottomSheet.show(requireActivity().getSupportFragmentManager(), "BottomSheetInfo");
-        });
+
 
         return view;
     }
