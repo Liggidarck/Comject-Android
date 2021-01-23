@@ -123,7 +123,6 @@
     <string name="this_will_be_the_most_important_text_for_your_project">This will be the most important text for your project</string>
 
     <!-- Activity Main Project -->
-    <string name="MyProject">My Project</string>
     <string name="information_from_teacher">Information from teacher</string>
     <string name="comments">Comments</string>
     <string name="hashtags">Hashtags</string>

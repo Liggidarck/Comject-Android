@@ -1,0 +1,21 @@
+<resources>
+
+    <string-array name="categories_of_predmeti">
+        <item>生物學</item>
+        <item>化學</item>
+        <item>經濟</item>
+        <item>英語</item>
+        <item>工程/建設</item>
+        <item>地理</item>
+        <item>歷史</item>
+        <item>信息學</item>
+        <item>文學</item>
+        <item>數學</item>
+        <item>物理</item>
+        <item>政治</item>
+        <item>運動</item>
+        <item>社會研究</item>
+        <item>其他</item>
+    </string-array>
+
+</resources>

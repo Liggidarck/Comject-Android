@@ -1,0 +1,21 @@
+<resources>
+
+    <string-array name="categories_of_predmeti">
+        <item>Biologia</item>
+        <item>Química</item>
+        <item>Economia</item>
+        <item>Língua Inglesa</item>
+        <item>Construção/Engenharia</item>
+        <item>Geografia</item>
+        <item>História</item>
+        <item>Informática</item>
+        <item>Literatura</item>
+        <item>Matemáticas</item>
+        <item>Física</item>
+        <item>Política</item>
+        <item>Esporte</item>
+        <item>Estudos Sociais</item>
+        <item>Outras</item>
+    </string-array>
+
+</resources>

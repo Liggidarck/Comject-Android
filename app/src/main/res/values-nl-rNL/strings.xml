@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name" translatable="false">Comject</string>
+
+    <string name="home">Huis</string>
+    <string name="notebook">Opmerkingen</string>
+    <string name="explore">Nieuwslijn</string>
+    <string name="chats">Chatrooms</string>
+    <string name="profile">Profiel</string>
+
+    <!-- fragment home -->
+    <string name="my_work">Mijn werk</string>
+    <string name="my_main_project">MIJN HOOFDPROJECT</string>
+    <string name="num_comments">1.3 Commentaar</string>
+    <string name="publish">Post</string>
+    <string name="edit_project">Verander project</string>
+    <string name="my_others_projects">Mijn Andere Projecten</string>
+
+    <!-- fragment notes -->
+    <string name="your_notes_will_be_here">Je aantekeningen zullen hier zijn</string>
+
+    <!-- fragment explore -->
+    <string name="subscribe">Abonneren</string>
+    <string name="like">Leuk vinden</string>
+    <string name="liked">liked</string>
+    <string name="btn_comment">Commentaar</string>
+
+    <!-- fragment profile main pupil -->
+    <string name="edit_profile">verander van profiel</string>
+    <string name="posts">Publicaties</string>
+    <string name="followers">Volgers</string>
+    <string name="following">Abonnementen</string>
+    <string name="settings_profile">maatwerk</string>
+    <string name="general_info">informatie</string>
+
+    <!-- Activity Add Change, Issues -->
+    <string name="add_due_date">Vervaldatum</string>
+    <string name="add_note">Notitie toevoegen</string>
+
+    <!-- Activity Add Change -->
+    <string name="name_change">Naam Veranderen</string>
+    <string name="add_changes">Wijzigingen Toevoegen</string>
+
+    <!-- Activity Changes -->
+    <string name="changes">Project verandering</string>
+    <string name="all_projects_changes_will_be_here">Alle projectwijzigingen zullen hier zijn</string>
+
+    <!-- Activity Issues -->
+    <string name="issues">Problemen</string>
+    <string name="all_problems_will_be_here">Alle projectproblemen zullen hier zijn</string>
+
+    <!-- Activity Add Issue -->
+    <string name="name_issue">Titel Van Probleem</string>
+    <string name="choose_priority">Selecteer voordeel</string>
+
+    <!-- Activity Add Note -->
+    <string name="title">Naam</string>
+    <string name="text">Tekst</string>
+
+    <!-- Activity Settings -->
+    <string name="settings">Instellingen</string>
+    <string name="edit_account">verander van profiel</string>
+    <string name="sign_out">uitgaan</string>
+
+    <!-- Activity Change Password -->
+    <string name="current_password">Huidig ​​Wachtwoord</string>
+    <string name="new_password">Nieuw Paswoord</string>
+    <string name="confirm_password">Bevestig Het Paswoord</string>
+    <string name="change_password">wachtwoord wijzigen</string>
+    <string name="forgot_your_password">Je wachtwoord vergeten?</string>
+
+    <!-- Activity Post -->
+    <string name="post">Publicatie</string>
+
+    <!-- Activity Message -->
+    <string name="message">Bericht</string>
+    <string name="online">Online</string>
+
+    <!-- Activity Registrations -->
+    <string name="your_name">Uw naam</string>
+    <string name="username">Gebruikersnaam</string>
+    <string name="topic">Thema</string>
+    <string name="e_mail">E-mail</string>
+    <string name="city">Stad</string>
+    <string name="school">School</string>
+    <string name="grade">Klasse</string>
+    <string name="birthday">Verjaardag</string>
+    <string name="password">Wachtwoord</string>
+    <string name="create_account">MAAK EEN PROFIEL</string>
+
+    <!-- Activity Registration Teather -->
+    <string name="registration_teather">Lerarenregistratie</string>
+
+    <!-- Activity Registration Pupil -->
+    <string name="registration_pupil">Studentenregistratie</string>
+
+    <!-- Activity Edit Profiles -->
+    <string name="edit_profile_teather">Verander van profiel</string>
+    <string name="name">Naam</string>
+    <string name="security">Veiligheid</string>
+
+    <!-- Activity Login -->
+    <string name="let_s_get_started">Laten we beginnen</string>
+    <string name="login">Binnenkomen</string>
+    <string name="you_don_t_have_eny_account">U heeft geen account?</string>
+    <string name="regist"><u>Registreer nu</u></string>
+
+    <!-- Activity Edit Project -->
+    <string name="next">verder</string>
+    <string name="save">sparen</string>
+    <string name="project_name">De naam van het project</string>
+    <string name="project_description">Projectbeschrijving</string>
+    <string name="project_topic">Project thema</string>
+    <string name="private_project">Persoonlijk project</string>
+    <string name="anyone_can_see_this_project">Iedereen kan dit project zien</string>
+
+    <!-- Activity Edit Project Images -->
+    <string name="find_more">vind meer</string>
+
+    <!-- Activity Find more images -->
+
+    <!-- Activity new project images -->
+    <string name="done">klaar</string>
+    <string name="this_will_be_the_most_important_text_for_your_project">Dit is de belangrijkste tekst voor uw project</string>
+
+    <!-- Activity Main Project -->
+    <string name="information_from_teacher">Informatie van de leraar</string>
+    <string name="comments">Opmerkingen</string>
+    <string name="hashtags">Hashtag</string>
+    <string name="my_tasks">Mijn taken</string>
+
+    <!-- Activity New Post -->
+    <string name="New_Post">Nieuwe publicatie</string>
+
+    <!-- Activity Information From Teather -->
+    <string name="information">Informatie</string>
+
+    <!-- Activity Add Task -->
+    <string name="Add_Task">Voeg taken toe</string>
+    <string name="text_task">Tekstopdracht</string>
+
+    <!-- Activity My Tasks -->
+    <string name="your_tasks_will_be_here">Uw taken zullen hier zijn</string>
+
+    <!-- Bottom Sheet Filters, EditThemeTasks, Information, Notes, Hastag -->
+    <string name="choose_theme">Thema veranderen</string>
+    <string name="filters">Filters</string>
+    <string name="edit_chastags">hashtag wijzigen</string>
+    <string name="basic_information">basis informatie</string>
+    <string name="actions_with_notes">Acties met notities</string>
+    <string name="delete">Verwijderen</string>
+    <string name="copy_content">Kopiëren</string>
+    <string name="share">Deel dit</string>
+
+    <!-- Fragment lock project -->
+    <string name="my_personal_project_private">Mijn persoonlijk project</string>
+
+    <!-- Layout choose category -->
+    <string name="choose_category">Kies een categorie</string>
+    <string name="pupil">Leerling</string>
+    <string name="teather">Leraar</string>
+
+
+</resources>

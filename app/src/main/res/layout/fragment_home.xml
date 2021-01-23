@@ -368,7 +368,7 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Publish"
+                                            android:text="@string/publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
@@ -385,7 +385,7 @@
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            android:text="Edit Project"
+                                            android:text="@string/edit_project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
                                             android:textSize="12sp"
@@ -516,7 +516,7 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Publish"
+                                            android:text="@string/publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
@@ -533,7 +533,7 @@
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            android:text="Edit Project"
+                                            android:text="@string/edit_project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
                                             android:textSize="12sp"
@@ -679,7 +679,7 @@
                                             android:layout_width="140dp"
                                             android:layout_height="55dp"
                                             android:fontFamily="@font/google_sans_medium"
-                                            android:text="Publish"
+                                            android:text="@string/publish"
                                             android:textColor="#4A4A4A"
                                             android:textAllCaps="false"
                                             android:textSize="13sp"
@@ -696,7 +696,7 @@
                                             android:layout_marginStart="8dp"
                                             android:layout_marginTop="10dp"
                                             android:layout_marginBottom="16dp"
-                                            android:text="Edit Project"
+                                            android:text="@string/edit_project"
                                             android:textAllCaps="false"
                                             android:textColor="#4A4A4A"
                                             android:textSize="12sp"
@@ -718,6 +718,7 @@
                     android:layout_height="100dp" />
 
             </LinearLayout>
+
         </androidx.core.widget.NestedScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

@@ -124,12 +124,7 @@ public class EditProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(v -> saveArrow());
 
-        String[] items = new String[] {
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction","Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items =  getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 EditProfileActivity.this,

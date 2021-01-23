@@ -104,12 +104,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         setSupportActionBar(topAppBar_edit_profile_teather);
         topAppBar_edit_profile_teather.setNavigationOnClickListener(v -> saveArrowTeather());
 
-        String[] items = new String[] {
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction","Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 EditProfileTeacher.this,
                 R.layout.dropdown_menu_categories,

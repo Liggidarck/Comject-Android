@@ -50,12 +50,7 @@ public class EditProjectActivity extends AppCompatActivity {
         Objects.requireNonNull(textField_topic_edit.getEditText()).setText(topik);
         switchPrivate_proj_EDIT.setChecked(private_public_proj_edit);
 
-        String[] items = new String[] {
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction","Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 EditProjectActivity.this,

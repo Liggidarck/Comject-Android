@@ -1,0 +1,21 @@
+<resources>
+
+    <string-array name="categories_of_predmeti">
+        <item>Biologie</item>
+        <item>Chemie</item>
+        <item>Economie</item>
+        <item>De Engelse Taal</item>
+        <item>Engineering/constructie</item>
+        <item>Aardrijkskunde</item>
+        <item>Geschiedenis</item>
+        <item>Informatica</item>
+        <item>Literatuur</item>
+        <item>Wiskunde</item>
+        <item>Fysica</item>
+        <item>Politiek</item>
+        <item>Sport</item>
+        <item>Sociale wetenschappen</item>
+        <item>Overige</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name" translatable="false">Comject</string>
+
+    <string name="home">Главная</string>
+    <string name="notebook">Заметки</string>
+    <string name="explore">Лента</string>
+    <string name="chats">Чаты</string>
+    <string name="profile">Профиль</string>
+
+    <!-- fragment home -->
+    <string name="my_work">Моя работа</string>
+    <string name="my_main_project">МОЙ ОСНОВНОЙ ПРОЕКТ</string>
+    <string name="num_comments">1.3 Комментарии</string>
+    <string name="publish">Опубликовать</string>
+    <string name="edit_project">Изменить проект</string>
+    <string name="my_others_projects">Мои Другие Проекты</string>
+
+    <!-- fragment notes -->
+    <string name="your_notes_will_be_here">Ваши заметки будут здесь</string>
+
+    <!-- fragment explore -->
+    <string name="subscribe">Подписаться</string>
+    <string name="like">лайк</string>
+    <string name="liked">liked</string>
+    <string name="btn_comment">Комментарий</string>
+
+    <!-- fragment profile main pupil -->
+    <string name="edit_profile">изменить профиль</string>
+    <string name="posts">Публикации</string>
+    <string name="followers">Подписчики</string>
+    <string name="following">Подписки</string>
+    <string name="settings_profile">настройки</string>
+    <string name="general_info">информация</string>
+
+    <!-- Activity Add Change, Issues -->
+    <string name="add_due_date">Дата окончания</string>
+    <string name="add_note">Добавить заметку</string>
+
+    <!-- Activity Add Change -->
+    <string name="name_change">Название Изменения</string>
+    <string name="add_changes">Добавить Изменения</string>
+
+    <!-- Activity Changes -->
+    <string name="changes">Изменение проекта</string>
+    <string name="all_projects_changes_will_be_here">Все изменения проекта будут здесь</string>
+
+    <!-- Activity Issues -->
+    <string name="issues">Проблемы</string>
+    <string name="all_problems_will_be_here">Все проблемы проекта будут здесь</string>
+
+    <!-- Activity Add Issue -->
+    <string name="name_issue">Название Проблемы</string>
+    <string name="choose_priority">Выбрать преимущество</string>
+
+    <!-- Activity Add Note -->
+    <string name="title">Название</string>
+    <string name="text">Текст</string>
+
+    <!-- Activity Settings -->
+    <string name="settings">Настройки</string>
+    <string name="edit_account">изменить профиль</string>
+    <string name="sign_out">выйти</string>
+
+    <!-- Activity Change Password -->
+    <string name="current_password">Текущий Пароль</string>
+    <string name="new_password">Новый Пароль</string>
+    <string name="confirm_password">Подтвердите Пароль</string>
+    <string name="change_password">изменить пароль</string>
+    <string name="forgot_your_password">Забыли пароль?</string>
+
+    <!-- Activity Post -->
+    <string name="post">Публикация</string>
+
+    <!-- Activity Message -->
+    <string name="message">Сообщение</string>
+    <string name="online">В сети</string>
+
+    <!-- Activity Registrations -->
+    <string name="your_name">Ваше имя</string>
+    <string name="username">Имя пользователя</string>
+    <string name="topic">Тема</string>
+    <string name="e_mail">Электронная почта</string>
+    <string name="city">Город</string>
+    <string name="school">Школа</string>
+    <string name="grade">Класс</string>
+    <string name="birthday">День рождение</string>
+    <string name="password">Пароль</string>
+    <string name="create_account">СОЗДАТЬ ПРОФИЛЬ</string>
+
+    <!-- Activity Registration Teather -->
+    <string name="registration_teather">Регистрация Учителя</string>
+
+    <!-- Activity Registration Pupil -->
+    <string name="registration_pupil">Регистрация Ученика</string>
+
+    <!-- Activity Edit Profiles -->
+    <string name="edit_profile_teather">Изменить профиль</string>
+    <string name="name">Имя</string>
+    <string name="security">Безопасность</string>
+
+    <!-- Activity Login -->
+    <string name="let_s_get_started">Давайте начнём</string>
+    <string name="login">Войти</string>
+    <string name="you_don_t_have_eny_account">У Вас нет учётной записи?</string>
+    <string name="regist"><u>Зарегистрироваться</u></string>
+
+    <!-- Activity Edit Project -->
+    <string name="next">далее</string>
+    <string name="save">сохранить</string>
+    <string name="project_name">Название проекта</string>
+    <string name="project_description">Описание проекта</string>
+    <string name="project_topic">Тема проекта</string>
+    <string name="private_project">Личный проект</string>
+    <string name="anyone_can_see_this_project">Все могут видеть этот проект</string>
+
+    <!-- Activity Edit Project Images -->
+    <string name="find_more">найти ещё</string>
+
+    <!-- Activity Find more images -->
+
+    <!-- Activity new project images -->
+    <string name="done">готово</string>
+    <string name="this_will_be_the_most_important_text_for_your_project">Это самый важный текст для вашего проекта</string>
+
+    <!-- Activity Main Project -->
+    <string name="information_from_teacher">Информация от учителя</string>
+    <string name="comments">Комментарии</string>
+    <string name="hashtags">Хэштег</string>
+    <string name="my_tasks">Мои задачи</string>
+
+    <!-- Activity New Post -->
+    <string name="New_Post">Новая публикация</string>
+
+    <!-- Activity Information From Teather -->
+    <string name="information">Информация</string>
+
+    <!-- Activity Add Task -->
+    <string name="Add_Task">Добавить задачи</string>
+    <string name="text_task">Текстовое Задание</string>
+
+    <!-- Activity My Tasks -->
+    <string name="your_tasks_will_be_here">Ваши задачи будут здесь</string>
+
+    <!-- Bottom Sheet Filters, EditThemeTasks, Information, Notes, Hastag -->
+    <string name="choose_theme">Изменить тему</string>
+    <string name="filters">Фильтры</string>
+    <string name="edit_chastags">изменить хэштег</string>
+    <string name="basic_information">основная информация</string>
+    <string name="actions_with_notes">Действия с заметками</string>
+    <string name="delete">Удалить</string>
+    <string name="copy_content">Скопировать</string>
+    <string name="share">Поделиться</string>
+
+    <!-- Fragment lock project -->
+    <string name="my_personal_project_private">Мой личный проект</string>
+
+    <!-- Layout choose category -->
+    <string name="choose_category">Выбрать категорию</string>
+    <string name="pupil">Ученик</string>
+    <string name="teather">Учитель</string>
+
+
+</resources>

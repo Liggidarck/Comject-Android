@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name" translatable="false">Comject</string>
+
+    <string name="home">家</string>
+    <string name="notebook">筆記</string>
+    <string name="explore">新聞專線</string>
+    <string name="chats">聊天室</string>
+    <string name="profile">個人資料</string>
+
+    <!-- fragment home -->
+    <string name="my_work">我的工作</string>
+    <string name="my_main_project">我的主要項目</string>
+    <string name="num_comments">1.3 評論</string>
+    <string name="publish">發布</string>
+    <string name="edit_project">變更專案</string>
+    <string name="my_others_projects">我的其他項目</string>
+
+    <!-- fragment notes -->
+    <string name="your_notes_will_be_here">您的筆記將在這裡</string>
+
+    <!-- fragment explore -->
+    <string name="subscribe">訂閱</string>
+    <string name="like">ла喜歡йк</string>
+    <string name="liked">liked</string>
+    <string name="btn_comment">評論</string>
+
+    <!-- fragment profile main pupil -->
+    <string name="edit_profile">變更個人資料</string>
+    <string name="posts">刊物</string>
+    <string name="followers">追隨者</string>
+    <string name="following">訂閱內容</string>
+    <string name="settings_profile">客制化</string>
+    <string name="general_info">信息</string>
+
+    <!-- Activity Add Change, Issues -->
+    <string name="add_due_date">截止日期</string>
+    <string name="add_note">加註</string>
+
+    <!-- Activity Add Change -->
+    <string name="name_change">更換名字</string>
+    <string name="add_changes">添加更改</string>
+
+    <!-- Activity Changes -->
+    <string name="changes">項目變更</string>
+    <string name="all_projects_changes_will_be_here">所有項目更改都將在此處</string>
+
+    <!-- Activity Issues -->
+    <string name="issues">問題</string>
+    <string name="all_problems_will_be_here">所有項目問題都在這裡</string>
+
+    <!-- Activity Add Issue -->
+    <string name="name_issue">問題標題</string>
+    <string name="choose_priority">選擇優勢</string>
+
+    <!-- Activity Add Note -->
+    <string name="title">名稱</string>
+    <string name="text">文本</string>
+
+    <!-- Activity Settings -->
+    <string name="settings">設定值</string>
+    <string name="edit_account">變更個人資料</string>
+    <string name="sign_out">出去</string>
+
+    <!-- Activity Change Password -->
+    <string name="current_password">當前密碼</string>
+    <string name="new_password">新密碼</string>
+    <string name="confirm_password">確認密碼</string>
+    <string name="change_password">更改密碼</string>
+    <string name="forgot_your_password">忘記密碼了嗎？</string>
+
+    <!-- Activity Post -->
+    <string name="post">出版物</string>
+
+    <!-- Activity Message -->
+    <string name="message">信息</string>
+    <string name="online">線上</string>
+
+    <!-- Activity Registrations -->
+    <string name="your_name">你的名字</string>
+    <string name="username">用戶名</string>
+    <string name="topic">主題</string>
+    <string name="e_mail">電子郵件</string>
+    <string name="city">市</string>
+    <string name="school">學校</string>
+    <string name="grade">類</string>
+    <string name="birthday">生日</string>
+    <string name="password">密碼</string>
+    <string name="create_account">建立個人資料</string>
+
+    <!-- Activity Registration Teather -->
+    <string name="registration_teather">教師註冊</string>
+
+    <!-- Activity Registration Pupil -->
+    <string name="registration_pupil">學生註冊</string>
+
+    <!-- Activity Edit Profiles -->
+    <string name="edit_profile_teather">變更個人資料</string>
+    <string name="name">名稱</string>
+    <string name="security">安全</string>
+
+    <!-- Activity Login -->
+    <string name="let_s_get_started">開始吧</string>
+    <string name="login">進來</string>
+    <string name="you_don_t_have_eny_account">您沒有帳號?</string>
+    <string name="regist"><u>現在註冊</u></string>
+
+    <!-- Activity Edit Project -->
+    <string name="next">進一步</string>
+    <string name="save">保持</string>
+    <string name="project_name">項目名稱</string>
+    <string name="project_description">項目描述</string>
+    <string name="project_topic">項目主題</string>
+    <string name="private_project">個人項目</string>
+    <string name="anyone_can_see_this_project">每個人都可以看到這個項目</string>
+
+    <!-- Activity Edit Project Images -->
+    <string name="find_more">尋找更多</string>
+
+    <!-- Activity Find more images -->
+
+    <!-- Activity new project images -->
+    <string name="done">準備</string>
+    <string name="this_will_be_the_most_important_text_for_your_project">這是您的項目最重要的文本。</string>
+
+    <!-- Activity Main Project -->
+    <string name="information_from_teacher">老師的信息</string>
+    <string name="comments">評論</string>
+    <string name="hashtags">井號</string>
+    <string name="my_tasks">我的任務</string>
+
+    <!-- Activity New Post -->
+    <string name="New_Post">新刊物</string>
+
+    <!-- Activity Information From Teather -->
+    <string name="information">信息</string>
+
+    <!-- Activity Add Task -->
+    <string name="Add_Task">添加任務</string>
+    <string name="text_task">文字工作</string>
+
+    <!-- Activity My Tasks -->
+    <string name="your_tasks_will_be_here">您的任務將在這裡</string>
+
+    <!-- Bottom Sheet Filters, EditThemeTasks, Information, Notes, Hastag -->
+    <string name="choose_theme">改變主題</string>
+    <string name="filters">篩選器</string>
+    <string name="edit_chastags">更改主題標籤</string>
+    <string name="basic_information">基本信息</string>
+    <string name="actions_with_notes">帶筆記的動作</string>
+    <string name="delete">刪除</string>
+    <string name="copy_content">複製</string>
+    <string name="share">分享這個</string>
+
+    <!-- Fragment lock project -->
+    <string name="my_personal_project_private">我的個人專案</string>
+
+    <!-- Layout choose category -->
+    <string name="choose_category">選擇一個類別</string>
+    <string name="pupil">瞳孔</string>
+    <string name="teather">老師</string>
+
+
+</resources>
