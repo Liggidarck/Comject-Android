@@ -61,84 +61,39 @@ public class EditProjectActivity extends AppCompatActivity {
         autoCompleteTextView.setAdapter(adapter);
 
         Button next = findViewById(R.id.next_edit_btn);
-        next.setOnClickListener(v -> {
-            BIG_DATA();
-            startActivity(new Intent(EditProjectActivity.this, EditProjectImagesActivity.class));
-        });
+        next.setOnClickListener(v -> BIG_DATA(1));
 
         MaterialToolbar topAppBar_edit_proj1 = findViewById(R.id.topAppBar_edit_proj1);
-        topAppBar_edit_proj1.setNavigationOnClickListener(v -> {
-            BIG_DATA();
-            startActivity(new Intent(EditProjectActivity.this, MainProjectActivity.class));
-        });
+        topAppBar_edit_proj1.setNavigationOnClickListener(v -> BIG_DATA(2));
 
         ExtendedFloatingActionButton fab_save_edit_proj = findViewById(R.id.fab_save_edit_proj);
-        fab_save_edit_proj.setOnClickListener(v -> {
-            BIG_DATA();
-            startActivity(new Intent(EditProjectActivity.this, MainProjectActivity.class));
-        });
+        fab_save_edit_proj.setOnClickListener(v -> BIG_DATA(3));
 
     }
 
-    public void BIG_DATA() {
+    public void BIG_DATA(int id_btn) {
         String nameProj = Objects.requireNonNull(textField_name_proj_edit.getEditText()).getText().toString();
         String descriptionProj = Objects.requireNonNull(textField_description_proj_edit.getEditText()).getText().toString();
         String topicPjaj = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString();
         boolean private_public_proj;
 
-
         private_public_proj = switchPrivate_proj_EDIT.isChecked();
 
-
-        validateSave(nameProj, descriptionProj, topicPjaj, private_public_proj);
+        validateSave(nameProj, descriptionProj, topicPjaj, private_public_proj, id_btn);
     }
 
-    public boolean vaildateNameProject(String checkNameProject) {
-//        String check = Objects.requireNonNull(textField_name_proj_edit.getEditText()).getText().toString().trim();
-        if(checkNameProject.isEmpty()){
-            textField_name_proj_edit.setError("Это поле не может быть пустом");
-            return false;
-        } else {
-            textField_name_proj_edit.setError(null);
-            return true;
-        }
-    }
-
-    public boolean validateDescriptionProject(String chrckDescriptionProj) {
-        //String check = Objects.requireNonNull(textField_description_proj_edit.getEditText()).getText().toString().trim();
-        if(chrckDescriptionProj.isEmpty()){
-            textField_description_proj_edit.setError("Это поле не может быть пустом");
-            return false;
-        } else {
-            textField_description_proj_edit.setError(null);
-            return true;
-        }
-
-    }
-
-    public boolean validateTopicProject(String TopicProj) {
-    //    String check = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString().trim();
-        if(TopicProj.isEmpty()){
-            textField_topic_edit.setError("Это поле не может быть пустом");
-            return false;
-        } else {
-            textField_topic_edit.setError(null);
-            return true;
-        }
-    }
-
-    public void validateSave (String name, String description, String topic, boolean private_public_proj) {
+    public void validateSave (String name, String description, String topic, boolean private_public_proj, int id_bt) {
 
         if(!vaildateNameProject(name) | !validateDescriptionProject(description) | !validateTopicProject(topic)){
             return;
         } else {
             Log.i(TAG, "проверка прошла успешно!");
-            saveData(name, description, topic, private_public_proj);
+            saveData(name, description, topic, private_public_proj, id_bt);
         }
 
     }
 
-    public void saveData(String nameProject, String descriptionProject, String topicProject, boolean private_public_pr) {
+    public void saveData(String nameProject, String descriptionProject, String topicProject, boolean private_public_pr, int id) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         sharedPreferences.edit().remove("nameMainProject").apply();
         sharedPreferences.edit().remove("descriptionMainProject").apply();
@@ -150,11 +105,52 @@ public class EditProjectActivity extends AppCompatActivity {
         sharedPreferences.edit().putString("descriptionMainProject", descriptionProject).apply();
         sharedPreferences.edit().putString("topicMainProject", topicProject).apply();
         sharedPreferences.edit().putBoolean("private_public_mail_proj", private_public_pr).apply();
+
+        if(id == 1) {
+            Log.i(TAG, topicProject);
+            Intent intet = new Intent(EditProjectActivity.this, EditProjectImagesActivity.class);
+            intet.putExtra("topic_image", topicProject);
+            startActivity(intet);
+        }
+
+        if(id == 2 || id == 3 || id == 4)
+            startActivity(new Intent(EditProjectActivity.this, MainProjectActivity.class));
+
+    }
+
+    public boolean vaildateNameProject(String checkNameProject) {
+        if(checkNameProject.isEmpty()){
+            textField_name_proj_edit.setError(getText(R.string.error_empty));
+            return false;
+        } else {
+            textField_name_proj_edit.setError(null);
+            return true;
+        }
+    }
+
+    public boolean validateDescriptionProject(String chrckDescriptionProj) {
+        if(chrckDescriptionProj.isEmpty()){
+            textField_description_proj_edit.setError(getText(R.string.error_empty));
+            return false;
+        } else {
+            textField_description_proj_edit.setError(null);
+            return true;
+        }
+
+    }
+
+    public boolean validateTopicProject(String TopicProj) {
+        if(TopicProj.isEmpty()) {
+            textField_topic_edit.setError(getText(R.string.error_empty));
+            return false;
+        } else {
+            textField_topic_edit.setError(null);
+            return true;
+        }
     }
 
     @Override
     public void onBackPressed() {
-        BIG_DATA();
-        startActivity(new Intent(EditProjectActivity.this, MainProjectActivity.class));
+        BIG_DATA(4);
     }
 }

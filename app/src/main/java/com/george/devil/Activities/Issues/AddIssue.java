@@ -3,6 +3,7 @@ package com.george.devil.Activities.Issues;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,10 +12,12 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.george.devil.DataBases.IssuesDataBase;
@@ -38,7 +41,7 @@ public class AddIssue extends AppCompatActivity {
     Cursor userCursor;
     long issuesId = 0;
 
-    AutoCompleteTextView choose_priority_TextEdit;
+    RelativeLayout choose_priority_lay;
 
     String dateFullIssue, noteissue;
     TextView dateViewIssue, text_note_issue;
@@ -50,6 +53,8 @@ public class AddIssue extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_issue);
 
+        choose_priority_lay = findViewById(R.id.choose_priority_lay);
+
         MaterialToolbar topAppBar_add_issue = findViewById(R.id.topAppBar_add_issue);
         topAppBar_add_issue.setNavigationOnClickListener(v -> save());
 
@@ -60,15 +65,15 @@ public class AddIssue extends AppCompatActivity {
 
             if(confirmDelet){
                 AlertDialog.Builder builder = new AlertDialog.Builder(AddIssue.this);
-                builder.setTitle("Внимание");
-                builder.setMessage("Вы действительно хотите удалить issue?");
+                builder.setTitle(getText(R.string.attention));
+                builder.setMessage(getText(R.string.confirm_delete_issue));
 
-                builder.setPositiveButton("Ок", (dialog, id) -> {
+                builder.setPositiveButton(getString(android.R.string.ok), (dialog, id) -> {
                     delete();
                     dialog.dismiss();
                 });
 
-                builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+                builder.setNegativeButton(getString(android.R.string.cancel), (dialog, which) -> dialog.dismiss());
 
                 builder.show();
             }else
@@ -78,25 +83,14 @@ public class AddIssue extends AppCompatActivity {
         });
 
         name_issue = findViewById(R.id.name_issue);
-        choose_priority_TextEdit = findViewById(R.id.choose_priority_TextEdit);
         editText_add_due_date = findViewById(R.id.editText_add_due_date);
         dateViewIssue = findViewById(R.id.date_issue);
         text_note_issue = findViewById(R.id.text_note_issue);
 
-        String[] items = new String[] {
-                "High", "Medium", "Low"
-        }; //        String[] countries = getResources().getStringArray(R.array.countries);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                AddIssue.this,
-                R.layout.dropdown_menu_categories,
-                items
-        );
-
-        choose_priority_TextEdit.setAdapter(adapter);
-
         sqlHelper = new IssuesDataBase(this);
         db = sqlHelper.getWritableDatabase();
+
+        choose_priority_lay.setOnClickListener(v -> onpenDialog());
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -112,7 +106,7 @@ public class AddIssue extends AppCompatActivity {
         String dateText = dateFormat.format(currentDate);
         DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         String timeText = timeFormat.format(currentDate);
-        dateFullIssue = "Последнее изменение:" + " " + dateText + " " + timeText;
+        dateFullIssue = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
         dateViewIssue.setText(dateFullIssue);
 
         if (issuesId > 0) {
@@ -120,7 +114,6 @@ public class AddIssue extends AppCompatActivity {
             userCursor.moveToFirst();
 
             name_issue.setText(userCursor.getString(1));
-            choose_priority_TextEdit.setText(userCursor.getString(2));
             editText_add_due_date.setText(userCursor.getString(3));
             dateViewIssue.setText(userCursor.getString(4));
             text_note_issue.setText(userCursor.getString(5));
@@ -140,19 +133,17 @@ public class AddIssue extends AppCompatActivity {
 
     public void save() {
         String chekName = name_issue.getText().toString();
-        String checkPrioritet = choose_priority_TextEdit.getText().toString();
 
-        if (!(chekName.isEmpty() | checkPrioritet.isEmpty())) {
+        if (!chekName.isEmpty()) {
             Date currentDate = new Date();
             DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
             String dateText = dateFormat.format(currentDate);
             DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
             String timeText = timeFormat.format(currentDate);
-            String fullDate = "Последнее изменение:" + " " + dateText + " " + timeText;
+            String fullDate = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
 
             ContentValues cv = new ContentValues();
             cv.put(IssuesDataBase.COLUMN_NAME_ISSUE, name_issue.getText().toString());
-            cv.put(IssuesDataBase.COLUMN_PRIORITY, choose_priority_TextEdit.getText().toString());
             cv.put(IssuesDataBase.COLUMN_DATE, editText_add_due_date.getText().toString());
             cv.put(IssuesDataBase.COLUMN_DATE_SAVE, fullDate);
 
@@ -166,20 +157,22 @@ public class AddIssue extends AppCompatActivity {
     }
 
     public void goHome() {
-
         db.close();
-
         Intent intent = new Intent(this, IssuesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
-
     }
 
     public void delete() {
-
         db.delete(IssuesDataBase.TABLE, "_id = ?", new String[]{String.valueOf(issuesId)});
         goHome();
+    }
 
+    public void onpenDialog() {
+        Dialog dialog = new Dialog(AddIssue.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_proirity);
+        dialog.show();
     }
 
     @Override

@@ -160,4 +160,29 @@
     <string name="teather">Leraar</string>
 
 
+
+    <string name="attention">Aandacht</string>
+    <string name="you_have_changed">U heeft de gegevens gewijzigd. Weet u zeker dat u de gewijzigde gegevens wilt opslaan?</string>
+    <string name="search">Zoeken</string>
+    <string name="change_theme">Thema veranderen</string>
+    <string name="add_issue">Voeg probleem toe</string>
+    <string name="write_message">Schrijf een bericht</string>
+    <string name="remove">Verwijderen</string>
+
+    <string name="general">Algemeen</string>
+    <string name="confirm_before_deleting">Bevestig voordat u verwijdert</string>
+
+    <string name="confirm_delete_note">Weet u zeker dat u de notitie wilt verwijderen??</string>
+
+    <string name="empty_note_cant_copied">Lege notitie kan niet worden gekopieerd!</string>
+    <string name="note_copied">Notitie gekopieerd!</string>
+    <string name="empty_note_cant_shared">Lege notitie kan niet worden gedeeld!</string>
+
+    <string name="error_empty" >Dit veld kan niet leeg zijn</string>
+
+    <string name="confirm_delete_issue">Wilt u het probleem echt verwijderen?</string>
+    <string name="confirm_delete_change">Wilt u de wijziging echt verwijderen?</string>
+
+    <string name="last_modified">Laatst gewijzigd</string>
+
 </resources>

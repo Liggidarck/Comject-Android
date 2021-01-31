@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/search_explore_menu"
-        android:title="Search"
+        android:title="@string/search"
         android:icon="@drawable/ic_baseline_search_24"
         app:showAsAction="ifRoom" />
 

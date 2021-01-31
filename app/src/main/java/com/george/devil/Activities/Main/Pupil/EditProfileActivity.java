@@ -327,7 +327,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(namePersonTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            namePersonTextLayout.setError("Это поле не может быть пустом");
+            namePersonTextLayout.setError(getText(R.string.error_empty));
             return true;
         } else {
             namePersonTextLayout.setError(null);
@@ -339,7 +339,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(usernameTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            usernameTextLayout.setError("Это поле не может быть пустом");
+            usernameTextLayout.setError(getText(R.string.error_empty));
             return false;
         } else {
             usernameTextLayout.setError(null);
@@ -351,7 +351,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(topikTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            topikTextLayout.setError("Это поле не может быть пустом");
+            topikTextLayout.setError(getText(R.string.error_empty));
             return false;
         } else {
             topikTextLayout.setError(null);
@@ -363,7 +363,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(emailTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            emailTextLayout.setError("Это поле не может быть пустом");
+            emailTextLayout.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -376,7 +376,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(cityTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            cityTextLayout.setError("Это поле не может быть пустом");
+            cityTextLayout.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -389,7 +389,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(schoolTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            schoolTextLayout.setError("Это поле не может быть пустом");
+            schoolTextLayout.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -402,7 +402,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(gradeTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            gradeTextLayout.setError("Это поле не может быть пустом");
+            gradeTextLayout.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -415,7 +415,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(birdayTextLayout.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            birdayTextLayout.setError("Это поле не может быть пустом");
+            birdayTextLayout.setError(getText(R.string.error_empty));
 
             return false;
         } else {

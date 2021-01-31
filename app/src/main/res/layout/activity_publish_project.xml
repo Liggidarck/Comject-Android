@@ -51,7 +51,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="144dp"
-                            android:src="@drawable/default_1"
+                            android:src="@drawable/it2"
                             android:scaleType="centerCrop" />
 
                         <LinearLayout

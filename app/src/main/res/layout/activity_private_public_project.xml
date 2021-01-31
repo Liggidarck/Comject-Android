@@ -356,7 +356,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:src="@drawable/default_1"
+                            android:src="@drawable/it1"
                             android:scaleType="centerCrop" />
                     </RelativeLayout>
 

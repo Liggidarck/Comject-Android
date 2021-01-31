@@ -38,8 +38,8 @@ public class FollowingFollowersActivity extends AppCompatActivity {
             toolbar.setTitle(name_teather);
 
         TabAdapterFollowingFollowers adapter = new TabAdapterFollowingFollowers(getSupportFragmentManager());
-        adapter.addFragment(new fragmentFollowers(), "Followers");
-        adapter.addFragment(new fragmentFollowing(), "Following");
+        adapter.addFragment(new fragmentFollowers(), (String) getText(R.string.followers));
+        adapter.addFragment(new fragmentFollowing(), (String) getText(R.string.following));
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 

@@ -164,4 +164,30 @@
     <string name="teather">Profesor</string>
 
 
+
+
+    <string name="attention">Atención</string>
+    <string name="you_have_changed">Has cambiado los datos. ¿Está seguro de que desea guardar los datos modificados?</string>
+    <string name="search">Buscar</string>
+    <string name="change_theme">Cambiar de tema</string>
+    <string name="add_issue">Agregar problema</string>
+    <string name="write_message">Escribe un mensaje</string>
+    <string name="remove">Eliminar</string>
+
+    <string name="general">General</string>
+    <string name="confirm_before_deleting">Confirmar antes de eliminar</string>
+
+    <string name="confirm_delete_note">¿Estás segura de que quieres eliminar la nota?</string>
+
+    <string name="empty_note_cant_copied">La nota vacía no se puede copiar!</string>
+    <string name="note_copied">Nota copiada!</string>
+    <string name="empty_note_cant_shared">La nota vacía no se puede compartir!</string>
+
+    <string name="error_empty" >Este campo no puede estar vacío</string>
+
+    <string name="confirm_delete_issue">¿De verdad quieres eliminar el problema?</string>
+    <string name="confirm_delete_change">¿De verdad quieres eliminar el cambio?</string>
+
+    <string name="last_modified">Última modificación</string>
+
 </resources>

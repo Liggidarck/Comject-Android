@@ -9,12 +9,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.george.devil.Activities.Main.Pupil.CommentsActivity;
+import com.george.devil.Activities.Main.Pupil.ProfileActivityPupil;
 import com.george.devil.Activities.Projects.PagesProjects.PostProjectActivity;
 import com.george.devil.BottomSheets.BottomSheetFilters;
 import com.george.devil.Fragments.Pupil.fragmentSearchExplore;
@@ -24,10 +27,9 @@ import com.google.android.material.card.MaterialCardView;
 
 public class fragmentExplore extends Fragment {
 
-    Button like_btn_1, like_btn_2;
+    Button like_btn_1, like_btn_2, comment_post_Explore, subscribe_btn, subscribed_btn;
     MaterialToolbar toolbar;
-
-    static final String TAG = "fragmentExplore";
+    RelativeLayout top_profile_card;
 
     @Nullable
     @Override
@@ -36,6 +38,12 @@ public class fragmentExplore extends Fragment {
 
         like_btn_1 = view.findViewById(R.id.like_btn_1);
         like_btn_2 = view.findViewById(R.id.like_btn_2);
+        subscribe_btn = view.findViewById(R.id.subscribe_btn);
+        subscribed_btn = view.findViewById(R.id.subscribed_btn);
+
+        top_profile_card = view.findViewById(R.id.top_profile_card);
+
+        comment_post_Explore = view.findViewById(R.id.comment_post_Explore);
 
         toolbar = view.findViewById(R.id.topAppBar_explore);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
@@ -48,6 +56,8 @@ public class fragmentExplore extends Fragment {
         MaterialCardView cardView = view.findViewById(R.id.card1_explore);
         cardView.setOnClickListener(v -> startActivity(new Intent(fragmentExplore.this.getActivity(), PostProjectActivity.class)));
 
+        top_profile_card.setOnClickListener(v -> startActivity(new Intent(fragmentExplore.this.getActivity(), ProfileActivityPupil.class)));
+
         like_btn_1.setOnClickListener(v -> {
             like_btn_1.setVisibility(View.INVISIBLE);
             like_btn_2.setVisibility(View.VISIBLE);
@@ -57,6 +67,18 @@ public class fragmentExplore extends Fragment {
             like_btn_1.setVisibility(View.VISIBLE);
             like_btn_2.setVisibility(View.INVISIBLE);
         });
+
+        subscribe_btn.setOnClickListener(v -> {
+            subscribe_btn.setVisibility(View.INVISIBLE);
+            subscribed_btn.setVisibility(View.VISIBLE);
+        });
+
+        subscribed_btn.setOnClickListener(v -> {
+            subscribe_btn.setVisibility(View.VISIBLE);
+            subscribed_btn.setVisibility(View.INVISIBLE);
+        });
+
+        comment_post_Explore.setOnClickListener(v -> startActivity(new Intent(fragmentExplore.this.getActivity(), CommentsActivity.class)));
 
         return view;
 

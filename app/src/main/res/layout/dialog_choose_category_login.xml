@@ -95,7 +95,7 @@
                 android:id="@+id/cancel_dialog_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="cancel"
+                android:text="@android:string/cancel"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="10dp"
                 style="?attr/materialButtonOutlinedStyle" />

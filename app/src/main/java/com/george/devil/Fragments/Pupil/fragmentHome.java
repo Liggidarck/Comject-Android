@@ -43,9 +43,7 @@ public class fragmentHome extends Fragment {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String titleMain = sharedPreferences.getString("nameMainProject", "empty_main_project");
-        String username = sharedPreferences.getString("username", "empty_correct_username");
         String descroption = sharedPreferences.getString("descriptionMainProject", "empty_absic_description");
-        String topic = sharedPreferences.getString("topicMainProject", "topic_main_proj_empty");
         String hastags = sharedPreferences.getString("hastags", "Edit project hastags!");
 
         main_title_project_1.setText(titleMain);

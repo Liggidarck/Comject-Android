@@ -1,3 +1,4 @@
+
 package com.george.devil.Activities.Main.Registration;
 
 import android.app.DatePickerDialog;
@@ -76,12 +77,7 @@ public class RegistarionPupilActivity extends AppCompatActivity {
                 .get(Calendar.YEAR), calendarDatePick.get(Calendar.MONTH),
                 calendarDatePick.get(Calendar.DAY_OF_MONTH)).show());
 
-        String[] items = new String[]{
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction", "Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 RegistarionPupilActivity.this,

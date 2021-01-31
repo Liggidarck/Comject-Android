@@ -12,7 +12,7 @@
     <string name="my_main_project">МОЙ ОСНОВНОЙ ПРОЕКТ</string>
     <string name="num_comments">1.3 Комментарии</string>
     <string name="publish">Опубликовать</string>
-    <string name="edit_project">Изменить проект</string>
+    <string name="edit_project">Изменить</string>
     <string name="my_others_projects">Мои Другие Проекты</string>
 
     <!-- fragment notes -->
@@ -125,7 +125,7 @@
     <!-- Activity Main Project -->
     <string name="information_from_teacher">Информация от учителя</string>
     <string name="comments">Комментарии</string>
-    <string name="hashtags">Хэштег</string>
+    <string name="hashtags">Хэштеги</string>
     <string name="my_tasks">Мои задачи</string>
 
     <!-- Activity New Post -->
@@ -145,7 +145,7 @@
     <string name="choose_theme">Изменить тему</string>
     <string name="filters">Фильтры</string>
     <string name="edit_chastags">изменить хэштег</string>
-    <string name="basic_information">основная информация</string>
+    <string name="basic_information">Основная информация</string>
     <string name="actions_with_notes">Действия с заметками</string>
     <string name="delete">Удалить</string>
     <string name="copy_content">Скопировать</string>
@@ -155,9 +155,50 @@
     <string name="my_personal_project_private">Мой личный проект</string>
 
     <!-- Layout choose category -->
-    <string name="choose_category">Выбрать категорию</string>
+    <string name="choose_category">Выбрите категорию</string>
     <string name="pupil">Ученик</string>
     <string name="teather">Учитель</string>
 
+
+    <string name="MyProject">Мой проект</string>
+    <string name="attention">Внимание</string>
+    <string name="you_have_changed">Вы изменили данные. Вы уверены, что хотите сохранить измененные данные?</string>
+    <string name="search">Поиск</string>
+    <string name="change_theme">Изменить тему</string>
+    <string name="add_issue">Новая проблема</string>
+    <string name="write_message">Новое сообщение</string>
+    <string name="remove">Удалить</string>
+
+    <string name="general">Основные</string>
+    <string name="confirm_before_deleting">Подтверждать перед удалением</string>
+
+    <string name="confirm_delete_note">Вы уверены, что хотите удалить заметку?</string>
+
+    <string name="empty_note_cant_copied">Пустую заметку невозможно скопировать!</string>
+    <string name="note_copied">Заметка скопирована!</string>
+    <string name="empty_note_cant_shared">Пустой заметкой нельзя поделиться!</string>
+
+    <string name="error_empty" >Это поле не может быть пустым</string>
+
+    <string name="confirm_delete_issue">Вы действительно хотите удалить проблему?</string>
+    <string name="confirm_delete_change">Вы действительно хотите удалить изменение?</string>
+
+    <string name="last_modified">Последнее изменение</string>
+
+    <string name="bio">Биология</string>
+    <string name="Chemistry">Химия</string>
+    <string name="Economics">Экономика</string>
+    <string name="English">Английский язык</string>
+    <string name="Engineering">Инженерия/Строительство</string>
+    <string name="Geography">География</string>
+    <string name="History">История</string>
+    <string name="IT">ИТ</string>
+    <string name="Literature">Литература</string>
+    <string name="Math">Математика</string>
+    <string name="Physics">Физика</string>
+    <string name="Politics">Политика</string>
+    <string name="Sports">Спорт</string>
+    <string name="SocialStudies">Обществознание</string>
+    <string name="Other">Другие</string>
 
 </resources>

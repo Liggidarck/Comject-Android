@@ -47,7 +47,7 @@
         android:id="@+id/toolbar_issues"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="Issues"
+        app:title="@string/issues"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_dark"
         style="@style/Widget.MaterialComponents.Toolbar.Primary" />
 

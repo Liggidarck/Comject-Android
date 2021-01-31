@@ -160,4 +160,28 @@
     <string name="teather">Lehrer</string>
 
 
+    <string name="attention">Beachtung</string>
+    <string name="you_have_changed">Sie haben die Daten geändert. Sind Sie sicher, dass Sie die geänderten Daten speichern möchten?</string>
+    <string name="search">Suche</string>
+    <string name="change_theme">Thema ändern</string>
+    <string name="add_issue">Problem hinzufügen</string>
+    <string name="write_message">Eine Nachricht schreiben</string>
+    <string name="remove">Entfernen</string>
+
+    <string name="general">Allgemeines</string>
+    <string name="confirm_before_deleting">Bestätigen Sie vor dem Löschen</string>
+
+    <string name="confirm_delete_note">Sind Sie sicher, dass Sie die Notiz löschen möchten?</string>
+
+    <string name="empty_note_cant_copied">Leere Notiz kann nicht kopiert werden!</string>
+    <string name="note_copied">Hinweis kopiert!</string>
+    <string name="empty_note_cant_shared">Leere Notiz kann nicht geteilt werden!</string>
+
+    <string name="error_empty" >Dieses Feld kann nicht leer sein</string>
+
+    <string name="confirm_delete_issue">Möchten Sie das Problem wirklich löschen?</string>
+    <string name="confirm_delete_change">Möchten Sie wirklich Änderungen entfernen?</string>
+
+    <string name="last_modified">Zuletzt bearbeitet</string>
+
 </resources>

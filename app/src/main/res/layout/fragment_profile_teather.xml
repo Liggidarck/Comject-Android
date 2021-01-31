@@ -23,7 +23,7 @@
                     android:id="@+id/main_profile_image_teather"
                     android:layout_width="match_parent"
                     android:layout_height="174dp"
-                    android:src="@drawable/default_3"
+                    android:src="@drawable/it6"
                     android:scaleType="centerCrop"/>
 
                 <de.hdodenhof.circleimageview.CircleImageView

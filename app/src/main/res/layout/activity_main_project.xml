@@ -86,7 +86,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:src="@drawable/line_gray_dark" />
+                android:src="@drawable/line_gray_dark"
+                android:contentDescription="TODO" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -119,7 +120,8 @@
                             android:layout_width="28dp"
                             android:layout_height="28dp"
                             android:src="@drawable/ic_outline_report_problem_24"
-                            android:layout_centerInParent="true" />
+                            android:layout_centerInParent="true"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -156,7 +158,8 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/violet_rectangle" />
+                            android:src="@drawable/violet_rectangle"
+                            android:contentDescription="TODO" />
 
                         <ImageView
                             android:layout_width="28dp"
@@ -199,13 +202,15 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/greeen_rectangle" />
+                            android:src="@drawable/greeen_rectangle"
+                            android:contentDescription="TODO" />
 
                         <ImageView
                             android:layout_width="28dp"
                             android:layout_height="28dp"
                             android:src="@drawable/ic_outline_info_24"
-                            android:layout_centerInParent="true" />
+                            android:layout_centerInParent="true"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -227,7 +232,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:src="@drawable/line_gray_dark" />
+                android:src="@drawable/line_gray_dark"
+                android:contentDescription="TODO" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -254,13 +260,15 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/orange_rectangle" />
+                            android:src="@drawable/orange_rectangle"
+                            android:contentDescription="TODO" />
 
                         <ImageView
                             android:layout_width="28dp"
                             android:layout_height="28dp"
-                            android:src="@drawable/ic_outline_comment_24"
-                            android:layout_centerInParent="true" />
+                            android:src="@drawable/ic_chat_white"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -297,13 +305,15 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/blue_recangle" />
+                            android:src="@drawable/blue_recangle"
+                            android:contentDescription="TODO" />
 
                         <ImageView
                             android:layout_width="25dp"
                             android:layout_height="25dp"
                             android:src="@drawable/has"
-                            android:layout_centerInParent="true" />
+                            android:layout_centerInParent="true"
+                            android:contentDescription="TODO" />
 
                     </RelativeLayout>
 
@@ -354,8 +364,9 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:src="@drawable/default_1"
-                        android:scaleType="centerCrop" />
+                        android:src="@drawable/it1"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="TODO" />
                 </RelativeLayout>
 
 

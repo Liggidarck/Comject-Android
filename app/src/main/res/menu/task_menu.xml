@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/edit_theme_task"
-        android:title="Изменить тему"
+        android:title="@string/change_theme"
         android:icon="@drawable/ic_outline_design_services_24"
         app:showAsAction="always"/>
 

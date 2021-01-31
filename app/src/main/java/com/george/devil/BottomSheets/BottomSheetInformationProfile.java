@@ -43,17 +43,17 @@ public class BottomSheetInformationProfile extends BottomSheetDialogFragment {
         String birthday_teather = sharedPreferences.getString("birthay_teather", "birthay_teather_empty");
 
         if(!topic_pupil.equals("empty_topic")) {
-            topicTextView.setText(getString(R.string.profile) + topic_pupil);
-            bithdayTextView.setText(getString(R.string.birthday) + birthday_pupil);
-            city_bottomTextView.setText(getString(R.string.city) + city_pupil);
+            topicTextView.setText(getString(R.string.profile) + ": " + topic_pupil);
+            bithdayTextView.setText(getString(R.string.birthday) + ": " + birthday_pupil);
+            city_bottomTextView.setText(getString(R.string.city) + ": " + city_pupil);
             cityBottomTextView.setText(city_pupil);
             date_birthday.setText(birthday_pupil);
         }
 
         if(!topic_teather.equals("topic_teather_empty")){
-            topicTextView.setText(getString(R.string.profile) + topic_teather);
-            bithdayTextView.setText(getString(R.string.birthday)+ birthday_teather);
-            city_bottomTextView.setText(getString(R.string.city) + city_teather);
+            topicTextView.setText(getString(R.string.profile) + ": " + topic_teather);
+            bithdayTextView.setText(getString(R.string.birthday) + ": " + birthday_teather);
+            city_bottomTextView.setText(getString(R.string.city) + ": " + city_teather);
             cityBottomTextView.setText(city_teather);
             date_birthday.setText(birthday_teather);
         }

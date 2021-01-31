@@ -19,7 +19,7 @@
                     android:id="@+id/main_profile_image"
                     android:layout_width="match_parent"
                     android:layout_height="174dp"
-                    android:src="@drawable/default_3"
+                    android:src="@drawable/it3"
                     android:scaleType="centerCrop"/>
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -229,7 +229,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="164dp"
-                            android:src="@drawable/default_3"
+                            android:src="@drawable/it2"
                             android:scaleType="centerCrop" />
 
                         <LinearLayout

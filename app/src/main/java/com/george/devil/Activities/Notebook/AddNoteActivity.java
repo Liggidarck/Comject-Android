@@ -81,7 +81,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
         String dateText = dateFormat.format(currentDate);
         DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         String timeText = timeFormat.format(currentDate);
-        dateFull = "Последнее изменение:" + " " + dateText + " " + timeText;
+        dateFull = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
         dateView.setText(dateFull);
 
         if (notesId > 0) {
@@ -187,7 +187,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
             String dateText = dateFormat.format(currentDate);
             DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
             String timeText = timeFormat.format(currentDate);
-            dateFull = "Последнее изменение:" + " " + dateText + " " + timeText;
+            dateFull = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
 
             ContentValues cv = new ContentValues();
             cv.put(NotesDatabase.COLUMN_NAME_NOTE, nameBox.getText().toString());
@@ -215,15 +215,15 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
             if(confirmDelet){
                 AlertDialog.Builder builder = new AlertDialog.Builder(AddNoteActivity.this);
-                builder.setTitle("Внимание");
-                builder.setMessage("Вы действительно хотите удалить заметку?");
+                builder.setTitle(getText(R.string.attention));
+                builder.setMessage(getText(R.string.confirm_delete_note));
 
-                builder.setPositiveButton("Ок", (dialog, id) -> {
+                builder.setPositiveButton(getString(android.R.string.ok), (dialog, id) -> {
                     delete();
                     dialog.dismiss();
                 });
 
-                builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+                builder.setNegativeButton(getString(android.R.string.cancel), (dialog, which) -> dialog.dismiss());
 
                 builder.show();
 
@@ -235,23 +235,21 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
         if(text.equals("Button copy clicked")){
             String copy = noteBox.getText().toString();
-
             if(copy.isEmpty()){
-                Snackbar.make(coordinatorLayout, "Empty Note cant copied!", Snackbar.LENGTH_SHORT).setAction("done", null).show();
+                Snackbar.make(coordinatorLayout, getText(R.string.empty_note_cant_copied), Snackbar.LENGTH_SHORT).setAction("done", null).show();
             } else {
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 ClipData clip = ClipData.newPlainText("", copy);
                 assert clipboard != null;
                 clipboard.setPrimaryClip(clip);
-                Snackbar.make(coordinatorLayout, "Note copied!", Snackbar.LENGTH_SHORT).setAction("done", null).show();
+                Snackbar.make(coordinatorLayout, getText(R.string.note_copied), Snackbar.LENGTH_SHORT).setAction("done", null).show();
             }
         }
 
         if(text.equals("Button share clicked")) {
             String copy = noteBox.getText().toString();
-
             if (copy.isEmpty()) {
-                Snackbar.make(coordinatorLayout, "Empty Note cant shared!", Snackbar.LENGTH_SHORT).setAction("done", null).show();
+                Snackbar.make(coordinatorLayout, getText(R.string.empty_note_cant_shared), Snackbar.LENGTH_SHORT).setAction("done", null).show();
             } else {
 
                 Intent sendIntent = new Intent();

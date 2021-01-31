@@ -82,7 +82,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="174dp"
-                                android:src="@drawable/default_1"
+                                android:src="@drawable/it2"
                                 android:scaleType="centerCrop" />
 
                             <LinearLayout
@@ -273,7 +273,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="145dp"
-                                    android:src="@drawable/default_2"
+                                    android:src="@drawable/it3"
                                     android:scaleType="centerCrop" />
 
                                 <LinearLayout
@@ -419,7 +419,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="145dp"
-                                    android:src="@drawable/default_4"
+                                    android:src="@drawable/it4"
                                     android:scaleType="centerCrop" />
 
                                 <LinearLayout
@@ -566,7 +566,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="145dp"
-                                    android:src="@drawable/default_3"
+                                    android:src="@drawable/it3"
                                     android:scaleType="centerCrop" />
 
                                 <LinearLayout

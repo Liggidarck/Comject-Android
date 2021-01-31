@@ -13,7 +13,6 @@
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
     </style>
 
     <style name="ProjectDevilToolbar" parent="Theme.MaterialComponents.Light.NoActionBar" >
@@ -22,6 +21,9 @@
         <item name="colorPrimary">@color/bluePrimary</item>
         <item name="colorPrimaryVariant">@color/blue_primary_variant</item>
         <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blueSecondary</item>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Projects.AddInformationActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar_add_info"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Add information"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+        app:layout_collapseMode="pin"
+        android:background="@color/bluePrimary" />
+
+    <EditText
+        android:id="@+id/name_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topAppBar_add_info"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:hint="@string/title"
+        android:fontFamily="@font/google_sans_medium"
+        android:inputType="textMultiLine"
+        android:padding="8dp"
+        android:selectAllOnFocus="true"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:layout_below="@id/name_note">
+
+        <EditText
+            android:id="@+id/note_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:hint="@string/text"
+            android:textSize="18sp"
+            app:borderWidth="0dp"
+            android:fontFamily="@font/google_sans_medium"
+            android:background="@null"
+            android:padding="8dp"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+</RelativeLayout>

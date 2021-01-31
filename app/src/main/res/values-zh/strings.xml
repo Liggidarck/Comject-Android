@@ -160,4 +160,28 @@
     <string name="teather">老師</string>
 
 
+    <string name="attention">注意</string>
+    <string name="you_have_changed">您已更改数据。 您确定要保存更改的数据吗？</string>
+    <string name="search">搜索</string>
+    <string name="change_theme">更改主题</string>
+    <string name="add_issue">添加问题</string>
+    <string name="write_message">写短信</string>
+    <string name="remove">去掉</string>
+
+    <string name="general">一般</string>
+    <string name="confirm_before_deleting">删除前先确认</string>
+
+    <string name="confirm_delete_note">您确定要删除注释吗?</string>
+
+    <string name="empty_note_cant_copied">空笔记无法复制!</string>
+    <string name="note_copied">笔记已复制!</string>
+    <string name="empty_note_cant_shared">空笔记无法共享!</string>
+
+    <string name="error_empty" >该字段不能为空</string>
+
+    <string name="confirm_delete_issue">您是否真的要删除问题?</string>
+    <string name="confirm_delete_change">您真的要删除更改吗?</string>
+
+    <string name="last_modified">上一次更改</string>
+
 </resources>

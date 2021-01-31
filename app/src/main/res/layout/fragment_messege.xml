@@ -109,7 +109,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="_kate_sheee_"
+                            android:text="Now l do this"
                             android:layout_below="@id/name_chat_1" />
 
                     </RelativeLayout>
@@ -164,7 +164,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Teatcher"
+                            android:text="You: Photo"
                             android:layout_below="@id/name_chat_3" />
 
                     </RelativeLayout>
@@ -219,7 +219,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="thefireowl"
+                            android:text="ok"
                             android:layout_below="@id/name_chat_4" />
 
                     </RelativeLayout>
@@ -274,7 +274,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="liggidarck"
+                            android:text="You: No problem"
                             android:layout_below="@id/name_chat_5" />
 
                     </RelativeLayout>

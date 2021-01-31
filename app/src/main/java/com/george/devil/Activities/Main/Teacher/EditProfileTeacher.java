@@ -310,7 +310,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(name_account_edit_profile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            name_account_edit_profile_teather.setError("Это поле не может быть пустом");
+            name_account_edit_profile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             name_account_edit_profile_teather.setError(null);
@@ -322,7 +322,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(username_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            username_layout_editProfile_teather.setError("Это поле не может быть пустом");
+            username_layout_editProfile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             username_layout_editProfile_teather.setError(null);
@@ -335,7 +335,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(email_layout_editProfile_tether.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            email_layout_editProfile_tether.setError("Это поле не может быть пустом");
+            email_layout_editProfile_tether.setError(getText(R.string.error_empty));
             return false;
         } else {
             email_layout_editProfile_tether.setError(null);
@@ -348,7 +348,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(city_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            city_layout_editProfile_teather.setError("Это поле не может быть пустом");
+            city_layout_editProfile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             city_layout_editProfile_teather.setError(null);
@@ -361,7 +361,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(city_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            city_layout_editProfile_teather.setError("Это поле не может быть пустом");
+            city_layout_editProfile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             city_layout_editProfile_teather.setError(null);
@@ -374,7 +374,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(school_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            school_layout_editProfile_teather.setError("Это поле не может быть пустом");
+            school_layout_editProfile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             school_layout_editProfile_teather.setError(null);
@@ -387,7 +387,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
-            textField_bithday_edit_profile_teather.setError("Это поле не может быть пустом");
+            textField_bithday_edit_profile_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             textField_bithday_edit_profile_teather.setError(null);

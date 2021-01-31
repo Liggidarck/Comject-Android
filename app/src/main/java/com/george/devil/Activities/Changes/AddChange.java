@@ -55,15 +55,15 @@ public class AddChange extends AppCompatActivity {
             boolean confirmDelet = preferences.getBoolean("delet_bool", true);
             if (confirmDelet) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(AddChange.this);
-                builder.setTitle("Внимание");
-                builder.setMessage("Вы действительно хотите удалить change?");
+                builder.setTitle(getString(R.string.attention));
+                builder.setMessage(getText(R.string.confirm_delete_change));
 
-                builder.setPositiveButton("Ок", (dialog, id) -> {
+                builder.setPositiveButton(getString(android.R.string.ok), (dialog, id) -> {
                     delete();
                     dialog.dismiss();
                 });
 
-                builder.setNegativeButton("Отмена", (dialog, which) -> dialog.dismiss());
+                builder.setNegativeButton(getString(android.R.string.cancel), (dialog, which) -> dialog.dismiss());
 
                 builder.show();
             } else
@@ -83,7 +83,7 @@ public class AddChange extends AppCompatActivity {
         String dateText = dateFormat.format(currentDate);
         DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         String timeText = timeFormat.format(currentDate);
-        String fullDate = "Последнее изменение:" + " " + dateText + " " + timeText;
+        String fullDate = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
         date_edit.setText(fullDate);
 
         Bundle extras = getIntent().getExtras();
@@ -103,7 +103,6 @@ public class AddChange extends AppCompatActivity {
 
             userCursor.close();
         }
-
     }
 
     public void save() {
@@ -114,7 +113,7 @@ public class AddChange extends AppCompatActivity {
             String dateText = dateFormat.format(currentDate);
             DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
             String timeText = timeFormat.format(currentDate);
-            String fullDate = "Последнее изменение:" + " " + dateText + " " + timeText;
+            String fullDate = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
 
             ContentValues cv = new ContentValues();
             cv.put(ChangesDataBase.COLUMN_NAME_CHANGE, name_chage.getText().toString());
@@ -138,7 +137,6 @@ public class AddChange extends AppCompatActivity {
         Intent intent = new Intent(this, ChangesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
-
     }
 
     public void delete() {

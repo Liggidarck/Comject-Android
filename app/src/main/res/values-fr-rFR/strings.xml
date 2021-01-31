@@ -160,4 +160,30 @@
     <string name="teather">Prof</string>
 
 
+
+
+    <string name="attention">Attention</string>
+    <string name="you_have_changed">Vous avez modifié les données. Êtes-vous sûr de vouloir enregistrer les données modifiées?</string>
+    <string name="search">Chercher</string>
+    <string name="change_theme">Change le thème</string>
+    <string name="add_issue">Ajouter un problème</string>
+    <string name="write_message">Écrire un message</string>
+    <string name="remove">Retirer</string>
+
+    <string name="general">Générale</string>
+    <string name="confirm_before_deleting">Confirmer avant de supprimer</string>
+
+    <string name="confirm_delete_note">Voulez-vous vraiment supprimer la note?</string>
+
+    <string name="empty_note_cant_copied">La note vide ne peut pas être copiée!</string>
+    <string name="note_copied">Note copiée!</string>
+    <string name="empty_note_cant_shared">La note vide ne peut pas être partagée!</string>
+
+    <string name="error_empty" >Ce champ ne peut pas être vide</string>
+
+    <string name="confirm_delete_issue">Voulez-vous vraiment supprimer le problème?</string>
+    <string name="confirm_delete_change">Voulez-vous vraiment supprimer le changement?</string>
+
+    <string name="last_modified">Dernière modification</string>
+
 </resources>

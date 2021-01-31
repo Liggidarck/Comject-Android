@@ -128,9 +128,9 @@
                         android:layout_height="wrap_content" >
 
                         <ImageView
+                            android:id="@+id/image_proj"
                             android:layout_width="match_parent"
                             android:layout_height="184dp"
-                            android:src="@drawable/default_2"
                             android:scaleType="centerCrop" />
 
                         <ImageView

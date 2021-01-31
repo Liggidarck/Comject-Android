@@ -159,5 +159,44 @@
     <string name="pupil">Pupil</string>
     <string name="teather">Teather</string>
 
+    <string name="attention">Attention</string>
+    <string name="you_have_changed">You have changed the data. Are you sure you want to save the changed data?</string>
+    <string name="search">Search</string>
+    <string name="change_theme">Change theme</string>
+    <string name="add_issue">Add Issue</string>
+    <string name="write_message">Write a message</string>
+    <string name="remove">Remove</string>
+
+    <string name="general">General</string>
+    <string name="confirm_before_deleting">Confirm before deleting</string>
+
+    <string name="confirm_delete_note">Are you sure you want to delete the note?</string>
+
+    <string name="empty_note_cant_copied">Empty Note can\'t copied!</string>
+    <string name="note_copied">Note copied!</string>
+    <string name="empty_note_cant_shared">Empty Note can\'t shared!</string>
+
+    <string name="error_empty" >This field cannot be empty</string>
+
+    <string name="confirm_delete_issue">Do you really want to delete the issue?</string>
+    <string name="confirm_delete_change">Do you really want to remove change?</string>
+
+    <string name="last_modified">Last modified</string>
+
+    <string name="bio">Biology</string>
+    <string name="Chemistry">Chemistry</string>
+    <string name="Economics">Economics</string>
+    <string name="English">English</string>
+    <string name="Engineering">Engineering/Construction</string>
+    <string name="Geography">Geography</string>
+    <string name="History">History</string>
+    <string name="IT">IT</string>
+    <string name="Literature">Literature</string>
+    <string name="Math">Math</string>
+    <string name="Physics">Physics</string>
+    <string name="Politics">Politics</string>
+    <string name="Sports">Sports</string>
+    <string name="SocialStudies">Social studies</string>
+    <string name="Other">Other</string>
 
 </resources>

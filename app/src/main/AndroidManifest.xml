@@ -6,12 +6,16 @@
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/ProjectDevil"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:theme="@style/ProjectDevil">
+        <activity android:name=".Activities.Projects.AddInformationActivity"></activity>
+        <activity android:name=".Activities.Projects.AddInformationTeacher" />
+        <activity android:name=".Activities.Projects.PagesProjects.ProjectTeacher" />
+        <activity android:name=".Activities.Projects.EditsProject.ImagesActivity" />
         <activity android:name=".Activities.Main.Teacher.EditProfileTeacher" />
         <activity android:name=".Activities.Projects.PagesProjects.PublishProjectActivity" />
         <activity android:name=".Activities.Main.Pupil.ProfileActivityPupil" />

@@ -75,12 +75,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         date_textView_teather.setOnClickListener(v -> new DatePickerDialog(RegistrationTeatherActivity.this, date, datePickCalendar
                 .get(Calendar.YEAR), datePickCalendar.get(Calendar.MONTH), datePickCalendar.get(Calendar.DAY_OF_MONTH)).show());
 
-        String[] items = new String[]{
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction", "Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 RegistrationTeatherActivity.this,
@@ -122,8 +117,6 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
                 startActivity(new Intent(RegistrationTeatherActivity.this, MainActivityTeather.class));
             }
         });
-
-
     }
 
     public void updateLabel() {
@@ -137,7 +130,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_name_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_name_regis_teather.setError("Это поле не может быть пустом");
+            textField_name_regis_teather.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -150,7 +143,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_email_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_email_regis_teather.setError("Это поле не может быть пустом");
+            textField_email_regis_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             textField_email_regis_teather.setError(null);
@@ -162,7 +155,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_city_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_city_regis_teather.setError("Это поле не может быть пустом");
+            textField_city_regis_teather.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -175,7 +168,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_topic_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_topic_teather.setError("Это поле не может быть пустом");
+            textField_topic_teather.setError(getText(R.string.error_empty));
 
             return false;
         } else {
@@ -188,7 +181,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_school_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_school_regis_teather.setError("Это поле не может быть пустом");
+            textField_school_regis_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             textField_school_regis_teather.setError(null);
@@ -200,7 +193,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_bithday_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_bithday_regis_teather.setError("Это поле не может быть пустом");
+            textField_bithday_regis_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             textField_bithday_regis_teather.setError(null);
@@ -212,7 +205,7 @@ public class RegistrationTeatherActivity extends AppCompatActivity {
         String check = Objects.requireNonNull(textField_password_regis_teather.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
-            textField_password_regis_teather.setError("Это поле не может быть пустом");
+            textField_password_regis_teather.setError(getText(R.string.error_empty));
             return false;
         } else {
             textField_password_regis_teather.setError(null);
