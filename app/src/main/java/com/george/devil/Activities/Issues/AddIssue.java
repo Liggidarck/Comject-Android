@@ -13,8 +13,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Window;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -32,19 +30,18 @@ import java.util.Locale;
 
 public class AddIssue extends AppCompatActivity {
 
-    //TODO: ПЕРЕДЕЛАТЬ ЭТОТ ПИЗДЕЦ В БОЛЕЕ ЧИТАЕМЫЙ С КОММЕНТАРИЯМИ
-
-    EditText name_issue, editText_add_due_date;
-
     IssuesDataBase sqlHelper;
     SQLiteDatabase db;
     Cursor userCursor;
     long issuesId = 0;
-
-    RelativeLayout choose_priority_lay;
-
     String dateFullIssue, noteissue;
+
+    EditText name_issue, editText_add_due_date;
+    RelativeLayout choose_priority_lay;
     TextView dateViewIssue, text_note_issue;
+    MaterialToolbar topAppBar_add_issue;
+    ImageView delete_isseue;
+    MaterialCardView addNote;
 
     private static final String TAG = "AddIssueActivity";
 
@@ -54,11 +51,16 @@ public class AddIssue extends AppCompatActivity {
         setContentView(R.layout.activity_add_issue);
 
         choose_priority_lay = findViewById(R.id.choose_priority_lay);
+        topAppBar_add_issue = findViewById(R.id.topAppBar_add_issue);
+        delete_isseue = findViewById(R.id.delete_issue);
+        name_issue = findViewById(R.id.name_issue);
+        editText_add_due_date = findViewById(R.id.editText_add_due_date);
+        dateViewIssue = findViewById(R.id.date_issue);
+        text_note_issue = findViewById(R.id.text_note_issue);
+        addNote = findViewById(R.id.add_note_issue_layout);
 
-        MaterialToolbar topAppBar_add_issue = findViewById(R.id.topAppBar_add_issue);
-        topAppBar_add_issue.setNavigationOnClickListener(v -> save());
+        choose_priority_lay.setOnClickListener(v -> openPriorityDialog());
 
-        ImageView delete_isseue = findViewById(R.id.delete_issue);
         delete_isseue.setOnClickListener(v -> {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             boolean confirmDelet = preferences.getBoolean("delet_bool", true);
@@ -78,19 +80,15 @@ public class AddIssue extends AppCompatActivity {
                 builder.show();
             }else
                 delete();
-
-
         });
 
-        name_issue = findViewById(R.id.name_issue);
-        editText_add_due_date = findViewById(R.id.editText_add_due_date);
-        dateViewIssue = findViewById(R.id.date_issue);
-        text_note_issue = findViewById(R.id.text_note_issue);
+        topAppBar_add_issue.setNavigationOnClickListener(v -> save());
+        addNote.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), AddNoteIssue.class);
+            intent.putExtra("name_issue", name_issue.getText().toString());
+            startActivity(intent);
+        });
 
-        sqlHelper = new IssuesDataBase(this);
-        db = sqlHelper.getWritableDatabase();
-
-        choose_priority_lay.setOnClickListener(v -> onpenDialog());
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -109,6 +107,9 @@ public class AddIssue extends AppCompatActivity {
         dateFullIssue = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
         dateViewIssue.setText(dateFullIssue);
 
+        sqlHelper = new IssuesDataBase(this);
+        db = sqlHelper.getWritableDatabase();
+
         if (issuesId > 0) {
             userCursor = db.rawQuery("select * from " + IssuesDataBase.TABLE + " where " + IssuesDataBase.COLUMN_ID + "=?", new String[]{String.valueOf(issuesId)});
             userCursor.moveToFirst();
@@ -121,16 +122,11 @@ public class AddIssue extends AppCompatActivity {
             userCursor.close();
         }
 
-        MaterialCardView addNote = findViewById(R.id.add_note_issue_layout);
-        addNote.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplicationContext(), AddNoteIssue.class);
-            intent.putExtra("name_issue", name_issue.getText().toString());
-            startActivity(intent);
-        });
-
-
     }
 
+    /**
+     * Вызывается когда, нужно сохрнить в базу данных новую ячейку или для перезаписи текущего ячейки данных
+     */
     public void save() {
         String chekName = name_issue.getText().toString();
 
@@ -156,6 +152,9 @@ public class AddIssue extends AppCompatActivity {
         goHome();
     }
 
+    /**
+     * Закрывается подключение к {@link IssuesDataBase} и запускается {@link IssuesActivity}
+     */
     public void goHome() {
         db.close();
         Intent intent = new Intent(this, IssuesActivity.class);
@@ -163,12 +162,18 @@ public class AddIssue extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Выполням запрос на удадение ячейки из {@link IssuesDataBase} и закрываем подключение
+     */
     public void delete() {
         db.delete(IssuesDataBase.TABLE, "_id = ?", new String[]{String.valueOf(issuesId)});
         goHome();
     }
 
-    public void onpenDialog() {
+    /**
+     * Вызывается, когда нужно отрисовать {@link Dialog} для получения данных от пользователя о приоритете задачи
+     */
+    public void openPriorityDialog() {
         Dialog dialog = new Dialog(AddIssue.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_proirity);

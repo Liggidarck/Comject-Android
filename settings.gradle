@@ -1,3 +1,2 @@
-include ':benchmark'
 include ':app'
 rootProject.name = "Project Devil"

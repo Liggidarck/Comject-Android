@@ -22,8 +22,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.george.devil.Activities.Changes.ChangesActivity;
 import com.george.devil.Activities.Main.Pupil.MainActivityPupil;
 import com.george.devil.BottomSheets.BottomSheetNotes;
+import com.george.devil.DataBases.ChangesDataBase;
 import com.george.devil.DataBases.NotesDatabase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -178,32 +180,10 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
         });
     }
 
-    public void save() {
-        if(!validateNameNote()) {
-            return;
-        } else {
-            Date currentDate = new Date();
-            DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
-            String dateText = dateFormat.format(currentDate);
-            DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
-            String timeText = timeFormat.format(currentDate);
-            dateFull = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
-
-            ContentValues cv = new ContentValues();
-            cv.put(NotesDatabase.COLUMN_NAME_NOTE, nameBox.getText().toString());
-            cv.put(NotesDatabase.COLUMN_NOTE, noteBox.getText().toString());
-            cv.put(NotesDatabase.COLUMN_DATE, dateFull);
-            cv.put(NotesDatabase.COLUMN_THEME, checkTheme);
-
-            if (notesId > 0)
-                db.update(NotesDatabase.TABLE, cv, NotesDatabase.COLUMN_ID + "=" + notesId, null);
-            else
-                db.insert(NotesDatabase.TABLE, null, cv);
-
-            goHome();
-        }
-    }
-
+    /**
+     * Метод для определения нажатой кнопки в {@link BottomSheetNotes}
+     * @param text - полученые данные о кнопке от {@link BottomSheetNotes}
+     */
     @Override
     public void onButtonClicked(String text) {
         Log.i(TAG, "" + text);
@@ -341,12 +321,46 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
     }
 
+    /**
+     * Вызывается когда, нужно сохрнить в базу данных новую ячейку или для перезаписи текущего ячейки данных
+     */
+    public void save() {
+        if(!validateNameNote()) {
+            return;
+        } else {
+            Date currentDate = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
+            String dateText = dateFormat.format(currentDate);
+            DateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            String timeText = timeFormat.format(currentDate);
+            dateFull = getText(R.string.last_modified) + ":" + " " + dateText + " " + timeText;
 
+            ContentValues cv = new ContentValues();
+            cv.put(NotesDatabase.COLUMN_NAME_NOTE, nameBox.getText().toString());
+            cv.put(NotesDatabase.COLUMN_NOTE, noteBox.getText().toString());
+            cv.put(NotesDatabase.COLUMN_DATE, dateFull);
+            cv.put(NotesDatabase.COLUMN_THEME, checkTheme);
+
+            if (notesId > 0)
+                db.update(NotesDatabase.TABLE, cv, NotesDatabase.COLUMN_ID + "=" + notesId, null);
+            else
+                db.insert(NotesDatabase.TABLE, null, cv);
+
+            goHome();
+        }
+    }
+
+    /**
+     * Выполням запрос на удадение ячейки из {@link NotesDatabase} и закрываем подключение
+     */
     public void delete() {
         db.delete(NotesDatabase.TABLE, "_id = ?", new String[]{String.valueOf(notesId)});
         goHome();
     }
 
+    /**
+     * Закрывается подключение к {@link NotesDatabase} и запускается {@link ChangesActivity}
+     */
     public void goHome(){
         db.close();
 
@@ -354,11 +368,6 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(intent);
 
-    }
-
-    @Override
-    public void onBackPressed() {
-        save();
     }
 
     public boolean validateNameNote() {
@@ -374,5 +383,10 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
             return true;
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        save();
     }
 }

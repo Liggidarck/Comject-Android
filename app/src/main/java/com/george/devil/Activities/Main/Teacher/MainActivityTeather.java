@@ -8,9 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.george.devil.Fragments.Common.fragmentExplore;
-import com.george.devil.Fragments.Teacher.fragmentHomeTeather;
-import com.george.devil.Fragments.Teacher.fragmentMessageTeather;
-import com.george.devil.Fragments.Teacher.fragmentProfileTeather;
+import com.george.devil.Fragments.Teacher.fragmentHomeTeacher;
+import com.george.devil.Fragments.Teacher.fragmentMessageTeacher;
+import com.george.devil.Fragments.Teacher.fragmentProfileTeacher;
 import com.george.devil.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -27,10 +27,14 @@ public class MainActivityTeather extends AppCompatActivity {
         navigationView.setOnNavigationItemSelectedListener(navListener);
 
         if (savedInstanceState == null)
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_teather_container, new fragmentHomeTeather()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_teather_container, new fragmentHomeTeacher()).commit();
 
     }
 
+    /**
+     * Метод для работы {@link BottomNavigationView}.
+     * Метод отслеживает нажатие пользователя и запускает фрагмент.
+     */
     @SuppressLint("NonConstantResourceId")
     private final BottomNavigationView.OnNavigationItemSelectedListener navListener =
             item -> {
@@ -38,7 +42,7 @@ public class MainActivityTeather extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.nav_home_teather:
                         Log.i(TAG, "Fragment home started");
-                        selectedFragment = new fragmentHomeTeather();
+                        selectedFragment = new fragmentHomeTeacher();
                         break;
                     case R.id.nav_explore_teather:
                         Log.i(TAG, "Fragment explore started");
@@ -46,11 +50,11 @@ public class MainActivityTeather extends AppCompatActivity {
                         break;
                     case R.id.nav_message_teather:
                         Log.i(TAG, "Fragment message started");
-                        selectedFragment = new fragmentMessageTeather();
+                        selectedFragment = new fragmentMessageTeacher();
                         break;
                     case R.id.nav_profile_teather:
                         Log.i(TAG, "Fragment profile started");
-                        selectedFragment = new fragmentProfileTeather();
+                        selectedFragment = new fragmentProfileTeacher();
                         break;
                 }
                 assert selectedFragment != null;

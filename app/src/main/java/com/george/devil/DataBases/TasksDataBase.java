@@ -20,12 +20,21 @@ public class TasksDataBase extends SQLiteOpenHelper {
     }
 
 
+    /**
+     * Иницилализируем базу данных со столбцами ID, TASK, NOTE_TASK, DATE_CREATE_TASK
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE tasks (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                 + COLUMN_TASK + " TEXT, " + COLUMN_NOTE_TASK + " TEXT, " + COLUMN_DATE_CREATE_TASK + " TEXT);");
     }
 
+    /**
+     * Вызывается, когда необходимо обновить базу данных.
+     * @param db база данных которую нужно обновить
+     * @param oldVersion номер версии старой базы данынх
+     * @param newVersion номер версии новой базы данных
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE);

@@ -19,10 +19,7 @@ import com.google.android.material.appbar.MaterialToolbar;
 public class NewProjectImagesActivity extends AppCompatActivity {
 
     TextView project_main_name_images;
-
     EditText description_main_text;
-
-    public static final String TAG_1 = "NewProjectImages";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +35,8 @@ public class NewProjectImagesActivity extends AppCompatActivity {
 
         SharedPreferences sharedPr = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String name_project = sharedPr.getString("nameMainProject", "empty_main_project");
-        boolean private_public_pr = sharedPr.getBoolean("private_public_mail_proj", false);
 
         SharedPreferences.Editor editor = sharedPr.edit();
-
-        /** СПАСИБО, БЛЯТЬ, ВСЕМ БОГАМ ЗА ТО, ЧТО ЭТА ХУЙНЯ {@link private_public_pr} РАБОТАЕТ!!!*/
-        Log.i(TAG_1, "BOOLEAN = " + private_public_pr);
 
         project_main_name_images.setText(name_project);
 

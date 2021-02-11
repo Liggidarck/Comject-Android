@@ -16,8 +16,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.george.devil.Activities.Main.Pupil.MainActivityPupil;
-import com.george.devil.Activities.Main.Registration.RegistarionPupilActivity;
-import com.george.devil.Activities.Main.Registration.RegistrationTeatherActivity;
+import com.george.devil.Activities.Main.Registration.RegisterPupilActivity;
+import com.george.devil.Activities.Main.Registration.RegisterTeacherActivity;
 import com.george.devil.Activities.Main.Teacher.MainActivityTeather;
 import com.george.devil.R;
 import com.google.android.material.textfield.TextInputLayout;
@@ -63,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
         Log.e(TAG, "grade pupil - " + grade_pupil);
         Log.e(TAG, "birthday pupil" + birthday_pupil);
         Log.e(TAG, "password pupil - " + password_pupil);
-        Log.e(TAG, "---------------");
 
         String name_teather = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
         String username_teather = sharedPreferences.getString("username_teather", "username_teather_empty");
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, MainActivityTeather.class));
         }
 
-        reg.setOnClickListener(v -> showResistrDialog());
+        reg.setOnClickListener(v -> showRegisterDialog());
 
         login_btn.setOnClickListener(v -> {
             String email = Objects.requireNonNull(email_login_text_layout.getEditText()).getText().toString();
@@ -136,32 +135,11 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    private boolean validateEmail() {
-        String email = Objects.requireNonNull(email_login_text_layout.getEditText()).getText().toString();
 
-        if(email.isEmpty()){
-            email_login_text_layout.setError("Ошибка! Поле не может быть пустым");
-            return false;
-        } else {
-            email_login_text_layout.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validatePassword() {
-        String email = Objects.requireNonNull(email_login_text_layout.getEditText()).getText().toString();
-
-        if(email.isEmpty()) {
-            email_login_text_layout.setError("Ошибка! Поле не может быть пустым");
-            return false;
-        } else {
-            email_login_text_layout.setError(null);
-            return true;
-        }
-
-    }
-
-    public void showResistrDialog() {
+    /**
+     * Вызываем {@link Dialog} для выбора Registration Activity.
+     */
+    public void showRegisterDialog() {
         final Dialog dialog = new Dialog(LoginActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_choose_category_login);
@@ -170,12 +148,16 @@ public class LoginActivity extends AppCompatActivity {
         next.setOnClickListener(v -> dialog.dismiss());
 
         RelativeLayout pupil_ralative_layout = dialog.findViewById(R.id.pupil_ralative_layout);
-        pupil_ralative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistarionPupilActivity.class)));
+        pupil_ralative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterPupilActivity.class)));
 
         RelativeLayout teacher_relative_layout = dialog.findViewById(R.id.teacher_relative_dilaog);
-        teacher_relative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistrationTeatherActivity.class)));
+        teacher_relative_layout.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegisterTeacherActivity.class)));
 
         dialog.show();
     }
 
+    @Override
+    public void onBackPressed() {
+        Log.i(TAG, "незя");
+    }
 }

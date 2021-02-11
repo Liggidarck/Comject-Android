@@ -6,325 +6,322 @@
     android:layout_height="match_parent"
     android:scrollbars="none">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <ImageView
-                    android:id="@+id/main_profile_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="174dp"
-                    android:src="@drawable/it3"
-                    android:scaleType="centerCrop"/>
-
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/main_ava"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_below="@id/main_profile_image"
-                    android:src="@drawable/ava_me"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="-40dp"
-                    app:civ_border_width="3.5dp"
-                    app:civ_border_color="@color/white"/>
-
-                <TextView
-                    android:id="@+id/main_name_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/main_ava"
-                    android:textColor="@color/black"
-                    android:textSize="24sp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginStart="15dp" />
-
-                <TextView
-                    android:id="@+id/main_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/main_name_profile"
-                    android:textSize="17sp"
-                    android:layout_marginStart="15dp" />
-
-                <Button
-                    android:id="@+id/edit_profile_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/edit_profile"
-                    android:layout_below="@id/main_ava"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="20dp"
-                    style="?attr/materialButtonOutlinedStyle"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:padding="4dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="30dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    tools:ignore="UnusedAttribute">
-
-                    <TextView
-                        android:id="@+id/text_num_posts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:layout_marginTop="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/posts"
-                        android:textColor="@color/black"
-                        android:textSize="19sp"
-                        android:fontFamily="@font/product_sans_light"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/text_num_posts"
-                        android:layout_marginTop="5dp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/followers_layout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:padding="4dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    tools:ignore="UnusedAttribute">
-
-                    <TextView
-                        android:id="@+id/text_num_followers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="28"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:layout_marginTop="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/followers"
-                        android:textColor="@color/black"
-                        android:textSize="19sp"
-                        android:fontFamily="@font/product_sans_light"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/text_num_followers"
-                        android:layout_marginTop="5dp" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:id="@+id/following_layout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="70dp"
-                    android:padding="4dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="20dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    tools:ignore="UnusedAttribute">
-
-                    <TextView
-                        android:id="@+id/text_num_following"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="98"
-                        android:layout_centerHorizontal="true"
-                        android:textColor="@color/black"
-                        android:textSize="22sp"
-                        android:layout_marginTop="5dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/following"
-                        android:textColor="@color/black"
-                        android:textSize="19sp"
-                        android:fontFamily="@font/product_sans_light"
-                        android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/text_num_following"
-                        android:layout_marginTop="5dp" />
-
-                </RelativeLayout>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
-
-                <Button
-                    android:id="@+id/settings_btn"
-                    android:layout_width="180dp"
-                    android:layout_height="match_parent"
-                    android:text="@string/settings_profile"
-                    style="?attr/materialButtonOutlinedStyle"
-                    android:layout_marginStart="15dp"/>
-
-                <Button
-                    android:id="@+id/general_info"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/general_info"
-                    style="?attr/materialButtonOutlinedStyle"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="15dp" />
-
-            </RelativeLayout>
+            android:layout_height="wrap_content" >
 
             <ImageView
+                android:id="@+id/main_profile_image"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:src="@drawable/line_gray_dark"
+                android:layout_height="174dp"
+                android:src="@drawable/it3"
+                android:scaleType="centerCrop"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/main_ava"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/main_profile_image"
+                android:src="@drawable/ava_me"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="-40dp"
+                app:civ_border_width="3.5dp"
+                app:civ_border_color="@color/white"/>
+
+            <TextView
+                android:id="@+id/main_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_ava"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp" />
+
+            <TextView
+                android:id="@+id/main_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_name_profile"
+                android:textSize="17sp"
+                android:layout_marginStart="15dp" />
+
+            <Button
+                android:id="@+id/edit_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile"
+                android:layout_below="@id/main_ava"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                style="?attr/materialButtonOutlinedStyle"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
             <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:padding="4dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:id="@+id/text_num_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/posts"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/product_sans_light"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/text_num_posts"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/followers_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:padding="4dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:id="@+id/text_num_followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/followers"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/product_sans_light"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/text_num_followers"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/following_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:padding="4dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:id="@+id/text_num_following"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="98"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/following"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"
+                    android:fontFamily="@font/product_sans_light"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/text_num_following"
+                    android:layout_marginTop="5dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/settings_btn"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="@string/settings_profile"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_marginStart="15dp"/>
+
+            <Button
+                android:id="@+id/general_info"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/general_info"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:src="@drawable/line_gray_dark"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp">
+
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp">
+                app:cardElevation="6dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="15dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true" >
 
-                <com.google.android.material.card.MaterialCardView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardElevation="6dp"
-                    app:cardCornerRadius="10dp"
-                    android:layout_margin="15dp"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true" >
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="164dp"
+                        android:src="@drawable/it2"
+                        android:scaleType="centerCrop" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" >
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title goes here"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/google_sans_medium"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                            android:textSize="16sp"
+                            android:textColor="#3D3D3D"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/product_sans_regular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
+                            android:textSize="15sp"
+                            android:textColor="#1E3F92"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:layout_marginTop="15dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
 
                         <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="164dp"
-                            android:src="@drawable/it2"
-                            android:scaleType="centerCrop" />
+                            android:id="@+id/icon_likes1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_baseline_favorite_24_red" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/val_likes1"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:text="5.4k"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:layout_toEndOf="@id/icon_likes1"
+                            android:layout_marginStart="8dp"
+                            android:layout_centerVertical="true"/>
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Title goes here"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/google_sans_medium"
-                                android:textStyle="bold"
-                                android:textSize="22sp"
-                                android:textAppearance="?attr/textAppearanceHeadline6" />
+                        <ImageView
+                            android:id="@+id/icon_comment_1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_chat"
+                            android:layout_toEndOf="@id/val_likes1"
+                            android:layout_marginStart="26dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
-                                android:textSize="16sp"
-                                android:textColor="#3D3D3D"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/product_sans_regular"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
-                                android:textSize="15sp"
-                                android:textColor="#1E3F92"
-                                android:fontFamily="@font/product_sans_regular"
-                                android:layout_marginTop="15dp" />
-
-                        </LinearLayout>
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="20dp">
-
-                                <ImageView
-                                    android:id="@+id/icon_likes1"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:layout_marginStart="16dp"
-                                    android:src="@drawable/ic_baseline_favorite_24_red" />
-
-                                <TextView
-                                    android:id="@+id/val_likes1"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="5.4k"
-                                    android:textSize="15sp"
-                                    android:textColor="@color/black"
-                                    android:fontFamily="@font/product_sans_regular"
-                                    android:layout_toEndOf="@id/icon_likes1"
-                                    android:layout_marginStart="8dp"
-                                    android:layout_centerVertical="true"/>
-
-                                <ImageView
-                                    android:id="@+id/icon_comment_1"
-                                    android:layout_width="25dp"
-                                    android:layout_height="25dp"
-                                    android:src="@drawable/ic_chat"
-                                    android:layout_toEndOf="@id/val_likes1"
-                                    android:layout_marginStart="26dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/comments"
-                                    android:layout_toEndOf="@id/icon_comment_1"
-                                    android:layout_marginStart="8dp"
-                                    android:textSize="15sp"
-                                    android:fontFamily="@font/product_sans_regular"
-                                    android:textColor="@color/black"
-                                    android:layout_centerVertical="true" />
+                            android:text="@string/comments"
+                            android:layout_toEndOf="@id/icon_comment_1"
+                            android:layout_marginStart="8dp"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/product_sans_regular"
+                            android:textColor="@color/black"
+                            android:layout_centerVertical="true" />
 
 
 
-                        </RelativeLayout>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-            </RelativeLayout>
+        </RelativeLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="100dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
 
-
-        </LinearLayout>
-
-
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>

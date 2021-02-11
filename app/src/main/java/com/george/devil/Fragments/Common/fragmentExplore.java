@@ -30,6 +30,7 @@ public class fragmentExplore extends Fragment {
     Button like_btn_1, like_btn_2, comment_post_Explore, subscribe_btn, subscribed_btn;
     MaterialToolbar toolbar;
     RelativeLayout top_profile_card;
+    MaterialCardView cardView;
 
     @Nullable
     @Override
@@ -40,12 +41,11 @@ public class fragmentExplore extends Fragment {
         like_btn_2 = view.findViewById(R.id.like_btn_2);
         subscribe_btn = view.findViewById(R.id.subscribe_btn);
         subscribed_btn = view.findViewById(R.id.subscribed_btn);
-
         top_profile_card = view.findViewById(R.id.top_profile_card);
-
         comment_post_Explore = view.findViewById(R.id.comment_post_Explore);
-
         toolbar = view.findViewById(R.id.topAppBar_explore);
+        cardView = view.findViewById(R.id.card1_explore);
+
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
         setHasOptionsMenu(true);
         toolbar.setNavigationOnClickListener(v -> {
@@ -53,9 +53,7 @@ public class fragmentExplore extends Fragment {
             bottom_sheet_filter.show(requireActivity().getSupportFragmentManager(), "BottomSheetNotes");
         });
 
-        MaterialCardView cardView = view.findViewById(R.id.card1_explore);
         cardView.setOnClickListener(v -> startActivity(new Intent(fragmentExplore.this.getActivity(), PostProjectActivity.class)));
-
         top_profile_card.setOnClickListener(v -> startActivity(new Intent(fragmentExplore.this.getActivity(), ProfileActivityPupil.class)));
 
         like_btn_1.setOnClickListener(v -> {
@@ -84,12 +82,18 @@ public class fragmentExplore extends Fragment {
 
     }
 
+    /**
+     * Подключаемся к menu для отрисовки в {@link MaterialToolbar} кнопки Search
+     */
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.search_menu, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
 
+    /**
+     * Метод для реализации нажатия на элементы {@link MaterialToolbar}
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

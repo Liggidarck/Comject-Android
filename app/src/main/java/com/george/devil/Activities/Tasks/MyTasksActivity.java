@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.george.devil.BottomSheets.BottomSheetEditThemeTasks;
+import com.george.devil.DataBases.ChangesDataBase;
 import com.george.devil.DataBases.TasksDataBase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -44,7 +45,6 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_tasks);
-
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
@@ -77,6 +77,9 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
 
     }
 
+    /**
+     * Подключаемся к {@link ChangesDataBase} для отрисовки сохраненых данных в базе данных
+     */
     @Override
     public void onResume(){
         super.onResume();
@@ -92,6 +95,9 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
 
     }
 
+    /**
+     * Когда фрагмент пониамет, что больше не используется, он закрывает подключение к базе данных
+     */
     @Override
     public void onDestroy(){
         super.onDestroy();
@@ -99,6 +105,9 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
         userCursor.close();
     }
 
+    /**
+     * Подключаемся к menu для отрисовки в {@link MaterialToolbar} кнопки Change Theme
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -107,6 +116,9 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
         return true;
     }
 
+    /**
+     * Метод для реализации нажатия на элементы {@link MaterialToolbar}
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.edit_theme_task) {
@@ -117,73 +129,77 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Вызывается когда пользователь меняет тему
+     * @param theme_text полученое значение от {@link BottomSheetEditThemeTasks} для сохрания в памяти телефона
+     */
     @Override
-    public void ThemeChoose(String tex) {
+    public void ThemeChoose(String theme_text) {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         SharedPreferences.Editor editor = prefs.edit();
 
-        if(tex.equals("Default")) {
+        if(theme_text.equals("Default")) {
             themeChoosed = "Default";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Red")) {
+        if(theme_text.equals("Red")) {
             themeChoosed = "Red";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Orange")){
+        if(theme_text.equals("Orange")){
             themeChoosed = "Orange";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Yellow")){
+        if(theme_text.equals("Yellow")){
             themeChoosed = "Yellow";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Green")){
+        if(theme_text.equals("Green")){
             themeChoosed = "Green";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Green Secondary")){
+        if(theme_text.equals("Green Secondary")){
             themeChoosed = "Green Secondary";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Light Blue")) {
+        if(theme_text.equals("Light Blue")) {
             themeChoosed = "Light Blue";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Blue")){
+        if(theme_text.equals("Blue")){
             themeChoosed = "Blue";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Violet")){
+        if(theme_text.equals("Violet")){
             themeChoosed = "Violet";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Pink")){
+        if(theme_text.equals("Pink")){
             themeChoosed = "Pink";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
         }
 
-        if(tex.equals("Gray")){
+        if(theme_text.equals("Gray")){
             themeChoosed = "Gray";
             editor.putString("themeData", themeChoosed);
             ThemeChanged(themeChoosed);
@@ -193,6 +209,10 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
 
     }
 
+    /**
+     * Метод для отрисовки сохраненой темы в памяти телефона
+     * @param theme  для отслеживая сохраненой темы
+     */
     public void ThemeChanged(String theme) {
 
         if(theme.equals("Default")) {
@@ -251,5 +271,4 @@ public class MyTasksActivity extends AppCompatActivity implements BottomSheetEdi
         }
 
     }
-
 }

@@ -34,10 +34,6 @@ public class AddChange extends AppCompatActivity {
     Cursor userCursor;
     long changesId = 0;
 
-    //TODO: Добавить возможность удаления элементов из базы данных Changes
-
-    //TODO: Добавить проверку на пустоту
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,6 +101,9 @@ public class AddChange extends AppCompatActivity {
         }
     }
 
+    /**
+     * Вызывается когда, нужно сохрнить в базу данных новую ячейку или для перезаписи текущего ячейки данных
+     */
     public void save() {
         String ckeckName = name_chage.getText().toString();
         if (!ckeckName.isEmpty()) {
@@ -131,6 +130,9 @@ public class AddChange extends AppCompatActivity {
         goHome();
     }
 
+    /**
+     * Закрывается подключение к {@link ChangesDataBase} и запускается {@link ChangesActivity}
+     */
     public void goHome() {
         db.close();
 
@@ -139,6 +141,9 @@ public class AddChange extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Выполням запрос на удадение ячейки из {@link ChangesDataBase} и закрываем подключение
+     */
     public void delete() {
         db.delete(ChangesDataBase.TABLE, "_id = ?", new String[]{String.valueOf(changesId)});
         goHome();

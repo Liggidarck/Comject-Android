@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
+import com.george.devil.Activities.Main.Pupil.MainActivityPupil;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.switchmaterial.SwitchMaterial;
@@ -25,34 +26,35 @@ public class NewProjectActivity extends AppCompatActivity {
     TextInputLayout textField_name_proj, textField_description_proj, textField_topic;
     SwitchMaterial switchPrivate_proj;
 
+    Button next, skip;
+    MaterialToolbar toolbar;
+    MaterialAutoCompleteTextView topicAutoCompleteTextView;
+
     private static final String TAG = "newProjectActivity";
 
+    /**
+     * инициализируем активити, находим все фронтэнд элементы по id
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_project);
 
-        MaterialToolbar toolbar = findViewById(R.id.topAppBar_new_project1);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(v -> onBackPressed());
-
+        toolbar = findViewById(R.id.topAppBar_new_project1);
         textField_name_proj = findViewById(R.id.textField_name_proj);
         textField_description_proj = findViewById(R.id.textField_description_proj);
         textField_topic = findViewById(R.id.textField_topic_new);
-
         switchPrivate_proj = findViewById(R.id.switchPrivate_proj);
+        skip = findViewById(R.id.skip_btn);
+        next = findViewById(R.id.next_btn);
+        topicAutoCompleteTextView = findViewById(R.id.topic_auto_new_proj);
 
-        MaterialAutoCompleteTextView autoCompleteTextView = findViewById(R.id.topic_auto_new_proj);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         cleanErrors();
 
-        String[] items = new String[] {
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction","Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
-
+        String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 NewProjectActivity.this,
                 R.layout.dropdown_menu_categories,
@@ -76,9 +78,8 @@ public class NewProjectActivity extends AppCompatActivity {
 
         });
 
-        autoCompleteTextView.setAdapter(adapter);
+        topicAutoCompleteTextView.setAdapter(adapter);
 
-        Button next = findViewById(R.id.next_btn);
         next.setOnClickListener(v -> {
 
             if(!vaildateNameProject() | !validateDescriptionProject() | !validateTopicProject()) {
@@ -104,10 +105,13 @@ public class NewProjectActivity extends AppCompatActivity {
             }
 
         });
-
-
+        skip.setOnClickListener(v -> startActivity(new Intent(this, MainActivityPupil.class)));
     }
 
+    /**
+     * @return
+     * возвращает true/false для проверки поля {@link TextInputLayout} на пустоту. и отрисовывает ошибку.
+     */
     public boolean vaildateNameProject() {
         String check = Objects.requireNonNull(textField_name_proj.getEditText()).getText().toString().trim();
 
@@ -122,6 +126,10 @@ public class NewProjectActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @return
+     * возвращает true/false для проверки поля {@link TextInputLayout} на пустоту. и отрисовывает ошибку.
+     */
     public boolean validateDescriptionProject() {
         String check = Objects.requireNonNull(textField_description_proj.getEditText()).getText().toString().trim();
 
@@ -135,6 +143,10 @@ public class NewProjectActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return
+     * возвращает true/false для проверки поля {@link TextInputLayout} на пустоту. и отрисовывает ошибку.
+     */
     public boolean validateTopicProject() {
         String check = Objects.requireNonNull(textField_topic.getEditText()).getText().toString().trim();
 
@@ -148,8 +160,10 @@ public class NewProjectActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Вызывается, когда нужно проверить {@link TextInputLayout} на пустоту и снять ошибку
+     */
     public void cleanErrors() {
-
         Objects.requireNonNull(textField_name_proj.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

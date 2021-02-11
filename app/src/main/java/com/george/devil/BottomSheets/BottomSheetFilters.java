@@ -30,12 +30,7 @@ public class BottomSheetFilters extends BottomSheetDialogFragment {
 
         topic_auto_edit_filter = view.findViewById(R.id.topic_auto_edit_filter);
 
-        String[] items = new String[] {
-                "Biology", "Chemistry", "Economics", "English",
-                "Engineering/Construction","Geography", "History",
-                "IT", "Literature", "Math", "Physics", "Politics",
-                "Sports", "Social studies", "Other"
-        };
+        String[] items  = getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 BottomSheetFilters.this.getActivity(),

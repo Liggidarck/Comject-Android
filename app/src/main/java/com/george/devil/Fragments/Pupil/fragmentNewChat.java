@@ -42,8 +42,6 @@ public class fragmentNewChat extends Fragment {
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         inflater.inflate(R.menu.menu_new_chat, menu);
-
-
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -52,7 +50,6 @@ public class fragmentNewChat extends Fragment {
 
         if (item.getItemId() == R.id.seart_new_chat)
             Log.i(TAG, "Search toolbar menu cliked");
-
 
         return super.onOptionsItemSelected(item);
     }

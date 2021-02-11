@@ -39,37 +39,44 @@ import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class EditProfileActivity extends AppCompatActivity {
-
-    //TODO: Сделать что-нибудть с этим пиздецомю Читать этот код нереально!
+public class EditProfilePupil extends AppCompatActivity {
 
     private static final String TAG = "EditProfileActivity";
 
-    TextInputLayout namePersonTextLayout, usernameTextLayout, topikTextLayout, emailTextLayout, cityTextLayout, schoolTextLayout, gradeTextLayout, birdayTextLayout;
+    TextInputLayout namePersonTextLayout, usernameTextLayout, topikTextLayout, emailTextLayout,
+            cityTextLayout, schoolTextLayout, gradeTextLayout, birdayTextLayout;
     Calendar myCalendar;
 
     CircleImageView changable_ava;
     ImageView main_profile_image_edit;
+    MaterialToolbar toolbar;
+    MaterialAutoCompleteTextView topicAutoComplete;
+    Button changePass;
+
     private final int ava_data_pick = 1;
     private final int main_image_pick = 2;
+
+    String name_user, username, topic, email, city, school, grade, birthday;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
-        MaterialToolbar toolbar = findViewById(R.id.topAppBar_edit_profile);
-
-        namePersonTextLayout    = findViewById(R.id.name_account_edit_profile);
-        usernameTextLayout      = findViewById(R.id.username_layout_editProfile);
-        topikTextLayout         = findViewById(R.id.topic_layout);
-        emailTextLayout         = findViewById(R.id.email_layout_edit_profile);
-        cityTextLayout          = findViewById(R.id.city_layout_edit_profile);
-        schoolTextLayout        = findViewById(R.id.school_edit_profile);
-        gradeTextLayout         = findViewById(R.id.grade_edit_profile);
-        birdayTextLayout        = findViewById(R.id.textField_bithday_edit_profile);
-        changable_ava           = findViewById(R.id.changable_ava);
+        toolbar = findViewById(R.id.topAppBar_edit_profile);
+        namePersonTextLayout = findViewById(R.id.name_account_edit_profile);
+        usernameTextLayout = findViewById(R.id.username_layout_editProfile);
+        topikTextLayout = findViewById(R.id.topic_layout);
+        emailTextLayout = findViewById(R.id.email_layout_edit_profile);
+        cityTextLayout = findViewById(R.id.city_layout_edit_profile);
+        schoolTextLayout = findViewById(R.id.school_edit_profile);
+        gradeTextLayout = findViewById(R.id.grade_edit_profile);
+        birdayTextLayout = findViewById(R.id.textField_bithday_edit_profile);
+        changable_ava = findViewById(R.id.changable_ava);
         main_profile_image_edit = findViewById(R.id.main_profile_image_edit);
+        topicAutoComplete = findViewById(R.id.topic_auto_edit_profile);
+        TextInputEditText text = findViewById(R.id.date_textView_4);
+        changePass = findViewById(R.id.chan_pas);
 
         changable_ava.setOnClickListener(v -> {
             Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
@@ -83,20 +90,13 @@ public class EditProfileActivity extends AppCompatActivity {
             startActivityForResult(photoPik, main_image_pick);
         });
 
-        MaterialAutoCompleteTextView autoCompleteTextView = findViewById(R.id.topic_auto_edit_profile);
+        setSupportActionBar(toolbar);
+
+        toolbar.setNavigationOnClickListener(v -> saveArrow());
+        changePass.setOnClickListener(v -> startActivity(new Intent(EditProfilePupil.this, ChangePasswordActivity.class)));
 
         clearErrors();
-
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        String name_user = sharedPreferences.getString("full_name", "empty_user_name");
-        String username = sharedPreferences.getString("username", "empty_correct_username");
-        String topic = sharedPreferences.getString("topik", "empty_topic");
-        String email = sharedPreferences.getString("email", "empty_email");
-        String city = sharedPreferences.getString("city", "empty_city");
-        String school = sharedPreferences.getString("school", "empty_school");
-        String grade = sharedPreferences.getString("grade", "empty_grade");
-        String birthday = sharedPreferences.getString("birthday", "empty_birthday");
-        String password = sharedPreferences.getString("pas", "empty_pas");
+        get_data();
 
         Objects.requireNonNull(namePersonTextLayout.getEditText()).setText(name_user);
         Objects.requireNonNull(usernameTextLayout.getEditText()).setText(username);
@@ -115,30 +115,40 @@ public class EditProfileActivity extends AppCompatActivity {
             updateLabel();
         };
 
-        TextInputEditText text = findViewById(R.id.date_textView_4);
-
-        text.setOnClickListener(v -> new DatePickerDialog(EditProfileActivity.this, date, myCalendar
+        text.setOnClickListener(v -> new DatePickerDialog(EditProfilePupil.this, date, myCalendar
                 .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                 myCalendar.get(Calendar.DAY_OF_MONTH)).show());
-
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(v -> saveArrow());
 
         String[] items =  getResources().getStringArray(R.array.categories_of_predmeti);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                EditProfileActivity.this,
+                EditProfilePupil.this,
                 R.layout.dropdown_menu_categories,
                 items
         );
 
-        autoCompleteTextView.setAdapter(adapter);
-
-        Button changePass = findViewById(R.id.chan_pas);
-        changePass.setOnClickListener(v -> startActivity(new Intent(EditProfileActivity.this, ChangePasswordActivity.class)));
+        topicAutoComplete.setAdapter(adapter);
 
     }
 
+    /**
+     * Вызывается для получения данных о пользователе из внутреней памяти телефона
+     */
+    public void get_data() {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        name_user = sharedPreferences.getString("full_name", "empty_user_name");
+        username = sharedPreferences.getString("username", "empty_correct_username");
+        topic = sharedPreferences.getString("topik", "empty_topic");
+        email = sharedPreferences.getString("email", "empty_email");
+        city = sharedPreferences.getString("city", "empty_city");
+        school = sharedPreferences.getString("school", "empty_school");
+        grade = sharedPreferences.getString("grade", "empty_grade");
+        birthday = sharedPreferences.getString("birthday", "empty_birthday");
+    }
+
+    /**
+     * Получаем ответ(картинку) от вызванный активити и устанавливаем аватарку или шапку профиля
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -173,10 +183,12 @@ public class EditProfileActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Метод для установки в {@link TextInputLayout} даты
+     */
     private void updateLabel() {
-        String myFormat = "MM.dd.yyyy"; //In which you need put here
-        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
-
+        String date = "MM.dd.yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(date, Locale.US);
         Objects.requireNonNull(birdayTextLayout.getEditText()).setText(sdf.format(myCalendar.getTime()));
     }
 
@@ -188,10 +200,12 @@ public class EditProfileActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Метод для отстлеживания нажатия на галочку в {@link MaterialToolbar} и сохранения новых данный о пользователе во внутренней памяти телефона
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-
         String name_user_chek = Objects.requireNonNull(namePersonTextLayout.getEditText()).getText().toString();
         String username_chek = Objects.requireNonNull(usernameTextLayout.getEditText()).getText().toString();
         String topic_chek = Objects.requireNonNull(topikTextLayout.getEditText()).getText().toString();
@@ -203,7 +217,8 @@ public class EditProfileActivity extends AppCompatActivity {
 
         if (item.getItemId() == R.id.save_changes_profile) {
 
-            if(validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
+            if(validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail()
+                    | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay()) {
                 return super.onOptionsItemSelected(item);
             } else {
                 sharedPreferences.edit().remove("full_name").apply();
@@ -224,15 +239,9 @@ public class EditProfileActivity extends AppCompatActivity {
                 sharedPreferences.edit().putString("grade", grade_chek).apply();
                 sharedPreferences.edit().putString("birthday", birthday_chek).apply();
 
-                Intent intent = new Intent(this, MainActivityPupil.class);
-                startActivity(intent);
-
+                startActivity(new Intent(this, MainActivityPupil.class));
             }
-
         }
-
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -241,26 +250,31 @@ public class EditProfileActivity extends AppCompatActivity {
         saveArrow();
     }
 
+    /**
+     * Метод для отслеживания изменения данных о пользователе.
+     *
+     * Вызвает {@link AlertDialog} в случае обнаружения изменения данных о пользователе.
+     * Сохраняет новые данные по нажатию на "ok" кнопку
+     */
     public void saveArrow() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String name_user = sharedPreferences.getString("full_name", "empty_user_name");
-        String username = sharedPreferences.getString("username", "empty_correct_username");
-        String topic = sharedPreferences.getString("topik", "empty_topic");
-        String email = sharedPreferences.getString("email", "empty_email");
-        String city = sharedPreferences.getString("city", "empty_city");
-        String school = sharedPreferences.getString("school", "empty_school");
-        String grade = sharedPreferences.getString("grade", "empty_grade");
-        String birthday = sharedPreferences.getString("birthday", "empty_birthday");
-        String password = sharedPreferences.getString("pas", "empty_pas");
+        String username  = sharedPreferences.getString("username", "empty_correct_username");
+        String topic     = sharedPreferences.getString("topik", "empty_topic");
+        String email     = sharedPreferences.getString("email", "empty_email");
+        String city      = sharedPreferences.getString("city", "empty_city");
+        String school    = sharedPreferences.getString("school", "empty_school");
+        String grade     = sharedPreferences.getString("grade", "empty_grade");
+        String birthday  = sharedPreferences.getString("birthday", "empty_birthday");
 
         String name_user_chek = Objects.requireNonNull(namePersonTextLayout.getEditText()).getText().toString();
-        String username_chek = Objects.requireNonNull(usernameTextLayout.getEditText()).getText().toString();
-        String topic_chek = Objects.requireNonNull(topikTextLayout.getEditText()).getText().toString();
-        String emai_chekl = Objects.requireNonNull(emailTextLayout.getEditText()).getText().toString();
-        String city_chek = Objects.requireNonNull(cityTextLayout.getEditText()).getText().toString();
-        String school_chek = Objects.requireNonNull(schoolTextLayout.getEditText()).getText().toString();
-        String grade_chek = Objects.requireNonNull(gradeTextLayout.getEditText()).getText().toString();
-        String birthday_chek = Objects.requireNonNull(birdayTextLayout.getEditText()).getText().toString();
+        String username_chek  = Objects.requireNonNull(usernameTextLayout.getEditText()).getText().toString();
+        String topic_chek     = Objects.requireNonNull(topikTextLayout.getEditText()).getText().toString();
+        String emai_chekl     = Objects.requireNonNull(emailTextLayout.getEditText()).getText().toString();
+        String city_chek      = Objects.requireNonNull(cityTextLayout.getEditText()).getText().toString();
+        String school_chek    = Objects.requireNonNull(schoolTextLayout.getEditText()).getText().toString();
+        String grade_chek     = Objects.requireNonNull(gradeTextLayout.getEditText()).getText().toString();
+        String birthday_chek  = Objects.requireNonNull(birdayTextLayout.getEditText()).getText().toString();
 
         if(validateNameProfile() | !validateUsername() |!validateTopic() | !validateEmail() | !validateCity() | !validateSchool() | !validateGrade() | !validateBirthay() ) {
             return;
@@ -276,7 +290,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
                 Log.i(TAG, "Что-то поменялось");
 
-                final AlertDialog.Builder alert = new AlertDialog.Builder(EditProfileActivity.this);
+                final AlertDialog.Builder alert = new AlertDialog.Builder(EditProfilePupil.this);
                 View view = getLayoutInflater().inflate(R.layout.dialog_confirm_editing, null);
 
                 Button cencel = view.findViewById(R.id.cancle_editing);
@@ -315,14 +329,13 @@ public class EditProfileActivity extends AppCompatActivity {
                 });
 
                 alertDialog.show();
-
             }
-
         }
-
-
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateNameProfile(){
         String check = Objects.requireNonNull(namePersonTextLayout.getEditText()).getText().toString().trim();
 
@@ -335,6 +348,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateUsername(){
         String check = Objects.requireNonNull(usernameTextLayout.getEditText()).getText().toString().trim();
 
@@ -347,6 +363,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateTopic(){
         String check = Objects.requireNonNull(topikTextLayout.getEditText()).getText().toString().trim();
 
@@ -359,6 +378,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateEmail(){
         String check = Objects.requireNonNull(emailTextLayout.getEditText()).getText().toString().trim();
 
@@ -372,6 +394,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateCity(){
         String check = Objects.requireNonNull(cityTextLayout.getEditText()).getText().toString().trim();
 
@@ -385,6 +410,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateSchool(){
         String check = Objects.requireNonNull(schoolTextLayout.getEditText()).getText().toString().trim();
 
@@ -398,6 +426,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateGrade() {
         String check = Objects.requireNonNull(gradeTextLayout.getEditText()).getText().toString().trim();
 
@@ -411,6 +442,9 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateBirthay() {
         String check = Objects.requireNonNull(birdayTextLayout.getEditText()).getText().toString().trim();
 
@@ -424,8 +458,10 @@ public class EditProfileActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
+     */
     public void clearErrors() {
-
         Objects.requireNonNull(namePersonTextLayout.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -561,7 +597,6 @@ public class EditProfileActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
 }

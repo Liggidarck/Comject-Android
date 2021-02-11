@@ -166,6 +166,9 @@ public class BottomSheetNotes extends BottomSheetDialogFragment {
     }
 
 
+    /**
+     * Интерфейс с методом для определения нажатой кнопки
+     */
     public interface BottomSheetListener {
         void onButtonClicked(String text);
     }

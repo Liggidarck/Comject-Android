@@ -25,7 +25,7 @@ public class FollowingFollowersActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String name_user = sharedPreferences.getString("full_name", "empty_user_name");
-        String name_teather = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
+        String name_teacher = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
 
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_following_followers);
 
@@ -34,8 +34,8 @@ public class FollowingFollowersActivity extends AppCompatActivity {
         if(!name_user.equals("empty_user_name"))
             toolbar.setTitle(name_user);
 
-        if(!name_teather.equals("full_name_teather_empty"))
-            toolbar.setTitle(name_teather);
+        if(!name_teacher.equals("full_name_teather_empty"))
+            toolbar.setTitle(name_teacher);
 
         TabAdapterFollowingFollowers adapter = new TabAdapterFollowingFollowers(getSupportFragmentManager());
         adapter.addFragment(new fragmentFollowers(), (String) getText(R.string.followers));

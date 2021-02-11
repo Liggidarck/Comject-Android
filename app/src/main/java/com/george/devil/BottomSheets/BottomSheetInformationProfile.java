@@ -18,20 +18,25 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class BottomSheetInformationProfile extends BottomSheetDialogFragment {
 
+    TextView topicTextView, bithdayTextView, city_bottomTextView, cityBottomTextView, date_birthday;
+    ImageView close;
+
+    /**
+     * Подключаемся к {@link SharedPreferences} для получения данных о пользователе.
+     * Устанавливаем в {@link TextView} данные о пользовате взятые из {@link SharedPreferences}
+     */
     @SuppressLint("SetTextI18n")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.bottom_sheet_information_profile, container, false);
 
-        TextView topicTextView = view.findViewById(R.id.topik_bottom);
-        TextView bithdayTextView = view.findViewById(R.id.birthday_bottom);
-        TextView city_bottomTextView = view.findViewById(R.id.city_bottom);
-        TextView cityBottomTextView = view.findViewById(R.id.city_bottom_2);
-        TextView date_birthday = view.findViewById(R.id.date_birthday);
-
-        ImageView close = view.findViewById(R.id.close_btn);
-        close.setOnClickListener(v -> dismiss());
+        topicTextView = view.findViewById(R.id.topik_bottom);
+        bithdayTextView = view.findViewById(R.id.birthday_bottom);
+        city_bottomTextView = view.findViewById(R.id.city_bottom);
+        cityBottomTextView = view.findViewById(R.id.city_bottom_2);
+        date_birthday = view.findViewById(R.id.date_birthday);
+        close = view.findViewById(R.id.close_btn);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String topic_pupil = sharedPreferences.getString("topik", "empty_topic");
@@ -57,6 +62,8 @@ public class BottomSheetInformationProfile extends BottomSheetDialogFragment {
             cityBottomTextView.setText(city_teather);
             date_birthday.setText(birthday_teather);
         }
+
+        close.setOnClickListener(v -> dismiss());
 
         return view;
     }

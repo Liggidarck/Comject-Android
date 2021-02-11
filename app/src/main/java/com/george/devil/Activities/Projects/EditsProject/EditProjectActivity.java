@@ -1,11 +1,14 @@
 package com.george.devil.Activities.Projects.EditsProject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -58,20 +61,26 @@ public class EditProjectActivity extends AppCompatActivity {
                 items
         );
 
+        cleanErrors();
+
         autoCompleteTextView.setAdapter(adapter);
 
         Button next = findViewById(R.id.next_edit_btn);
-        next.setOnClickListener(v -> BIG_DATA(1));
+        next.setOnClickListener(v -> get_data(1));
 
         MaterialToolbar topAppBar_edit_proj1 = findViewById(R.id.topAppBar_edit_proj1);
-        topAppBar_edit_proj1.setNavigationOnClickListener(v -> BIG_DATA(2));
+        topAppBar_edit_proj1.setNavigationOnClickListener(v -> get_data(2));
 
         ExtendedFloatingActionButton fab_save_edit_proj = findViewById(R.id.fab_save_edit_proj);
-        fab_save_edit_proj.setOnClickListener(v -> BIG_DATA(3));
+        fab_save_edit_proj.setOnClickListener(v -> get_data(3));
 
     }
 
-    public void BIG_DATA(int id_btn) {
+    /**
+     * получение данных для проверки на пустоту.
+     * @param id_btn для отслеживания нажатой кнопки. Для разного реагирования на нажаните.
+     */
+    public void get_data(int id_btn) {
         String nameProj = Objects.requireNonNull(textField_name_proj_edit.getEditText()).getText().toString();
         String descriptionProj = Objects.requireNonNull(textField_description_proj_edit.getEditText()).getText().toString();
         String topicPjaj = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString();
@@ -82,17 +91,32 @@ public class EditProjectActivity extends AppCompatActivity {
         validateSave(nameProj, descriptionProj, topicPjaj, private_public_proj, id_btn);
     }
 
+    /**
+     * Метод проверяет на пустоту все поля {@link TextInputLayout} на пустоту. И отправляет запрос на отрисовку ошибок.
+     * @param name имя проекта
+     * @param description описание проекта
+     * @param topic тема проекта
+     * @param private_public_proj public или private проект
+     * @param id_bt для отслеживания нажатой кнопки. Для разного реагирования на нажаните.
+     */
     public void validateSave (String name, String description, String topic, boolean private_public_proj, int id_bt) {
-
         if(!vaildateNameProject(name) | !validateDescriptionProject(description) | !validateTopicProject(topic)){
             return;
         } else {
             Log.i(TAG, "проверка прошла успешно!");
             saveData(name, description, topic, private_public_proj, id_bt);
         }
-
     }
 
+    /**
+     * Метод сохраняет даныне в памяти телефона и запускает по id кнопки активити
+     *
+     * @param nameProject имя проекта
+     * @param descriptionProject описание проекта
+     * @param topicProject тема проекта
+     * @param private_public_pr public или private проект
+     * @param id для запуска activity по контексту
+     */
     public void saveData(String nameProject, String descriptionProject, String topicProject, boolean private_public_pr, int id) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         sharedPreferences.edit().remove("nameMainProject").apply();
@@ -118,6 +142,10 @@ public class EditProjectActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param checkNameProject строка из {@link TextInputLayout} для проверки на пустоту
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean vaildateNameProject(String checkNameProject) {
         if(checkNameProject.isEmpty()){
             textField_name_proj_edit.setError(getText(R.string.error_empty));
@@ -128,6 +156,11 @@ public class EditProjectActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @param chrckDescriptionProj строка из {@link TextInputLayout} для проверки на пустоту
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateDescriptionProject(String chrckDescriptionProj) {
         if(chrckDescriptionProj.isEmpty()){
             textField_description_proj_edit.setError(getText(R.string.error_empty));
@@ -139,6 +172,10 @@ public class EditProjectActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @param TopicProj строка из {@link TextInputLayout} для проверки на пустоту
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateTopicProject(String TopicProj) {
         if(TopicProj.isEmpty()) {
             textField_topic_edit.setError(getText(R.string.error_empty));
@@ -149,8 +186,64 @@ public class EditProjectActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
+     */
+    public void cleanErrors() {
+        Objects.requireNonNull(textField_name_proj_edit.getEditText()).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                textField_name_proj_edit.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        Objects.requireNonNull(textField_description_proj_edit.getEditText()).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                textField_description_proj_edit.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        Objects.requireNonNull(textField_topic_edit.getEditText()).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                textField_topic_edit.setError(null);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
-        BIG_DATA(4);
+        get_data(4);
     }
 }

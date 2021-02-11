@@ -11,13 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.george.devil.R;
 
-public class fragmentMessageTeather extends Fragment {
+public class fragmentMessageTeacher extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_message_teather, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_message_teather, container, false);
     }
 }

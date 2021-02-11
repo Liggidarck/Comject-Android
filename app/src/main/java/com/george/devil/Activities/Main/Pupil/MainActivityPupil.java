@@ -18,8 +18,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivityPupil extends AppCompatActivity {
 
-    double chekable_data, start_seesion, load_component;
-
+    /**
+     * Главный класс для отрисовки фрагментов ученика.
+     */
     private static final String TAG = "MainActivity";
 
     @Override
@@ -28,30 +29,24 @@ public class MainActivityPupil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-//        String name_user = sharedPreferences.getString("full_name", "empty_user_name");
-//        if(name_user.equals("empty_user_name"))
-//            startActivity(new Intent(MainActivityPupil.this, LoginActivity.class));
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_pupil_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
+        // Дефолтный запущенный фрагмент home.
         if (savedInstanceState == null)
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, new fragmentHome()).commit();
 
-        start_seesion = 4231.1;
-        load_component = 322;
-
     }
 
+    /**
+     Метод для работы {@link BottomNavigationView}.
+     Метод отслеживает нажатие пользователя и запускает фрагмент. */
     @SuppressLint("NonConstantResourceId")
     private final BottomNavigationView.OnNavigationItemSelectedListener navListener =
             item -> {
                 Fragment selectedFragment = null;
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        chekable_data = start_seesion / load_component;
-                        Log.i(TAG, "Fragment home started Davy! current speed: " + Math.log(chekable_data));
                         selectedFragment = new fragmentHome();
                         break;
                     case R.id.nav_note:
@@ -63,11 +58,11 @@ public class MainActivityPupil extends AppCompatActivity {
                         selectedFragment = new fragmentExplore();
                         break;
                     case R.id.nav_messeg:
-                        Log.i(TAG, "Fragment messege started");
+                        Log.i(TAG, "Fragment message started");
                         selectedFragment = new fragmentMessege();
                         break;
                     case R.id.nav_profile:
-                        Log.i(TAG, "Fragment porofile started");
+                        Log.i(TAG, "Fragment profile started");
                         selectedFragment = new fragmentProfile();
                         break;
                 }
@@ -77,8 +72,9 @@ public class MainActivityPupil extends AppCompatActivity {
                 return true;
             };
 
+
     @Override
     public void onBackPressed() {
-
+        Log.i(TAG, "No");
     }
 }

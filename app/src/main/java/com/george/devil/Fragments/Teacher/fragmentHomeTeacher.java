@@ -14,17 +14,17 @@ import com.george.devil.Activities.Projects.PagesProjects.ProjectTeacher;
 import com.george.devil.R;
 import com.google.android.material.card.MaterialCardView;
 
-public class fragmentHomeTeather extends Fragment {
+public class fragmentHomeTeacher extends Fragment {
 
-    MaterialCardView card_teather;
+    MaterialCardView card_teacher;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_teather, container, false);
 
-        card_teather = view.findViewById(R.id.card_teather);
-        card_teather.setOnClickListener(v -> startActivity(new Intent(fragmentHomeTeather.this.getActivity(), ProjectTeacher.class)));
+        card_teacher = view.findViewById(R.id.card_teather);
+        card_teacher.setOnClickListener(v -> startActivity(new Intent(fragmentHomeTeacher.this.getActivity(), ProjectTeacher.class)));
 
         return view;
     }

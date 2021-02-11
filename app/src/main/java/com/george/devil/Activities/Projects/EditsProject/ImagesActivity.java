@@ -22,6 +22,7 @@ import com.george.devil.Fragments.Images.fragmentImageSocial;
 import com.george.devil.Fragments.Images.fragmentImageSport;
 import com.george.devil.Fragments.Pupil.fragmentHome;
 import com.george.devil.R;
+import com.google.android.material.appbar.MaterialToolbar;
 
 public class ImagesActivity extends AppCompatActivity {
 
@@ -37,6 +38,9 @@ public class ImagesActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null)
             id_image = extras.getLong("id_image");
+
+        MaterialToolbar topAppBar_images = findViewById(R.id.topAppBar_images);
+        topAppBar_images.setNavigationOnClickListener(v -> onBackPressed());
 
         Log.i(TAG, String.valueOf(id_image));
 

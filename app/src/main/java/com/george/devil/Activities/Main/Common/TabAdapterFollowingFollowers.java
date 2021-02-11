@@ -11,33 +11,38 @@ import java.util.List;
 
 public class TabAdapterFollowingFollowers extends FragmentStatePagerAdapter {
 
-    private final List<Fragment> mFragmentList = new ArrayList<>();
-    private final List<String> mFragmentTitleList = new ArrayList<>();
+    private final List<Fragment> FragmentsList = new ArrayList<>();
+    private final List<String> FragmentsTitleList = new ArrayList<>();
 
     TabAdapterFollowingFollowers(FragmentManager fm) {
         super(fm);
     }
 
+    /**
+     * Вызывается для отрисовки фрагметров
+     * @param fragment xml для отрисовки экрана
+     * @param title устанавливает текст в tab
+     */
+    public void addFragment(Fragment fragment, String title) {
+        FragmentsList.add(fragment);
+        FragmentsTitleList.add(title);
+    }
+
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return mFragmentList.get(position);
-    }
-
-    public void addFragment(Fragment fragment, String title) {
-        mFragmentList.add(fragment);
-        mFragmentTitleList.add(title);
+        return FragmentsList.get(position);
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return mFragmentTitleList.get(position);
+        return FragmentsTitleList.get(position);
     }
 
     @Override
     public int getCount() {
-        return mFragmentList.size();
+        return FragmentsList.size();
     }
 
 }

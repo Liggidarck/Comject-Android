@@ -21,8 +21,8 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
 
     private BottomSheetEditThemeTasks.StateListener listener;
 
-    CircleImageView check_defualt_tasks, check_red_tasks, check_orange_tasks, check_yellow_tasks,
-            check_green_tasks, check_green_secondary_tasks, check_blue_ligth_tasks, check_blue_tasks,
+    CircleImageView check_default_tasks, check_red_tasks, check_orange_tasks, check_yellow_tasks,
+            check_green_tasks, check_green_secondary_tasks, check_blue_light_tasks, check_blue_tasks,
             check_violet_tasks, check_pink_tasks, check_gray_tasks;
 
     String themeTask;
@@ -35,20 +35,20 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
         SharedPreferences prefsBottomSheetThemeTask = PreferenceManager.getDefaultSharedPreferences(requireActivity().getApplicationContext());
         themeTask =  prefsBottomSheetThemeTask.getString("themeData", "Default");
 
-        check_defualt_tasks = view.findViewById(R.id.check_defualt_tasks);
+        check_default_tasks = view.findViewById(R.id.check_defualt_tasks);
         check_red_tasks = view.findViewById(R.id.check_red_tasks);
         check_orange_tasks = view.findViewById(R.id.check_orange_tasks);
         check_yellow_tasks = view.findViewById(R.id.check_yellow_tasks);
         check_green_tasks = view.findViewById(R.id.check_green_tasks);
         check_green_secondary_tasks = view.findViewById(R.id.check_green_secondary_tasks);
-        check_blue_ligth_tasks = view.findViewById(R.id.check_blue_ligth_tasks);
+        check_blue_light_tasks = view.findViewById(R.id.check_blue_ligth_tasks);
         check_blue_tasks = view.findViewById(R.id.check_blue_tasks);
         check_violet_tasks = view.findViewById(R.id.check_violet_tasks);
         check_pink_tasks = view.findViewById(R.id.check_pink_tasks);
         check_gray_tasks = view.findViewById(R.id.check_gray_tasks);
 
         if(themeTask.equals("Default"))
-            check_defualt_tasks.setVisibility(View.VISIBLE);
+            check_default_tasks.setVisibility(View.VISIBLE);
 
         if(themeTask.equals("Red"))
             check_red_tasks.setVisibility(View.VISIBLE);
@@ -66,7 +66,7 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
             check_green_secondary_tasks.setVisibility(View.VISIBLE);
 
         if(themeTask.equals("Light Blue"))
-            check_blue_ligth_tasks.setVisibility(View.VISIBLE);
+            check_blue_light_tasks.setVisibility(View.VISIBLE);
 
         if(themeTask.equals("Blue"))
             check_blue_tasks.setVisibility(View.VISIBLE);
@@ -149,6 +149,9 @@ public class BottomSheetEditThemeTasks extends BottomSheetDialogFragment {
         return view;
     }
 
+    /**
+     * Интерфейс с методом для определения выбранной темы
+     */
     public interface StateListener {
         void ThemeChoose(String tex);
     }

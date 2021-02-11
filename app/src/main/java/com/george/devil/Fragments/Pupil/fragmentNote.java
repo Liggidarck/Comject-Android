@@ -27,22 +27,27 @@ public class fragmentNote extends Fragment {
     SQLiteDatabase db;
     Cursor userCursor;
     SimpleCursorAdapter userAdapter;
-    ListView notesList;
 
-    private static final String TAG = "fragmentNote";
+
+    ListView notesList;
+    MaterialToolbar toolbar;
+    FloatingActionButton add;
+    View empty;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_note, container, false);
 
-        MaterialToolbar toolbar = view.findViewById(R.id.toolbar_notebook);
+        toolbar = view.findViewById(R.id.toolbar_notebook);
+        add = view.findViewById(R.id.add_note);
+        notesList = view.findViewById(R.id.notebook_list);
+
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
-        FloatingActionButton add = view.findViewById(R.id.add_note);
         add.setOnClickListener(v -> startActivity(new Intent(fragmentNote.this.getActivity(), AddNoteActivity.class)));
 
-        notesList = view.findViewById(R.id.notebook_list);
         notesList.setOnItemClickListener((parent, view1, position, id) -> {
             Intent intent = new Intent(requireActivity().getApplicationContext(), AddNoteActivity.class);
             intent.putExtra("id", id);
@@ -51,14 +56,15 @@ public class fragmentNote extends Fragment {
 
         databaseHelper = new NotesDatabase(requireContext().getApplicationContext());
 
-        View empty = view.findViewById(R.id.empty_layout);
+        empty = view.findViewById(R.id.empty_layout);
         notesList.setEmptyView(empty);
-
-
 
         return view;
     }
 
+    /**
+     * Подключаемся к {@link NotesDatabase} для отрисовки сохраненых данных в базе данных
+     */
     @Override
     public void onResume(){
         super.onResume();
@@ -76,6 +82,9 @@ public class fragmentNote extends Fragment {
 
     }
 
+    /**
+     * Когда фрагмент пониамет, что больше не используется, он закрывает подключение к базе данных
+     */
     @Override
     public void onDestroy(){
         super.onDestroy();

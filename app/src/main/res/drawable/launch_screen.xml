@@ -8,7 +8,7 @@
     <item android:bottom="30dp">
         <bitmap
             android:gravity="center"
-            android:src="@drawable/fluentui_launch_logo" />
+            android:src="@drawable/comject_loading_logo" />
     </item>
 
 </layer-list>

@@ -1,19 +1,28 @@
 package com.george.devil.Activities.Tasks;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.george.devil.Activities.Changes.ChangesActivity;
+import com.george.devil.Activities.Issues.AddIssue;
+import com.george.devil.DataBases.ChangesDataBase;
+import com.george.devil.DataBases.IssuesDataBase;
 import com.george.devil.R;
 import com.george.devil.DataBases.TasksDataBase;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -34,7 +43,7 @@ public class AddTaskActivity extends AppCompatActivity {
     MaterialToolbar toolbar;
     MaterialCardView addNote;
 
-    //TODO: Добавить возможность удаления элементов из базы данных TASKS
+    ImageView delete_task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +54,7 @@ public class AddTaskActivity extends AppCompatActivity {
         text_edit_task = findViewById(R.id.text_edit_task);
         toolbar = findViewById(R.id.topAppBar_add_task);
         addNote = findViewById(R.id.add_note_task_layout);
+        delete_task = findViewById(R.id.delete_task);
 
         toolbar.setNavigationOnClickListener(v -> save());
         addNote.setOnClickListener(v -> startActivity(new Intent(AddTaskActivity.this, AddTaskNoteActivity.class)));
@@ -56,6 +66,27 @@ public class AddTaskActivity extends AppCompatActivity {
         String timeText = timeFormat.format(currentDate);
         date = "Последнее изменение:" + " " + dateText + " " + timeText;
         text_edit_task.setText(date);
+
+        delete_task.setOnClickListener(v -> {
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            boolean confirmDelet = preferences.getBoolean("delet_bool", true);
+
+            if(confirmDelet){
+                AlertDialog.Builder builder = new AlertDialog.Builder(AddTaskActivity.this);
+                builder.setTitle(getText(R.string.attention));
+                builder.setMessage(getText(R.string.confirm_delete_issue));
+
+                builder.setPositiveButton(getString(android.R.string.ok), (dialog, id) -> {
+                    delete();
+                    dialog.dismiss();
+                });
+
+                builder.setNegativeButton(getString(android.R.string.cancel), (dialog, which) -> dialog.dismiss());
+
+                builder.show();
+            }else
+                delete();
+        });
 
         sqlHelper = new TasksDataBase(this);
         db = sqlHelper.getWritableDatabase();
@@ -76,6 +107,9 @@ public class AddTaskActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Вызывается когда, нужно сохрнить в базу данных новую ячейку или для перезаписи текущего ячейки данных
+     */
     public void save() {
         if(!validateTask()){
             return;
@@ -101,6 +135,9 @@ public class AddTaskActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Закрывается подключение к {@link TasksDataBase} и запускается {@link MyTasksActivity}
+     */
     public void goHome() {
         db.close();
         Intent intent = new Intent(this, MyTasksActivity.class);
@@ -108,6 +145,9 @@ public class AddTaskActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     *  @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateTask() {
         String check = name_task.getText().toString();
         if(check.isEmpty()){
@@ -115,6 +155,14 @@ public class AddTaskActivity extends AppCompatActivity {
             return false;
         } else
             return true;
+    }
+
+    /**
+     * Выполням запрос на удадение ячейки из {@link ChangesDataBase} и закрываем подключение
+     */
+    public void delete() {
+        db.delete(TasksDataBase.TABLE, "_id = ?", new String[]{String.valueOf(taskId)});
+        goHome();
     }
 
 }

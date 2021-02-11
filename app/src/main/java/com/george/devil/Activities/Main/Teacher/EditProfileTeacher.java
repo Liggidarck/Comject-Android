@@ -63,7 +63,6 @@ public class EditProfileTeacher extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile_teacher);
 
         topAppBar_edit_profile_teather = findViewById(R.id.topAppBar_edit_profile_teather);
-
         name_account_edit_profile_teather = findViewById(R.id.name_account_edit_profile_teather);
         username_layout_editProfile_teather = findViewById(R.id.username_layout_editProfile_teather);
         email_layout_editProfile_tether = findViewById(R.id.email_layout_editProfile_tether);
@@ -71,14 +70,10 @@ public class EditProfileTeacher extends AppCompatActivity {
         topic_layout_teather = findViewById(R.id.topic_layout_teather);
         school_layout_editProfile_teather = findViewById(R.id.school_layout_editProfile_teather);
         textField_bithday_edit_profile_teather = findViewById(R.id.textField_bithday_edit_profile_teather);
-
         textInputDate = findViewById(R.id.date_textView_edit_teather);
-
         topic_auto_edit_profile_teather = findViewById(R.id.topic_auto_edit_profile_teather);
-
         changable_ava_teather = findViewById(R.id.changable_ava_teather);
         main_profile_image_edit_teather = findViewById(R.id.main_profile_image_edit_teather);
-
         chan_pas_teather = findViewById(R.id.chan_pas_teather);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -89,7 +84,6 @@ public class EditProfileTeacher extends AppCompatActivity {
         String topic_teather = sharedPreferences.getString("topic_teather", "topic_teather_empty");
         String school_teather = sharedPreferences.getString("school_teather","school_teather_empty");
         String birthay_teather = sharedPreferences.getString("birthay_teather","birthay_teather_empty");
-        String password_teather = sharedPreferences.getString("password_teather","password_teather_empty");
 
         cleanErrors();
 
@@ -102,7 +96,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).setText(birthay_teather);
 
         setSupportActionBar(topAppBar_edit_profile_teather);
-        topAppBar_edit_profile_teather.setNavigationOnClickListener(v -> saveArrowTeather());
+        topAppBar_edit_profile_teather.setNavigationOnClickListener(v -> saveArrowTeacher());
 
         String[] items = getResources().getStringArray(R.array.categories_of_predmeti);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
@@ -130,6 +124,7 @@ public class EditProfileTeacher extends AppCompatActivity {
             photoPickerIntent.setType("image/*");
             startActivityForResult(photoPickerIntent, ava_data_pick);
         });
+
         main_profile_image_edit_teather.setOnClickListener(v -> {
             Intent photoPik = new Intent(Intent.ACTION_PICK);
             photoPik.setType("image/*");
@@ -140,6 +135,9 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
+    /**
+     * Получаем ответ(картинку) от вызванный активити и устанавливаем аватарку или шапку профиля
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -181,6 +179,9 @@ public class EditProfileTeacher extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Метод для отстлеживания нажатия на галочку в {@link MaterialToolbar} и сохранения новых данный о пользователе во внутренней памяти телефона
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -196,8 +197,8 @@ public class EditProfileTeacher extends AppCompatActivity {
 
         if (item.getItemId() == R.id.save_changes_profile) {
 
-            if (!validateNameTeatcher() | !validateUsernameTeather() | !validateEmailTeather()
-                    | !validateCityTeather() | !validateTopicTeather() | !validateSchoolTeather() | !validateBithtayTeather()) {
+            if (!validateNameTeacher() | !validateUsernameTeacher() | !validateEmailTeacher()
+                    | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBithtayTeacher()) {
                 return super.onOptionsItemSelected(item);
             } else {
                 sharedPreferences.edit().remove("full_name_teather").apply();
@@ -224,14 +225,23 @@ public class EditProfileTeacher extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Метод для установки в {@link TextInputLayout} даты
+     */
     public void updateLabel() {
-        String myFormat = "MM.dd.yyyy"; //In which you need put here
-        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        String date_text = "MM.dd.yyyy";
+        SimpleDateFormat sdf = new SimpleDateFormat(date_text, Locale.US);
 
         Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).setText(sdf.format(calendar.getTime()));
     }
 
-    private void saveArrowTeather() {
+    /**
+     * Метод для отслеживания изменения данных о пользователе.
+     *
+     * Вызвает {@link AlertDialog} в случае обнаружения изменения данных о пользователе.
+     * Сохраняет новые данные по нажатию на "ok" кнопку
+     */
+    private void saveArrowTeacher() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String name_teather = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
         String username_teather = sharedPreferences.getString("username_teather", "username_teather_empty");
@@ -250,8 +260,8 @@ public class EditProfileTeacher extends AppCompatActivity {
         String school_teather_check = Objects.requireNonNull(school_layout_editProfile_teather.getEditText()).getText().toString();
         String birthay_teather_check = Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).getText().toString();
 
-        if(!validateNameTeatcher() | !validateUsernameTeather() | !validateEmailTeather()
-                | !validateCityTeather() | !validateTopicTeather() | !validateSchoolTeather() | !validateBithtayTeather()){
+        if(!validateNameTeacher() | !validateUsernameTeacher() | !validateEmailTeacher()
+                | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBithtayTeacher()){
             return;
         } else {
 
@@ -306,7 +316,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    private boolean validateNameTeatcher() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    private boolean validateNameTeacher() {
         String check = Objects.requireNonNull(name_account_edit_profile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -318,7 +331,10 @@ public class EditProfileTeacher extends AppCompatActivity {
         }
     }
 
-    boolean validateUsernameTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateUsernameTeacher() {
         String check = Objects.requireNonNull(username_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -331,7 +347,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    boolean validateEmailTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateEmailTeacher() {
         String check = Objects.requireNonNull(email_layout_editProfile_tether.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -344,7 +363,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    boolean validateCityTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateCityTeacher() {
         String check = Objects.requireNonNull(city_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -357,7 +379,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    boolean validateTopicTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateTopicTeacher() {
         String check = Objects.requireNonNull(city_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -370,7 +395,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    boolean validateSchoolTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateSchoolTeacher() {
         String check = Objects.requireNonNull(school_layout_editProfile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -383,7 +411,10 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
-    boolean validateBithtayTeather() {
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
+    boolean validateBithtayTeacher() {
         String check = Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){
@@ -396,6 +427,9 @@ public class EditProfileTeacher extends AppCompatActivity {
 
     }
 
+    /**
+     * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
+     */
     void cleanErrors(){
         Objects.requireNonNull(name_account_edit_profile_teather.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override

@@ -33,13 +33,13 @@ public class ChangePasswordActivity extends AppCompatActivity {
         current_pass_LayoutText = findViewById(R.id.current_pass_LayoutText);
         new_pass_LayoutText = findViewById(R.id.new_pass_LayoutText);
         confirm_pass_LayoutText = findViewById(R.id.confirm_pass_LayoutText);
-
+        Button changePs = findViewById(R.id.change);
         MaterialToolbar toolbar = findViewById(R.id.topAppBar_change_password);
+
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
         cleanErrors();
 
-        Button changePs = findViewById(R.id.change);
         changePs.setOnClickListener(v -> {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             String password = sharedPreferences.getString("pas", "empty_pas");
@@ -49,7 +49,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 ChangePupilPassword();
 
             if(!password_teather.equals("password_teather_empty"))
-                ChangeTeatherPassword();
+                ChangeTeacherPassword();
         });
 
         Button forgotPaa = findViewById(R.id.forgot_pass);
@@ -62,13 +62,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 forgotPupilPassword(v);
 
             if(!password_teather.equals("password_teather_empty"))
-                forgotTeatherPassword(v);
+                forgotTeacherPassword(v);
 
         });
 
 
     }
 
+    /**
+     * Вызывается, для изменения пароля ученика
+     */
     public void ChangePupilPassword() {
         if (!validateConfirmPas() | !validateNewPas() | !validatePas()) {
             return;
@@ -76,11 +79,11 @@ public class ChangePasswordActivity extends AppCompatActivity {
             SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             String password = sharedPreferences.getString("pas", "empty_pas");
 
-            String currnetPas = Objects.requireNonNull(current_pass_LayoutText.getEditText()).getText().toString();
+            String currentPassword = Objects.requireNonNull(current_pass_LayoutText.getEditText()).getText().toString();
             String checkPasNew = Objects.requireNonNull(new_pass_LayoutText.getEditText()).getText().toString();
             String checkPasConfirm = Objects.requireNonNull(confirm_pass_LayoutText.getEditText()).getText().toString();
 
-            if (currnetPas.equals(password)) {
+            if (currentPassword.equals(password)) {
                 if (checkPasNew.equals(checkPasConfirm)) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(ChangePasswordActivity.this);
                     builder.setTitle("Внимание");
@@ -104,7 +107,10 @@ public class ChangePasswordActivity extends AppCompatActivity {
         }
     }
 
-    public void ChangeTeatherPassword() {
+    /**
+     * Вызывается для изменения пароля учителя
+     */
+    public void ChangeTeacherPassword() {
         if (!validateConfirmPas() | !validateNewPas() | !validatePas()) {
             return;
         } else {
@@ -139,11 +145,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
         }
     }
 
-    public void forgotPupilPassword(View v) {
+    /**
+     * Вызывыается по нажатию на кнопку "Forgot Password"
+     * Отрисосвывает в {@link Snackbar} пароль ученика
+     * @param view для отрисовки {@link Snackbar}
+     */
+    public void forgotPupilPassword(View view) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String password = sharedPreferences.getString("pas", "empty_pas");
         Snackbar
-                .make(v, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
+                .make(view, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
                 .setAction("COPY", v1 -> {
                     ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                     ClipData clip = ClipData.newPlainText("", password);
@@ -153,11 +164,16 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 .show();
     }
 
-    public void forgotTeatherPassword(View v) {
+    /**
+     * Вызывыается по нажатию на кнопку "Forgot Password"
+     * Отрисосвывает в {@link Snackbar} пароль учителя
+     * @param view для отрисовки {@link Snackbar}
+     */
+    public void forgotTeacherPassword(View view) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         String password = sharedPreferences.getString("password_teather", "password_teather_empty");
         Snackbar
-                .make(v, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
+                .make(view, "DEMO Comject PASSWORD: " + password, Snackbar.LENGTH_LONG)
                 .setAction("COPY", v1 -> {
                     ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                     ClipData clip = ClipData.newPlainText("", password);
@@ -167,6 +183,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 .show();
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateConfirmPas() {
         String check = Objects.requireNonNull(confirm_pass_LayoutText.getEditText()).getText().toString().trim();
 
@@ -181,6 +200,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateNewPas() {
         String check = Objects.requireNonNull(new_pass_LayoutText.getEditText()).getText().toString().trim();
 
@@ -195,6 +217,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validatePas() {
         String check = Objects.requireNonNull(current_pass_LayoutText.getEditText()).getText().toString().trim();
 
@@ -209,6 +234,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
+     */
     void cleanErrors() {
         Objects.requireNonNull(current_pass_LayoutText.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override

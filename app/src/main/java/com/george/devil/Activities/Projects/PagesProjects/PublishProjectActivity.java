@@ -46,6 +46,9 @@ public class PublishProjectActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Подключаемся к menu для отрисовки в {@link MaterialToolbar} кнопки Share
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -53,6 +56,10 @@ public class PublishProjectActivity extends AppCompatActivity {
         return true;
     }
 
+
+    /**
+     * Метод для реализации нажатия на элементы {@link MaterialToolbar}
+     */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 

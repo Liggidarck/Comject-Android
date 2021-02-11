@@ -28,18 +28,35 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class fragmentHome extends Fragment {
 
     TextView main_title_project_1, main_description_project, hastags_mail_proj_text;
+    FloatingActionButton add_proj;
+    MaterialCardView card1, card2, card3, card4;
+    Button edit_main_project_card_btn, publish_main_project_brn;
+    MaterialToolbar toolbar;
 
+    /**
+     * Подключаемся к {@link SharedPreferences}, записываем в строковые переменные сохраненые данные пользователя. Полученыне данные нужны для отрисовки интерфейса.
+     *
+     * Метод {@link View}  должен вернуть созданный xml. Благодаря этому можно обращаться
+     * по id к любому фронтенд интерфейсу.
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        MaterialToolbar toolbar = view.findViewById(R.id.topAppBar_home);
-        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
-
-        main_title_project_1     = view.findViewById(R.id.main_title_project);
+        toolbar = view.findViewById(R.id.topAppBar_home);
+        main_title_project_1 = view.findViewById(R.id.main_title_project);
         main_description_project = view.findViewById(R.id.main_description_project);
-        hastags_mail_proj_text   = view.findViewById(R.id.hastags_mail_proj_text);
+        hastags_mail_proj_text = view.findViewById(R.id.hastags_mail_proj_text);
+        add_proj = view.findViewById(R.id.add_proj);
+        edit_main_project_card_btn = view.findViewById(R.id.edit_main_project_card_btn);
+        publish_main_project_brn = view.findViewById(R.id.publish_main_project_brn);
+        card1 = view.findViewById(R.id.card1);
+        card2 = view.findViewById(R.id.card2);
+        card3 = view.findViewById(R.id.card3);
+        card4 = view.findViewById(R.id.card4);
+
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String titleMain = sharedPreferences.getString("nameMainProject", "empty_main_project");
@@ -50,37 +67,12 @@ public class fragmentHome extends Fragment {
         main_description_project.setText(descroption);
         hastags_mail_proj_text.setText(hastags);
 
-        FloatingActionButton add_proj = view.findViewById(R.id.add_proj);
         add_proj.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), NewProjectActivity.class)));
-
-        MaterialCardView card1 = view.findViewById(R.id.card1);
         card1.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), MainProjectActivity.class)));
-
-        MaterialCardView card2 = view.findViewById(R.id.card2);
         card2.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), PrivatePublicProjectActivity.class)));
-
-        MaterialCardView card3 = view.findViewById(R.id.card3);
         card3.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), PrivatePublicProjectActivity.class)));
-
-        MaterialCardView card4 = view.findViewById(R.id.card4);
         card4.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), PrivatePublicProjectActivity.class)));
-
-//        Button shareMainProject = view.findViewById(R.id.share_main_project_brn);
-//        shareMainProject.setOnClickListener(v -> {
-//
-//            Intent sendIntent = new Intent();
-//            sendIntent.setAction(Intent.ACTION_SEND);
-//            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
-//            sendIntent.setType("text/plain");
-//
-//            Intent shareIntent = Intent.createChooser(sendIntent, null);
-//            startActivity(shareIntent);
-//        });
-
-        Button edit_main_project_card_btn = view.findViewById(R.id.edit_main_project_card_btn);
         edit_main_project_card_btn.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), EditProjectActivity.class)));
-
-        Button publish_main_project_brn = view.findViewById(R.id.publish_main_project_brn);
         publish_main_project_brn.setOnClickListener(v -> startActivity(new Intent(fragmentHome.this.getActivity(), PublishProjectActivity.class)));
 
         return view;

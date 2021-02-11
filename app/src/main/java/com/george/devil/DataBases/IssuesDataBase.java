@@ -21,6 +21,9 @@ public class IssuesDataBase extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, SCHEMA);
     }
 
+    /**
+     * Иницилализируем базу данных со столбцами ID, NAME_ISSUE, PRIORITY, DATE, DATE_SAVE, NOTE_ISSUE
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE issues (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -28,6 +31,12 @@ public class IssuesDataBase extends SQLiteOpenHelper {
                 + COLUMN_DATE_SAVE + " TEXT, " + COLUMN_NOTE_ISSUE + " TEXT);");
     }
 
+    /**
+     * Вызывается, когда необходимо обновить базу данных.
+     * @param db база данных которую нужно обновить
+     * @param oldVersion номер версии старой базы данынх
+     * @param newVersion номер версии новой базы данных
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE);

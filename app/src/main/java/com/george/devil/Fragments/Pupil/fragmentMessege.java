@@ -82,7 +82,6 @@ public class fragmentMessege extends Fragment {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
         if(item.getItemId() == R.id.search_explore_menu)
             Log.i(TAG, "Search clicked!");
 

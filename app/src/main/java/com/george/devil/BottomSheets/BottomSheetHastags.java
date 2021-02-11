@@ -22,7 +22,7 @@ import java.util.Objects;
 
 public class BottomSheetHastags extends BottomSheetDialogFragment {
 
-    private BottomSheetHastags.StateListenerHastags listenerHastags;
+    private StateListenerHashtag listenerHastags;
 
     TextView text_hatsk_sheet;
 
@@ -34,12 +34,12 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
         View view = inflater.inflate(R.layout.bottom_sheet_hastags_lay, container, false);
 
         text_hatsk_sheet = view.findViewById(R.id.text_hatsk_sheet);
+        Button edit = view.findViewById(R.id.btn_edit_chas);
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireActivity().getBaseContext());
         String hastags = sharedPreferences.getString("hastags", "Edit project hastags!");
         text_hatsk_sheet.setText(hastags);
 
-        Button edit = view.findViewById(R.id.btn_edit_chas);
         edit.setOnClickListener(v -> {
             final AlertDialog.Builder alert = new AlertDialog.Builder(BottomSheetHastags.this.getActivity());
             View mvie = getLayoutInflater().inflate(R.layout.dialog_edit_hastags, null);
@@ -54,7 +54,7 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
             final AlertDialog alertDialog = alert.create();
 
             ok.setOnClickListener(v1 -> {
-                if(!validateHastags()){
+                if(!validateHashtag()){
                     return;
                 } else {
                     String hastags_edited = text_has.getEditText().getText().toString();
@@ -75,11 +75,18 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
         return view;
     }
 
-    public interface StateListenerHastags{
+    /**
+     * Метод для отправки полученных данных из {@link android.widget.EditText} в активити.
+     */
+    public interface StateListenerHashtag {
         void hastagsText(String textHast);
     }
 
-    public boolean validateHastags() {
+
+    /**
+     * @return возвращает true/false для проверки поля {@link TextInputLayout} на пустоту. и отрисовывает ошибку.
+     */
+    public boolean validateHashtag() {
 
         String check = Objects.requireNonNull(text_has.getEditText()).getText().toString().trim();
 
@@ -98,7 +105,7 @@ public class BottomSheetHastags extends BottomSheetDialogFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try {
-            listenerHastags = (StateListenerHastags) context;
+            listenerHastags = (StateListenerHashtag) context;
         } catch (ClassCastException e){
             throw new ClassCastException(context.toString()
                     + " must implement BottomSheetListener");

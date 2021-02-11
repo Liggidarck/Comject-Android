@@ -52,6 +52,9 @@ public class IssuesActivity extends AppCompatActivity {
         issuesList.setEmptyView(empty);
     }
 
+    /**
+     * Подключаемся к {@link IssuesDataBase} для отрисовки сохраненых данных в базе данных
+     */
     @Override
     public void onResume(){
         super.onResume();
@@ -67,12 +70,14 @@ public class IssuesActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Когда фрагмент пониамет, что больше не используется, он закрывает подключение к базе данных
+     */
     @Override
     public void onDestroy(){
         super.onDestroy();
         db.close();
         userCursor.close();
     }
-
 
 }

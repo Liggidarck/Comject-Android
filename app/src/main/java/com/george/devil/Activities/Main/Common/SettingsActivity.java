@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.george.devil.Activities.Main.LoginActivity;
-import com.george.devil.Activities.Main.Pupil.EditProfileActivity;
+import com.george.devil.Activities.Main.Pupil.EditProfilePupil;
 import com.george.devil.Activities.Main.Teacher.EditProfileTeacher;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -65,7 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
         Button edit_account = findViewById(R.id.btn_edit_account);
         edit_account.setOnClickListener(v -> {
             if (!name_user.equals("empty_user_name"))
-                startActivity(new Intent(SettingsActivity.this, EditProfileActivity.class));
+                startActivity(new Intent(SettingsActivity.this, EditProfilePupil.class));
 
             if (!name_teather.equals("full_name_teather_empty"))
                 startActivity(new Intent(SettingsActivity.this, EditProfileTeacher.class));
@@ -112,6 +112,9 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Вложеный класс для отрисовки фрагметна настроек
+     */
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

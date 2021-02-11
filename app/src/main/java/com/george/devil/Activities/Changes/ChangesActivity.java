@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
 import com.george.devil.DataBases.ChangesDataBase;
+import com.george.devil.DataBases.IssuesDataBase;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -50,7 +51,9 @@ public class ChangesActivity extends AppCompatActivity {
         add.setOnClickListener(v -> startActivity(new Intent(ChangesActivity.this, AddChange.class)));
     }
 
-
+    /**
+     * Подключаемся к {@link ChangesDataBase} для отрисовки сохраненых данных в базе данных
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -65,6 +68,9 @@ public class ChangesActivity extends AppCompatActivity {
         changesList.setAdapter(userAdapter);
     }
 
+    /**
+     * Когда фрагмент пониамет, что больше не используется, он закрывает подключение к базе данных
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
