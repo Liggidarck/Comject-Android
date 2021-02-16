@@ -59,7 +59,7 @@ public class RegisterPupilActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.topAppBar_reg_pupil);
         TextInputEditText textDate = findViewById(R.id.date_textView_3);
 
-        clearErrors();
+        cleanErrors();
 
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
@@ -87,8 +87,8 @@ public class RegisterPupilActivity extends AppCompatActivity {
 
         register.setOnClickListener(v -> {
 
-            if (!validateName() | !validateUserName() | !validateTopik() | !validateEmail() | !validateCity()
-                    | !validateSchool() | !validateGrade() | !validateBirthay() | !validatePassword()) {
+            if (!validateName() | !validateUserName() | !validateTopic() | !validateEmail() | !validateCity()
+                    | !validateSchool() | !validateGrade() | !validateBirthday() | !validatePassword()) {
                 return;
             } else {
                 String name = Objects.requireNonNull(textField_name_register_pupil.getEditText()).getText().toString();
@@ -178,7 +178,7 @@ public class RegisterPupilActivity extends AppCompatActivity {
     /**
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    public boolean validateTopik() {
+    public boolean validateTopic() {
         String check = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
@@ -258,7 +258,7 @@ public class RegisterPupilActivity extends AppCompatActivity {
     /**
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    public boolean validateBirthay() {
+    public boolean validateBirthday() {
         String check = Objects.requireNonNull(textField_bithday_register_pupil.getEditText()).getText().toString().trim();
 
         if (check.isEmpty()) {
@@ -290,7 +290,7 @@ public class RegisterPupilActivity extends AppCompatActivity {
     /**
      * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
      */
-    public void clearErrors() {
+    public void cleanErrors() {
 
         Objects.requireNonNull(textField_name_register_pupil.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override

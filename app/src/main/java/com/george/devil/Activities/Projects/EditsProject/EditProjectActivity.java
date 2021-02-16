@@ -1,6 +1,5 @@
 package com.george.devil.Activities.Projects.EditsProject;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -66,13 +65,13 @@ public class EditProjectActivity extends AppCompatActivity {
         autoCompleteTextView.setAdapter(adapter);
 
         Button next = findViewById(R.id.next_edit_btn);
-        next.setOnClickListener(v -> get_data(1));
+        next.setOnClickListener(v -> getData(1));
 
         MaterialToolbar topAppBar_edit_proj1 = findViewById(R.id.topAppBar_edit_proj1);
-        topAppBar_edit_proj1.setNavigationOnClickListener(v -> get_data(2));
+        topAppBar_edit_proj1.setNavigationOnClickListener(v -> getData(2));
 
         ExtendedFloatingActionButton fab_save_edit_proj = findViewById(R.id.fab_save_edit_proj);
-        fab_save_edit_proj.setOnClickListener(v -> get_data(3));
+        fab_save_edit_proj.setOnClickListener(v -> getData(3));
 
     }
 
@@ -80,7 +79,7 @@ public class EditProjectActivity extends AppCompatActivity {
      * получение данных для проверки на пустоту.
      * @param id_btn для отслеживания нажатой кнопки. Для разного реагирования на нажаните.
      */
-    public void get_data(int id_btn) {
+    public void getData(int id_btn) {
         String nameProj = Objects.requireNonNull(textField_name_proj_edit.getEditText()).getText().toString();
         String descriptionProj = Objects.requireNonNull(textField_description_proj_edit.getEditText()).getText().toString();
         String topicPjaj = Objects.requireNonNull(textField_topic_edit.getEditText()).getText().toString();
@@ -100,7 +99,7 @@ public class EditProjectActivity extends AppCompatActivity {
      * @param id_bt для отслеживания нажатой кнопки. Для разного реагирования на нажаните.
      */
     public void validateSave (String name, String description, String topic, boolean private_public_proj, int id_bt) {
-        if(!vaildateNameProject(name) | !validateDescriptionProject(description) | !validateTopicProject(topic)){
+        if(!validateNameProject(name) | !validateDescriptionProject(description) | !validateTopicProject(topic)){
             return;
         } else {
             Log.i(TAG, "проверка прошла успешно!");
@@ -146,7 +145,7 @@ public class EditProjectActivity extends AppCompatActivity {
      * @param checkNameProject строка из {@link TextInputLayout} для проверки на пустоту
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    public boolean vaildateNameProject(String checkNameProject) {
+    public boolean validateNameProject(String checkNameProject) {
         if(checkNameProject.isEmpty()){
             textField_name_proj_edit.setError(getText(R.string.error_empty));
             return false;
@@ -158,11 +157,11 @@ public class EditProjectActivity extends AppCompatActivity {
 
     /**
      *
-     * @param chrckDescriptionProj строка из {@link TextInputLayout} для проверки на пустоту
+     * @param checkDescriptionProject строка из {@link TextInputLayout} для проверки на пустоту
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    public boolean validateDescriptionProject(String chrckDescriptionProj) {
-        if(chrckDescriptionProj.isEmpty()){
+    public boolean validateDescriptionProject(String checkDescriptionProject) {
+        if(checkDescriptionProject.isEmpty()){
             textField_description_proj_edit.setError(getText(R.string.error_empty));
             return false;
         } else {
@@ -173,11 +172,11 @@ public class EditProjectActivity extends AppCompatActivity {
     }
 
     /**
-     * @param TopicProj строка из {@link TextInputLayout} для проверки на пустоту
+     * @param TopicProject строка из {@link TextInputLayout} для проверки на пустоту
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    public boolean validateTopicProject(String TopicProj) {
-        if(TopicProj.isEmpty()) {
+    public boolean validateTopicProject(String TopicProject) {
+        if(TopicProject.isEmpty()) {
             textField_topic_edit.setError(getText(R.string.error_empty));
             return false;
         } else {
@@ -244,6 +243,6 @@ public class EditProjectActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        get_data(4);
+        getData(4);
     }
 }

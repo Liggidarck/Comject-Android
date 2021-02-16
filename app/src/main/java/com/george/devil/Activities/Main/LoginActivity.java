@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.george.devil.Activities.Main.Pupil.MainActivityPupil;
 import com.george.devil.Activities.Main.Registration.RegisterPupilActivity;
 import com.george.devil.Activities.Main.Registration.RegisterTeacherActivity;
-import com.george.devil.Activities.Main.Teacher.MainActivityTeather;
+import com.george.devil.Activities.Main.Teacher.MainActivityTeacher;
 import com.george.devil.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -91,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if(!name_teather.equals("full_name_teather_empty")) {
             Log.i(TAG, "Имя учителя НЕПУСТОЕ");
-            startActivity(new Intent(LoginActivity.this, MainActivityTeather.class));
+            startActivity(new Intent(LoginActivity.this, MainActivityTeacher.class));
         }
 
         reg.setOnClickListener(v -> showRegisterDialog());
@@ -128,7 +128,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 editor.apply();
 
-                startActivity(new Intent(LoginActivity.this, MainActivityTeather.class));
+                startActivity(new Intent(LoginActivity.this, MainActivityTeacher.class));
             }
 
         });

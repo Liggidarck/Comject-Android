@@ -17,7 +17,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class IssuesActivity extends AppCompatActivity {
 
-
     IssuesDataBase databaseHelper;
     SQLiteDatabase db;
     Cursor userCursor;

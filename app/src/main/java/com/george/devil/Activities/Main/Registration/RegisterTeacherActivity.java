@@ -13,7 +13,7 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 
-import com.george.devil.Activities.Main.Teacher.MainActivityTeather;
+import com.george.devil.Activities.Main.Teacher.MainActivityTeacher;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
@@ -60,7 +60,7 @@ public class RegisterTeacherActivity extends AppCompatActivity {
         reg_teacher = findViewById(R.id.reg_teather);
         toolbar = findViewById(R.id.topAppBar_reg_teather);
 
-        clearErrors();
+        cleanErrors();
 
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
@@ -114,7 +114,7 @@ public class RegisterTeacherActivity extends AppCompatActivity {
 
                 editor.apply();
 
-                startActivity(new Intent(RegisterTeacherActivity.this, MainActivityTeather.class));
+                startActivity(new Intent(RegisterTeacherActivity.this, MainActivityTeacher.class));
             }
         });
     }
@@ -240,7 +240,7 @@ public class RegisterTeacherActivity extends AppCompatActivity {
     /**
      * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
      */
-    public void clearErrors() {
+    public void cleanErrors() {
         Objects.requireNonNull(textField_name_register_teacher.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

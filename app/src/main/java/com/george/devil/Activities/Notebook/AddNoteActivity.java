@@ -182,14 +182,14 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
     /**
      * Метод для определения нажатой кнопки в {@link BottomSheetNotes}
-     * @param text - полученые данные о кнопке от {@link BottomSheetNotes}
+     * @param button_clicked полученые данные о кнопке от {@link BottomSheetNotes}
      */
     @Override
-    public void onButtonClicked(String text) {
-        Log.i(TAG, "" + text);
+    public void onButtonClicked(String button_clicked) {
+        Log.i(TAG, "" + button_clicked);
         CoordinatorLayout coordinatorLayout = findViewById(R.id.chak);
 
-        if(text.equals("Button delete clicked")) {
+        if(button_clicked.equals("Button delete clicked")) {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             boolean confirmDelet = preferences.getBoolean("delet_bool", true);
 
@@ -213,7 +213,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
         }
 
-        if(text.equals("Button copy clicked")){
+        if(button_clicked.equals("Button copy clicked")){
             String copy = noteBox.getText().toString();
             if(copy.isEmpty()){
                 Snackbar.make(coordinatorLayout, getText(R.string.empty_note_cant_copied), Snackbar.LENGTH_SHORT).setAction("done", null).show();
@@ -226,7 +226,7 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
             }
         }
 
-        if(text.equals("Button share clicked")) {
+        if(button_clicked.equals("Button share clicked")) {
             String copy = noteBox.getText().toString();
             if (copy.isEmpty()) {
                 Snackbar.make(coordinatorLayout, getText(R.string.empty_note_cant_shared), Snackbar.LENGTH_SHORT).setAction("done", null).show();
@@ -242,77 +242,77 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
             }
         }
 
-        if(text.equals("Default")){
+        if(button_clicked.equals("Default")){
             checkTheme = "Default";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#FAFAFA"));
             toolbar.setBackgroundColor(Color.parseColor("#FAFAFA"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#FAFAFA"));
         }
 
-        if(text.equals("Red")){
+        if(button_clicked.equals("Red")){
             checkTheme = "Red";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#FF8C8C"));
             toolbar.setBackgroundColor(Color.parseColor("#FF8C8C"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#FF8C8C"));
         }
 
-        if(text.equals("Orange")){
+        if(button_clicked.equals("Orange")){
             checkTheme = "Orange";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#FFB661"));
             toolbar.setBackgroundColor(Color.parseColor("#FFB661"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#FFB661"));
         }
 
-        if(text.equals("Yellow")){
+        if(button_clicked.equals("Yellow")){
             checkTheme = "Yellow";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#FFD850"));
             toolbar.setBackgroundColor(Color.parseColor("#FFD850"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#FFD850"));
         }
 
-        if(text.equals("Green")){
+        if(button_clicked.equals("Green")){
             checkTheme = "Green";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#7AE471"));
             toolbar.setBackgroundColor(Color.parseColor("#7AE471"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#7AE471"));
         }
 
-        if(text.equals("Light Green")){
+        if(button_clicked.equals("Light Green")){
             checkTheme = "Light Green";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#56E0C7"));
             toolbar.setBackgroundColor(Color.parseColor("#56E0C7"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#56E0C7"));
         }
 
-        if(text.equals("Ligth Blue")){
+        if(button_clicked.equals("Ligth Blue")){
             checkTheme = "Ligth Blue";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#6CD3FF"));
             toolbar.setBackgroundColor(Color.parseColor("#6CD3FF"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#6CD3FF"));
         }
 
-        if(text.equals("Blue")) {
+        if(button_clicked.equals("Blue")) {
             checkTheme = "Blue";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#819CFF"));
             toolbar.setBackgroundColor(Color.parseColor("#819CFF"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#819CFF"));
         }
 
-        if(text.equals("violet")) {
+        if(button_clicked.equals("violet")) {
             checkTheme = "violet";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#DD8BFA"));
             toolbar.setBackgroundColor(Color.parseColor("#DD8BFA"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#DD8BFA"));
         }
 
-        if(text.equals("Pink")) {
+        if(button_clicked.equals("Pink")) {
             checkTheme = "Pink";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#FF6CA1"));
             toolbar.setBackgroundColor(Color.parseColor("#FF6CA1"));
             more_bottom.setCardBackgroundColor(Color.parseColor("#FF6CA1"));
         }
 
-        if(text.equals("Gray")) {
+        if(button_clicked.equals("Gray")) {
             checkTheme = "Gray";
             theme_view_add_note.setBackgroundColor(Color.parseColor("#C4C4C4"));
             toolbar.setBackgroundColor(Color.parseColor("#C4C4C4"));
@@ -370,6 +370,9 @@ public class AddNoteActivity extends AppCompatActivity implements BottomSheetNot
 
     }
 
+    /**
+     * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
+     */
     public boolean validateNameNote() {
         String check_name = nameBox.getText().toString().trim();
         String check_note = noteBox.getText().toString().trim();

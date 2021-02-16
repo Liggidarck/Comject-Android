@@ -158,7 +158,7 @@ public class AddTaskActivity extends AppCompatActivity {
     }
 
     /**
-     * Выполням запрос на удадение ячейки из {@link ChangesDataBase} и закрываем подключение
+     * Выполням запрос на удадение ячейки из {@link TasksDataBase} и закрываем подключение
      */
     public void delete() {
         db.delete(TasksDataBase.TABLE, "_id = ?", new String[]{String.valueOf(taskId)});

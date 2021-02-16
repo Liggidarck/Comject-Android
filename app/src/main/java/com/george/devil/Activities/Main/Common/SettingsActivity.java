@@ -113,7 +113,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     /**
-     * Вложеный класс для отрисовки фрагметна настроек
+     * Вложенный класс для отрисовки фрагмента настроек
      */
     public static class SettingsFragment extends PreferenceFragmentCompat {
         @Override

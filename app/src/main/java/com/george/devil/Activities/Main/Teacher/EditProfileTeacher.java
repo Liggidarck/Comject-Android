@@ -198,7 +198,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         if (item.getItemId() == R.id.save_changes_profile) {
 
             if (!validateNameTeacher() | !validateUsernameTeacher() | !validateEmailTeacher()
-                    | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBithtayTeacher()) {
+                    | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBirthdayTeacher()) {
                 return super.onOptionsItemSelected(item);
             } else {
                 sharedPreferences.edit().remove("full_name_teather").apply();
@@ -217,7 +217,7 @@ public class EditProfileTeacher extends AppCompatActivity {
                 sharedPreferences.edit().putString("school_teather", school_teather_check).apply();
                 sharedPreferences.edit().putString("birthay_teather", birthay_teather_check).apply();
 
-                startActivity(new Intent(EditProfileTeacher.this, MainActivityTeather.class));
+                startActivity(new Intent(EditProfileTeacher.this, MainActivityTeacher.class));
             }
 
         }
@@ -261,7 +261,7 @@ public class EditProfileTeacher extends AppCompatActivity {
         String birthay_teather_check = Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).getText().toString();
 
         if(!validateNameTeacher() | !validateUsernameTeacher() | !validateEmailTeacher()
-                | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBithtayTeacher()){
+                | !validateCityTeacher() | !validateTopicTeacher() | !validateSchoolTeacher() | !validateBirthdayTeacher()){
             return;
         } else {
 
@@ -306,7 +306,7 @@ public class EditProfileTeacher extends AppCompatActivity {
                     sharedPreferences.edit().putString("school_teather", school_teather_check).apply();
                     sharedPreferences.edit().putString("birthay_teather", birthay_teather_check).apply();
 
-                    startActivity(new Intent(EditProfileTeacher.this, MainActivityTeather.class));
+                    startActivity(new Intent(EditProfileTeacher.this, MainActivityTeacher.class));
                 });
 
                 alertDialog.show();
@@ -414,7 +414,7 @@ public class EditProfileTeacher extends AppCompatActivity {
     /**
      * @return возвращает true/false для проверки поля на пустоту и отрисовывает ошибку.
      */
-    boolean validateBithtayTeacher() {
+    boolean validateBirthdayTeacher() {
         String check = Objects.requireNonNull(textField_bithday_edit_profile_teather.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){

@@ -95,8 +95,8 @@ public class EditProfilePupil extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(v -> saveArrow());
         changePass.setOnClickListener(v -> startActivity(new Intent(EditProfilePupil.this, ChangePasswordActivity.class)));
 
-        clearErrors();
-        get_data();
+        cleanErrors();
+        getData();
 
         Objects.requireNonNull(namePersonTextLayout.getEditText()).setText(name_user);
         Objects.requireNonNull(usernameTextLayout.getEditText()).setText(username);
@@ -134,7 +134,7 @@ public class EditProfilePupil extends AppCompatActivity {
     /**
      * Вызывается для получения данных о пользователе из внутреней памяти телефона
      */
-    public void get_data() {
+    public void getData() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         name_user = sharedPreferences.getString("full_name", "empty_user_name");
         username = sharedPreferences.getString("username", "empty_correct_username");
@@ -461,7 +461,7 @@ public class EditProfilePupil extends AppCompatActivity {
     /**
      * Вызывается,когда нужно отправить запрос на отрисовку анимации снятия ошибки ввода
      */
-    public void clearErrors() {
+    public void cleanErrors() {
         Objects.requireNonNull(namePersonTextLayout.getEditText()).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

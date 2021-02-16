@@ -29,7 +29,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp" >
 
@@ -45,7 +45,7 @@
                         android:id="@+id/text_main_profile_post_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kate Sheptukhina"
+                        android:text="Екатерина Шептухина"
                         android:layout_toEndOf="@+id/ava_post"
                         android:textSize="20sp"
                         android:textColor="@color/black"
@@ -56,7 +56,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="_kate_sheee_"
+                        android:text="\@_kate_sheee_"
                         android:layout_toEndOf="@+id/ava_post"
                         android:layout_below="@+id/text_main_profile_post_name"
                         android:layout_marginStart="10dp" />
@@ -86,29 +86,29 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Title goes here"
+                android:text="Влияние Хип-Хоп культуры на молодёжный сленг"
                 android:fontFamily="@font/google_sans_medium"
                 android:textColor="@color/black"
                 android:textSize="25sp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS). Long default text for you project.  Long continuation of the description. Some new text. Some new text. Some new text."
+                android:text="Хип-хоп культура приобретает в России массовый характер, через нее проходят социализацию миллионы подростков. Можно утверждать, что хип-хоп субкультура относится к сфере прогрессивных движений в молодежной среде."
                 android:textSize="15sp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
+                android:text="#Hip-hop #молодежный_сленг #break_dance #Рэп #Граффити"
                 android:textColor="#1E3F92"
                 android:textSize="14sp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="12dp" />
 
@@ -121,7 +121,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:src="@drawable/ic_baseline_favorite_border_24"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"/>
 
@@ -147,6 +147,7 @@
                     android:text="@string/like"
                     android:textColor="#4A4A4A"
                     android:layout_marginStart="16dp"
+                    android:textSize="13sp"
                     android:layout_marginBottom="10dp"
                     app:icon="@drawable/ic_baseline_favorite_border_24"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
@@ -158,6 +159,7 @@
                     android:fontFamily="@font/google_sans_medium"
                     android:text="@string/btn_comment"
                     android:textColor="#4A4A4A"
+                    android:textSize="13sp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="10dp"
                     android:layout_alignParentEnd="true"
@@ -479,7 +481,7 @@
                 android:id="@+id/topAppBar_post_proj"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Post"
+                app:title="Пост"
                 app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
                 app:layout_collapseMode="pin"
                 android:background="@android:color/transparent" />

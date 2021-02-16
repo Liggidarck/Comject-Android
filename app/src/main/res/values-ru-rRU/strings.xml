@@ -10,7 +10,7 @@
     <!-- fragment home -->
     <string name="my_work">Моя работа</string>
     <string name="my_main_project">МОЙ ОСНОВНОЙ ПРОЕКТ</string>
-    <string name="num_comments">1.3 Комментарии</string>
+    <string name="num_comments">1.3k Комментарии</string>
     <string name="publish">Опубликовать</string>
     <string name="edit_project">Изменить</string>
     <string name="my_others_projects">Мои Другие Проекты</string>
@@ -99,7 +99,7 @@
     <string name="security">Безопасность</string>
 
     <!-- Activity Login -->
-    <string name="let_s_get_started">Давайте начнём</string>
+    <string name="let_s_get_started">Давайте начнём!</string>
     <string name="login">Войти</string>
     <string name="you_don_t_have_eny_account">У Вас нет учётной записи?</string>
     <string name="regist"><u>Зарегистрироваться</u></string>

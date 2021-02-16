@@ -71,7 +71,7 @@
                                     android:id="@+id/name_card_eee"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Kate Sheptukhina"
+                                    android:text="Екатерина Шептухина"
                                     android:layout_toEndOf="@id/profile_image"
                                     android:fontFamily="@font/product_sans_bold"
                                     android:layout_marginTop="15dp"
@@ -135,7 +135,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Title goes here"
+                                    android:text="Влияние Хип-Хоп культуры на молодёжный сленг"
                                     android:fontFamily="@font/product_sans_black"
                                     android:textSize="22sp"
                                     android:textColor="@color/black"
@@ -145,14 +145,14 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                                    android:text="Хип-хоп культура приобретает в России массовый характер, через нее проходят социализацию миллионы подростков. Можно утверждать, что хип-хоп субкультура относится к сфере прогрессивных движений в молодежной среде."
                                     android:layout_marginTop="5dp"
                                     android:layout_marginStart="15dp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="#Информатика #Программирование #IT #Мобильное Приложение #что-тоЕще"
+                                    android:text="#Hip-hop #молодежный_сленг #break_dance #Рэп #Граффити"
                                     android:textColor="#1E3F92"
                                     android:layout_marginTop="15dp"
                                     android:layout_marginStart="15dp"
@@ -237,6 +237,7 @@
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
                                         android:visibility="visible"
+                                        android:textSize="13sp"
                                         app:icon="@drawable/ic_baseline_favorite_border_24"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
@@ -250,6 +251,7 @@
                                         android:layout_marginStart="16dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
                                         android:visibility="invisible"
                                         app:icon="@drawable/ic_baseline_favorite_24_red"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
@@ -263,22 +265,268 @@
                                         android:layout_marginStart="18dp"
                                         android:layout_marginTop="16dp"
                                         android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
                                         android:text="@string/btn_comment"
                                         android:textColor="#4A4A4A"
                                         app:icon="@drawable/ic_chat"
                                         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
 
                                 </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card2_explore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="8dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/top_profile_card2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image2"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/main_kate_ava"
+                                    app:civ_border_width="0dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/name_card_eee2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kate Sheptukhina"
+                                    android:layout_toEndOf="@id/profile_image2"
+                                    android:fontFamily="@font/product_sans_bold"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\@kate_sheee"
+                                    android:layout_toEndOf="@id/profile_image2"
+                                    android:layout_below="@id/name_card_eee2"
+                                    android:layout_marginStart="10dp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/circle_border2"
+                                    android:layout_width="4dp"
+                                    android:layout_height="4dp"
+                                    android:layout_toEndOf="@+id/name_card_eee2"
+                                    android:src="@color/black"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginStart="10dp" />
+
+                                <Button
+                                    android:id="@+id/subscribe_btn2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_toEndOf="@+id/circle_border2"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginStart="3dp"
+                                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                                    android:text="@string/subscribe"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/subscribed_btn2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_toEndOf="@+id/circle_border2"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginStart="3dp"
+                                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                                    android:text="@string/subscribed"
+                                    android:visibility="invisible"
+                                    android:textSize="11sp" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="174dp"
+                                android:src="@drawable/it2"
+                                android:scaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Title goes here"
+                                    android:fontFamily="@font/product_sans_black"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#Информатика #Программирование #IT #Мобильное Приложение #что-тоЕще"
+                                    android:textColor="#1E3F92"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/product_sans_medium" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:src="@drawable/line_gray_dark"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:layout_marginTop="15dp" />
                             </LinearLayout>
 
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" >
+
+                                    <ImageView
+                                        android:id="@+id/icon_likes2"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginStart="16dp"
+                                        android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                    <TextView
+                                        android:id="@+id/val_likes2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="5.4k"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:layout_toEndOf="@id/icon_likes2"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_centerVertical="true"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon_comment_2"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_chat"
+                                        android:layout_toEndOf="@id/val_likes2"
+                                        android:layout_marginStart="26dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/num_comments"
+                                        android:layout_toEndOf="@id/icon_comment_2"
+                                        android:layout_marginStart="8dp"
+                                        android:textSize="15sp"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:textColor="@color/black"
+                                        android:layout_centerVertical="true" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <Button
+                                        android:id="@+id/like_btn_22"
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="@string/like"
+                                        android:textColor="#4A4A4A"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:visibility="visible"
+                                        android:textSize="13sp"
+                                        app:icon="@drawable/ic_baseline_favorite_border_24"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                    <Button
+                                        android:id="@+id/like_btn_222"
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="@string/like"
+                                        android:textColor="#4A4A4A"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
+                                        android:visibility="invisible"
+                                        app:icon="@drawable/ic_baseline_favorite_24_red"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    <Button
+                                        android:id="@+id/comment_post_Explore2"
+                                        android:layout_width="175dp"
+                                        android:layout_height="55dp"
+                                        android:layout_toEndOf="@id/like_btn_22"
+                                        android:layout_marginStart="18dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
+                                        android:text="@string/btn_comment"
+                                        android:textColor="#4A4A4A"
+                                        app:icon="@drawable/ic_chat"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
                         </LinearLayout>
-
                     </com.google.android.material.card.MaterialCardView>
-
                 </RelativeLayout>
 
             </LinearLayout>
 
         </androidx.core.widget.NestedScrollView>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </RelativeLayout>

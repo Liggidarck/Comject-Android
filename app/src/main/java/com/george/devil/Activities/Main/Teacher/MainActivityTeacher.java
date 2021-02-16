@@ -14,7 +14,7 @@ import com.george.devil.Fragments.Teacher.fragmentProfileTeacher;
 import com.george.devil.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivityTeather extends AppCompatActivity {
+public class MainActivityTeacher extends AppCompatActivity {
 
     static final String TAG = "mainActivityTea";
 

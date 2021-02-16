@@ -102,7 +102,7 @@ public class AddChange extends AppCompatActivity {
     }
 
     /**
-     * Вызывается когда, нужно сохрнить в базу данных новую ячейку или для перезаписи текущего ячейки данных
+     * Вызывается, когда нужно сохранить в базу данных новую ячейку или для перезаписи ячейки
      */
     public void save() {
         String ckeckName = name_chage.getText().toString();

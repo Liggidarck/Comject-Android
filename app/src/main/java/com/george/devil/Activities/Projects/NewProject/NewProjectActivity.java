@@ -82,7 +82,7 @@ public class NewProjectActivity extends AppCompatActivity {
 
         next.setOnClickListener(v -> {
 
-            if(!vaildateNameProject() | !validateDescriptionProject() | !validateTopicProject()) {
+            if(!validateNameProject() | !validateDescriptionProject() | !validateTopicProject()) {
                 return;
             } else {
 
@@ -112,7 +112,7 @@ public class NewProjectActivity extends AppCompatActivity {
      * @return
      * возвращает true/false для проверки поля {@link TextInputLayout} на пустоту. и отрисовывает ошибку.
      */
-    public boolean vaildateNameProject() {
+    public boolean validateNameProject() {
         String check = Objects.requireNonNull(textField_name_proj.getEditText()).getText().toString().trim();
 
         if(check.isEmpty()){

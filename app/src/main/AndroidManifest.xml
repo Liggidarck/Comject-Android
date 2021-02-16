@@ -20,7 +20,7 @@
         <activity android:name=".Activities.Projects.PagesProjects.PublishProjectActivity" />
         <activity android:name=".Activities.Main.Pupil.ProfileActivityPupil" />
         <activity android:name=".Activities.Main.Registration.RegisterTeacherActivity" />
-        <activity android:name=".Activities.Main.Teacher.MainActivityTeather" />
+        <activity android:name=".Activities.Main.Teacher.MainActivityTeacher" />
         <activity android:name=".Activities.Main.Common.SettingsActivity" />
         <activity android:name=".Activities.Main.Pupil.ForgotPasswordActivity" />
         <activity android:name=".Activities.Main.Pupil.ChangePasswordActivity" />

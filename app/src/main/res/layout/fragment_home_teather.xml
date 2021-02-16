@@ -62,14 +62,14 @@
                                     android:id="@+id/profile_image"
                                     android:layout_width="46dp"
                                     android:layout_height="46dp"
-                                    android:src="@drawable/ava_me"
-                                    android:layout_marginBottom="0dp"/>
+                                    android:src="@drawable/comject_loading_logo"
+                                    android:layout_marginBottom="0dp" />
 
                                 <TextView
                                     android:id="@+id/name_card_eee"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="George Filatov"
+                                    android:text="Группа из 2 учеников"
                                     android:layout_toEndOf="@id/profile_image"
                                     android:fontFamily="@font/product_sans_bold"
                                     android:layout_marginTop="5dp"
@@ -80,7 +80,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="\@liggidarck"
+                                    android:text="\@_kate_sheee_ @liggidarck"
                                     android:layout_toEndOf="@id/profile_image"
                                     android:layout_below="@id/name_card_eee"
                                     android:layout_marginStart="10dp" />
@@ -101,7 +101,7 @@
                                 android:fontFamily="@font/google_sans_medium"
                                 android:textStyle="bold"
                                 android:textSize="22sp"
-                                android:text="Title goes here"
+                                android:text="Comject"
                                 android:textAppearance="?attr/textAppearanceHeadline6" />
 
                             <TextView
@@ -109,7 +109,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="16sp"
-                                android:text="Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS) Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                                android:text="Это приложение создано специально чтобы быстро и легко обмениваться информацией между учеником и преподавателем."
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/product_sans_regular"/>
 
@@ -118,7 +118,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="15sp"
-                                android:text="#IT #Программирование #Информатика"
+                                android:text="#Информатика #Программирование #Java #SwiftUI #iOS #Android"
                                 android:textColor="#1E3F92"
                                 android:fontFamily="@font/product_sans_regular"
                                 android:layout_marginTop="15dp" />
@@ -131,6 +131,321 @@
                 </com.google.android.material.card.MaterialCardView>
 
             </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_teather2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="8dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image2"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/main_kate_ava"
+                                    android:layout_marginBottom="0dp"/>
+
+                                <TextView
+                                    android:id="@+id/name_card_eee2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Екатерина Шептухина"
+                                    android:layout_toEndOf="@id/profile_image2"
+                                    android:fontFamily="@font/product_sans_bold"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\@_kate_sheee_"
+                                    android:layout_toEndOf="@id/profile_image2"
+                                    android:layout_below="@id/name_card_eee2"
+                                    android:layout_marginStart="10dp" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:src="@drawable/line_gray"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/main_title_project2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:text="Влияние Хип-Хоп культуры на молодёжный сленг"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            <TextView
+                                android:id="@+id/main_description_project2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="Хип-хоп культура приобретает в России массовый характер, через нее проходят социализацию миллионы подростков. Можно утверждать, что хип-хоп субкультура относится к сфере прогрессивных движений в молодежной среде."
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/product_sans_regular"/>
+
+                            <TextView
+                                android:id="@+id/hastags_mail_proj_text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:text="#Hip-hop #молодежный_сленг #break_dance #Рэп #Граффити"
+                                android:textColor="#1E3F92"
+                                android:fontFamily="@font/product_sans_regular"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_teather4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="8dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image4"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/ava_me"
+                                    android:layout_marginBottom="0dp"/>
+
+                                <TextView
+                                    android:id="@+id/name_card_eee4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Филатов Георгий"
+                                    android:layout_toEndOf="@id/profile_image4"
+                                    android:fontFamily="@font/product_sans_bold"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\@liggidarck"
+                                    android:layout_toEndOf="@id/profile_image4"
+                                    android:layout_below="@id/name_card_eee4"
+                                    android:layout_marginStart="10dp" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:src="@drawable/line_gray"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/main_title_project4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:text="Modern Motes"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            <TextView
+                                android:id="@+id/main_description_project4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="Быстрое, современное, настраиваемое приложение для создания заметок, удобного серфинга в интернете без рекламы."
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/product_sans_regular"/>
+
+                            <TextView
+                                android:id="@+id/hastags_mail_proj_text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:text="#Информатика #Программирование #Java #Android"
+                                android:textColor="#1E3F92"
+                                android:fontFamily="@font/product_sans_regular"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_teather3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="6dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="8dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image3"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/ava_agamir"
+                                    android:layout_marginBottom="0dp"/>
+
+                                <TextView
+                                    android:id="@+id/name_card_eee3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Агамир Угурлиев"
+                                    android:layout_toEndOf="@id/profile_image3"
+                                    android:fontFamily="@font/product_sans_bold"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\@thefireowl"
+                                    android:layout_toEndOf="@id/profile_image3"
+                                    android:layout_below="@id/name_card_eee3"
+                                    android:layout_marginStart="10dp" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:src="@drawable/line_gray"
+                                android:layout_marginTop="5dp" />
+
+                            <TextView
+                                android:id="@+id/main_title_project3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/google_sans_medium"
+                                android:textStyle="bold"
+                                android:textSize="22sp"
+                                android:text="Brain Storm"
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            <TextView
+                                android:id="@+id/main_description_project3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="Прокачай свой навык быстрого счета в потрясающей игре Brain Storm! Игра подойдет для каждого от новичка до профи!  "
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/product_sans_regular"/>
+
+                            <TextView
+                                android:id="@+id/hastags_mail_proj_text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp"
+                                android:text="#Информатика #Программирование #GameDev #Unity #CSharp"
+                                android:textColor="#1E3F92"
+                                android:fontFamily="@font/product_sans_regular"
+                                android:layout_marginTop="15dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+
+
 
         </LinearLayout>
 
