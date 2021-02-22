@@ -39,7 +39,7 @@
                         android:id="@+id/name_card_eee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kate Sheptukhina"
+                        android:text="Екатерина Шептухина"
                         android:layout_toEndOf="@id/profile_image"
                         android:fontFamily="@font/product_sans_bold"
                         android:layout_marginTop="15dp"
@@ -60,7 +60,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="174dp"
-                    android:src="@drawable/it2"
+                    android:src="@drawable/sport6"
                     android:scaleType="centerCrop" />
 
                 <LinearLayout
@@ -71,7 +71,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Title goes here"
+                        android:text="Влияние Хип-Хоп культуры на молодёжный сленг"
                         android:fontFamily="@font/product_sans_black"
                         android:textSize="22sp"
                         android:textColor="@color/black"
@@ -81,14 +81,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                        android:text="Хип-хоп культура приобретает в России массовый характер, через нее проходят социализацию миллионы подростков. Можно утверждать, что хип-хоп субкультура относится к сфере прогрессивных движений в молодежной среде."
                         android:layout_marginTop="5dp"
                         android:layout_marginStart="15dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="#Информатика #Программирование #IT #Мобильное Приложение #что-тоЕще"
+                        android:text="#Hip-hop #молодежный_сленг #break_dance #Рэп #Граффити"
                         android:textColor="#1E3F92"
                         android:layout_marginTop="15dp"
                         android:layout_marginStart="15dp"

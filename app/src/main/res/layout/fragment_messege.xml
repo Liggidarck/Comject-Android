@@ -101,7 +101,7 @@
                             android:id="@+id/name_chat_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Kate Sheptukhina"
+                            android:text="Екатерина Шептухина"
                             android:textColor="@color/black"
                             android:fontFamily="@font/product_sans_black"
                             android:textSize="18sp" />
@@ -109,7 +109,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Now l do this"
+                            android:text="Как тебе такой варинт?"
                             android:layout_below="@id/name_chat_1" />
 
                     </RelativeLayout>
@@ -156,7 +156,7 @@
                             android:id="@+id/name_chat_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Anton Rovenko"
+                            android:text="Антон Ровенко"
                             android:textColor="@color/black"
                             android:fontFamily="@font/product_sans_black"
                             android:textSize="18sp" />
@@ -164,7 +164,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="You: Photo"
+                            android:text="Вы: Фото"
                             android:layout_below="@id/name_chat_3" />
 
                     </RelativeLayout>
@@ -266,7 +266,7 @@
                             android:id="@+id/name_chat_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="George Filatov"
+                            android:text="Георгий Филатов"
                             android:textColor="@color/black"
                             android:fontFamily="@font/product_sans_black"
                             android:textSize="18sp" />
@@ -274,7 +274,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="You: No problem"
+                            android:text="Вы: Хорошо, сделаю"
                             android:layout_below="@id/name_chat_5" />
 
                     </RelativeLayout>

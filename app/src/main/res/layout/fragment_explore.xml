@@ -124,7 +124,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="174dp"
-                                android:src="@drawable/it2"
+                                android:src="@drawable/sport6"
                                 android:scaleType="centerCrop" />
 
                             <LinearLayout
