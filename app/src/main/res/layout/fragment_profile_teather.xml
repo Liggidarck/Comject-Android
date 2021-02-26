@@ -31,7 +31,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_below="@id/main_profile_image_teather"
-                    android:src="@drawable/anton_ava"
+                    android:src="@drawable/ic_user"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="-40dp"
                     app:civ_border_width="3.5dp"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="28"
+                        android:text="763"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -121,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="5dp"
-                        android:text="98"
+                        android:text="142"
                         android:textColor="@color/black"
                         android:textSize="22sp" />
 
@@ -321,7 +321,7 @@
                                 android:layout_marginBottom="15dp"/>
 
                             <TextView
-                                android:id="@+id/topik__bottom"
+                                android:id="@+id/shloee_bottom"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toEndOf="@id/profile_icomge__sheet"

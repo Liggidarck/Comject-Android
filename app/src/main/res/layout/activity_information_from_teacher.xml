@@ -75,7 +75,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Дефолтный main текст годе находится техническое задание по твоему проекту. ТЕКСТ. Long default text for you project.  Long continuation of the description. Мой уровень английского не позволяет сделать мне более длинный текст на английском, поэтому продолжу на русском чтобы текст описания выглядил более объёмно. Дефолтный main текст годе находится техническое задание по твоему проекту. Дефолтный main текст годе находится техническое задание по твоему проекту. Дефолтный main текст годе находится техническое задание по твоему проекту."
+                            android:text="Дефолтный main текст годе находится техническое задание по твоему проекту"
                             android:layout_marginStart="10dp"
                             android:layout_below="@+id/ava_teather_info"
                             android:layout_marginTop="10dp"

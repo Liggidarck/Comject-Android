@@ -19,7 +19,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile Security Framework"
+                    android:text="Title goes here"
                     android:fontFamily="@font/google_sans_medium"
                     android:textColor="@color/black"
                     android:textSize="25sp"
@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS). Long default text for you project.  Long continuation of the description. Some new text. Some new text. Some new text."
+                    android:text="Текст проекта"
                     android:textSize="15sp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="#Информатика #Программирование #IT #Мобильное приложение #что-то еще #длинноеслово"
+                    android:text="Хэштеги проекта"
                     android:textColor="#1E3F92"
                     android:textSize="14sp"
                     android:layout_marginStart="20dp"
@@ -332,7 +332,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile Security Framework"
+                    android:text="Title goes here"
                     android:fontFamily="@font/google_sans_medium"
                     android:textColor="@color/black"
                     android:textSize="25sp"
@@ -366,7 +366,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile Security Framework (MobSF) is an automated, all-in-one mobile application (Android/iOS). Long default text for you project.  Long continuation of the description. Some new text. Some new text. Some new text."
+                    android:text="Текст проекта"
                     android:textSize="16sp"
                     android:textColor="@color/black"
                     android:layout_marginStart="20dp"

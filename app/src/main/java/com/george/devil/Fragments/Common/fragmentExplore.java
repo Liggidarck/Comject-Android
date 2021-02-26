@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +19,6 @@ import com.george.devil.Activities.Main.Pupil.CommentsActivity;
 import com.george.devil.Activities.Main.Pupil.ProfileActivityPupil;
 import com.george.devil.Activities.Projects.PagesProjects.PostProjectActivity;
 import com.george.devil.BottomSheets.BottomSheetFilters;
-import com.george.devil.Fragments.Pupil.fragmentSearchExplore;
 import com.george.devil.R;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.card.MaterialCardView;
@@ -91,17 +89,4 @@ public class fragmentExplore extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
     }
 
-    /**
-     * Метод для реализации нажатия на элементы {@link MaterialToolbar}
-     */
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if(item.getItemId() == R.id.search_explore_menu) {
-            Fragment searchFrag = new fragmentSearchExplore();
-            getParentFragmentManager().beginTransaction().replace(R.id.fragment_pupil_container, searchFrag).commit();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

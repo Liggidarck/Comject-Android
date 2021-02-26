@@ -23,7 +23,7 @@
             android:id="@+id/ava_settings"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ava_me"
+            android:src="@drawable/ic_user"
             app:civ_border_color="@color/white"
             android:elevation="3dp"
             android:layout_marginTop="20dp"

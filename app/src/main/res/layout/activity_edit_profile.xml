@@ -74,7 +74,7 @@
                             android:id="@+id/changable_ava"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/ava_me"
+                            android:src="@drawable/ic_user"
                             app:civ_border_color="@color/white"
                             app:civ_border_width="3.5dp"
                             app:layout_constraintStart_toStartOf="parent"

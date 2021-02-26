@@ -22,7 +22,7 @@ import com.george.devil.R;
 
 public class fragmentProfileTeacher extends Fragment {
 
-    TextView main_name_profile_teacher, main_username_teacher;
+    TextView main_name_profile_teacher, main_username_teacher, topik_bottom, birthday_bottom, city_bottom, shloee_bottom;
     Button edit_profile_btn_teacher, settings_btn_teacher;
     RelativeLayout followers_layout_teacher, following_layout_teacher;
 
@@ -36,6 +36,11 @@ public class fragmentProfileTeacher extends Fragment {
         settings_btn_teacher = view.findViewById(R.id.settings_btn_teather);
         edit_profile_btn_teacher = view.findViewById(R.id.edit_profile_teather);
 
+        topik_bottom = view.findViewById(R.id.topik_bottom);
+        birthday_bottom = view.findViewById(R.id.birthday_bottom);
+        city_bottom = view.findViewById(R.id.city_bottom);
+        shloee_bottom = view.findViewById(R.id.shloee_bottom);
+
         followers_layout_teacher = view.findViewById(R.id.followers_layout_teather);
         following_layout_teacher = view.findViewById(R.id.following_layout_teather);
 
@@ -43,9 +48,20 @@ public class fragmentProfileTeacher extends Fragment {
         String name_teacher = sharedPreferences.getString("full_name_teather", "full_name_teather_empty");
         String username_teacher = sharedPreferences.getString("username_teather", "username_teather_empty");
 
+        String topic_teacher = sharedPreferences.getString("topic_teather", "topic_teather_empty");
+        String birthday_teacher = sharedPreferences.getString("birthay_teather", "topic_teather_empty");
+        String city_teacher = sharedPreferences.getString("city_teather", "topic_teather_empty");
+        String schoole_teatcher = sharedPreferences.getString("school_teather", "topic_teather_empty");
+
+
         String username = "@" + username_teacher;
         main_name_profile_teacher.setText(name_teacher);
         main_username_teacher.setText(username);
+
+        topik_bottom.setText(getText(R.string.topic) + ": " + topic_teacher);
+        birthday_bottom.setText(getText(R.string.birthday) + ": " + birthday_teacher);
+        city_bottom.setText(getText(R.string.city) + ": " + city_teacher);
+        shloee_bottom.setText(getText(R.string.school) + ": " + schoole_teatcher);
 
         edit_profile_btn_teacher.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeacher.this.getActivity(), EditProfileTeacher.class)));
         settings_btn_teacher.setOnClickListener(v -> startActivity(new Intent(fragmentProfileTeacher.this.getActivity(), SettingsActivity.class)));

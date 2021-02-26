@@ -295,7 +295,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:text="Дефолтный текст проета."
                                         android:fontFamily="@font/google_sans_medium"
                                         android:layout_marginTop="8dp"
                                         android:layout_marginStart="8dp"
@@ -441,7 +441,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:text="Дефолтный текст проета."
                                         android:fontFamily="@font/google_sans_medium"
                                         android:layout_marginTop="8dp"
                                         android:layout_marginStart="8dp"
@@ -604,7 +604,7 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Mobile Security Framework (MobSF) is anautomated, all-in-one mobile application(Android/iOS)"
+                                        android:text="Дефолтный текст проета."
                                         android:fontFamily="@font/google_sans_medium"
                                         android:layout_marginTop="8dp"
                                         android:layout_marginStart="8dp"

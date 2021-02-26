@@ -283,6 +283,252 @@
                     android:layout_height="wrap_content" >
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card4_explore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="6dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_margin="8dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:id="@+id/top_profile_card4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_image_5"
+                                    android:layout_width="46dp"
+                                    android:layout_height="46dp"
+                                    android:src="@drawable/comject_loading_logo"
+                                    app:civ_border_width="0dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <TextView
+                                    android:id="@+id/name_card_eee4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Группа из 2 учеников"
+                                    android:layout_toEndOf="@id/profile_image_5"
+                                    android:fontFamily="@font/product_sans_bold"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="\@_kate_sheee_ @liggidarck"
+                                    android:layout_toEndOf="@id/profile_image_5"
+                                    android:layout_below="@id/name_card_eee4"
+                                    android:layout_marginStart="10dp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/circle_border4"
+                                    android:layout_width="4dp"
+                                    android:layout_height="4dp"
+                                    android:layout_toEndOf="@+id/name_card_eee4"
+                                    android:src="@color/black"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_marginStart="10dp" />
+
+                                <Button
+                                    android:id="@+id/subscribe_btn4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_toEndOf="@+id/circle_border4"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginStart="3dp"
+                                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                                    android:text="@string/subscribe"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/subscribed_btn4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_toEndOf="@+id/circle_border4"
+                                    android:layout_marginTop="7dp"
+                                    android:layout_marginStart="3dp"
+                                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                                    android:text="@string/subscribed"
+                                    android:visibility="invisible"
+                                    android:textSize="11sp" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="174dp"
+                                android:src="@drawable/it2"
+                                android:scaleType="centerCrop" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Comject"
+                                    android:fontFamily="@font/product_sans_black"
+                                    android:textSize="22sp"
+                                    android:textColor="@color/black"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Это приложение создано специально чтобы быстро и легко обмениваться информацией между учеником и преподавателем."
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginStart="15dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="#Информатика #Программирование #Java #SwiftUI #iOS #Android"
+                                    android:textColor="#1E3F92"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="15dp"
+                                    android:fontFamily="@font/product_sans_medium" />
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="3dp"
+                                    android:src="@drawable/line_gray_dark"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:layout_marginTop="15dp" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" >
+
+                                    <ImageView
+                                        android:id="@+id/icon_likes4"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginStart="16dp"
+                                        android:src="@drawable/ic_baseline_favorite_24_red" />
+
+                                    <TextView
+                                        android:id="@+id/val_likes4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="125.3k"
+                                        android:textSize="15sp"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:layout_toEndOf="@id/icon_likes4"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_centerVertical="true"/>
+
+                                    <ImageView
+                                        android:id="@+id/icon_comment_4"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/ic_chat"
+                                        android:layout_toEndOf="@id/val_likes4"
+                                        android:layout_marginStart="26dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/num_comments"
+                                        android:layout_toEndOf="@id/icon_comment_4"
+                                        android:layout_marginStart="8dp"
+                                        android:textSize="15sp"
+                                        android:fontFamily="@font/product_sans_regular"
+                                        android:textColor="@color/black"
+                                        android:layout_centerVertical="true" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" >
+
+                                    <Button
+                                        android:id="@+id/like_btn_555"
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="@string/like"
+                                        android:textColor="#4A4A4A"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:visibility="visible"
+                                        android:textSize="13sp"
+                                        app:icon="@drawable/ic_baseline_favorite_border_24"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                    <Button
+                                        android:id="@+id/like_btn_55"
+                                        android:layout_width="170dp"
+                                        android:layout_height="55dp"
+                                        android:fontFamily="@font/google_sans_medium"
+                                        android:text="@string/like"
+                                        android:textColor="#4A4A4A"
+                                        android:layout_marginStart="16dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
+                                        android:visibility="invisible"
+                                        app:icon="@drawable/ic_baseline_favorite_24_red"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+
+                                    <Button
+                                        android:id="@+id/comment_post_Explore4"
+                                        android:layout_width="175dp"
+                                        android:layout_height="55dp"
+                                        android:layout_toEndOf="@id/like_btn_55"
+                                        android:layout_marginStart="18dp"
+                                        android:layout_marginTop="16dp"
+                                        android:layout_marginBottom="16dp"
+                                        android:textSize="13sp"
+                                        android:text="@string/btn_comment"
+                                        android:textColor="#4A4A4A"
+                                        app:icon="@drawable/ic_chat"
+                                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"  />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.google.android.material.card.MaterialCardView
                         android:id="@+id/card2_explore"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -307,7 +553,7 @@
                                     android:id="@+id/profile_image2"
                                     android:layout_width="46dp"
                                     android:layout_height="46dp"
-                                    android:src="@drawable/main_kate_ava"
+                                    android:src="@drawable/ava_me"
                                     app:civ_border_width="0dp"
                                     android:layout_marginStart="15dp"
                                     android:layout_marginTop="10dp"
@@ -317,7 +563,7 @@
                                     android:id="@+id/name_card_eee2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Kate Sheptukhina"
+                                    android:text="Георгий Филатов"
                                     android:layout_toEndOf="@id/profile_image2"
                                     android:fontFamily="@font/product_sans_bold"
                                     android:layout_marginTop="15dp"
@@ -328,7 +574,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="\@kate_sheee"
+                                    android:text="\@liggidarck"
                                     android:layout_toEndOf="@id/profile_image2"
                                     android:layout_below="@id/name_card_eee2"
                                     android:layout_marginStart="10dp" />
@@ -370,7 +616,7 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="174dp"
-                                android:src="@drawable/it2"
+                                android:src="@drawable/it5"
                                 android:scaleType="centerCrop" />
 
                             <LinearLayout
@@ -381,7 +627,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Title goes here"
+                                    android:text="Modern Notes"
                                     android:fontFamily="@font/product_sans_black"
                                     android:textSize="22sp"
                                     android:textColor="@color/black"
@@ -391,14 +637,14 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Long continuation of the description. Long default text for you project. Continuation of the description. Long default text for you project. Long default text for you project. Long continuation of description. default text for you project."
+                                    android:text="Быстрое, современное, настраиваемое приложение для создания заметок, удобного серфинга в интернете без рекламы."
                                     android:layout_marginTop="5dp"
                                     android:layout_marginStart="15dp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="#Информатика #Программирование #IT #Мобильное Приложение #что-тоЕще"
+                                    android:text="#Информатика #Программирование #Java #Android"
                                     android:textColor="#1E3F92"
                                     android:layout_marginTop="15dp"
                                     android:layout_marginStart="15dp"
